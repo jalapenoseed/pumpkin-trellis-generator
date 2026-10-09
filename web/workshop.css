@@ -1,0 +1,24 @@
+aside{display:none;z-index:4;top:146px;max-height:calc(100dvh - 220px)}
+aside.open{display:block}
+#controlsToggle{display:block;position:fixed;right:22px;bottom:22px;z-index:5}
+#panelBar{display:flex;gap:8px;align-items:center;margin:-4px -4px 18px;padding-bottom:10px;border-bottom:1px solid #687662}
+#panelBar span{flex:1;font-size:13px;color:#e5b574}
+#panelBar button{padding:4px 10px;min-width:44px}
+.panel-left aside{left:22px;right:auto}
+.panel-left #controlsToggle{left:22px;right:auto}
+.panel-left #stats,.panel-left #caption{left:auto;right:22px;text-align:right}
+.wide{width:100%;margin-top:10px}
+#gardenStatus{font-size:13px;line-height:1.5;color:#f2c990}
+.referenceThumb{width:100%;border-radius:6px;margin-top:10px}
+#placementBanner{position:fixed;top:146px;left:50%;transform:translateX(-50%);display:flex;gap:12px;align-items:center;max-width:calc(100vw - 28px);padding:8px 12px;background:#14231bf2;border:1px solid #e5b574;border-radius:9px;z-index:3;font-size:13px}
+#placementBanner[hidden]{display:none}
+button:disabled{opacity:.45;cursor:default}
+body.controls-open #caption{display:none}
+@media(max-width:720px){
+  aside,.panel-left aside{top:auto;bottom:80px;left:12px;right:12px;width:auto;max-height:52dvh}
+  #controlsToggle,.panel-left #controlsToggle{left:auto;right:15px;bottom:21px}
+  .panel-left #stats,.panel-left #caption{left:15px;right:auto;text-align:left}
+  #dockPanel{display:none}
+  #placementBanner{top:182px;width:calc(100vw - 28px)}
+  #stats{max-width:calc(100vw - 180px);font-size:10px}
+}

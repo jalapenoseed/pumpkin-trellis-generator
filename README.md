@@ -44,6 +44,18 @@ Extracted from jalapenoseed/skydancer commit 450d9a5ff8d52837c391a3eb0feb91c9c9f
 
 Private project; no open-source license is granted. Asset Forge entries remain technical candidates pending human visual approval. The existing Skydancer implementation remains intact. This repository is a separate development snapshot; updates are not automatically synchronized.
 
+## v0.4.0 — Garden building, lights and surface inspection
+
+The standalone workshop now supports multiple placed trellises (24), yard lamps (8), and string-light runs (12). Open **Controls → Build your garden**, choose a placement tool, and tap the soil. For a free-standing string, tap two post positions, 0.75–18 metres apart. Choose **Done** to orbit again. **Light selected trellis** attaches a string to the selected support; it follows that support's position, rotation and dimensions. Selecting a placed trellis and applying current settings updates just that support. Removing a support also removes its attached strings.
+
+Placed objects and lighting choices save in browser local storage. Each origin/device has its own layout. Base patch controls and painted plants are still session-only. Browser storage can be unavailable or cleared; this is not cloud synchronization. **Export GLB** includes the visible garden and painted plants, including light fixtures and emissive bulbs. Environment lighting and interactive behavior are not exported.
+
+**Light & atmosphere** offers soft daylight, overcast, golden hour, blue hour and moonlit night, plus exposure and lamp brightness. To bound rendering cost, up to four placed fixtures provide local illumination; the remaining bulbs are emissive. Yard lamps get priority, followed by strings, in placement order. Local lights do not cast shadows.
+
+Controls minimize on desktop and phones. The desktop ↔ button switches sides. Placement automatically minimizes phone controls and shows a Done button above the scene. Pumpkin inspection can isolate one cultivar for a closer view, with denser inspection geometry, revised ribs, a cork collar/cut stem end and longitudinal stem grain. The workshop uses a generated rind albedo alongside procedural normal/roughness maps. The reusable core retains its self-contained procedural material by default. These are generated approximations, not scanned assets or a claim of photorealistic quality. See `web/assets/references/PROVENANCE.md` for prompts and asset origin.
+
+Validated with `node web/tools/test-autumn.cjs`, `node web/tools/verify-variance.cjs`, and `node web/tools/verify-workshop.cjs` using an isolated Chrome debugger on port 9275. The workshop suite exercises controls and actual ground clicks, reload persistence, transforms, attached-light removal, undo, lighting, generated texture loading, GLB serialization, finite vertices, and desktop/390×844 layouts. Physical iPhone Safari remains unverified. Existing bundled v0.2.2 exports have not been regenerated; use the live GLB export for current assets. This update has not been integrated into Skydancer.
+
 ## Windows shell troubleshooting
 
 If npm's default command shell exits silently on this PC, run `node tools/test-autumn.cjs` and `node tools/serve.cjs` directly from web, or use `npm test --script-shell=powershell.exe` / `npm start --script-shell=powershell.exe`. No global npm settings need to change.
