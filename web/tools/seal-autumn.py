@@ -1,7 +1,7 @@
 """Inspect exported GLBs and provide dependency-closed glTF for the existing Forge importer."""
 import json,struct,hashlib,math
 from pathlib import Path
-root=Path(__file__).resolve().parents[1]/'assets/autumn/v0.2.2'
+root=Path(__file__).resolve().parents[1]/'assets/autumn/v0.3.0'
 manifest=json.loads((root/'manifest.json').read_text())
 reports=[]
 for asset in manifest['assets']:

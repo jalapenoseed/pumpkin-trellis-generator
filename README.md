@@ -47,3 +47,19 @@ Private project; no open-source license is granted. Asset Forge entries remain t
 ## Windows shell troubleshooting
 
 If npm's default command shell exits silently on this PC, run `node tools/test-autumn.cjs` and `node tools/serve.cjs` directly from web, or use `npm test --script-shell=powershell.exe` / `npm start --script-shell=powershell.exe`. No global npm settings need to change.
+
+
+## v0.3.0 — Component variation and rendering
+
+Open Controls to access Pumpkin, Vine, Flower and Trellis variation groups. The Natural variation slider changes the seeded spread of sizes and organic irregularity. Mixed cultivar/color choices remain mixed even at zero variance. Flower view inspects buds/open blossoms independently of seasonal suppression.
+
+Pumpkins: width, height, ribs, groove depth, stem curl and size range.
+Vines: length, branching, internode spacing, branch angle, meander, thickness and tendril coils.
+Flowers: frequency, size, opening and petal count (five is botanically typical; alternatives are artistic).
+Trellises: width, height, arch depth/crown rise, rail spacing and member thickness. Crown rise is capped internally below support height; climbing paths use the same arch formula.
+
+The renderer now uses mottled PBR skin and foliage, bark fissures, tapered ridged stems, corrugated petals with raised centers, a soft environment reflection map, textured soil and tighter shadow framing. Mobile component inspections use medium geometry; field budgets remain unchanged. These are procedural approximations, not photogrammetry.
+
+Validation: node web/tools/test-autumn.cjs and node web/tools/verify-variance.cjs. The browser check uses an isolated Chrome debugger and verifies actual geometry changes, all support types at extreme slider settings, zero flower density, deterministic seeds and finite vertices.
+
+The runtime is v0.3.0. Bundled asset exports and their historical validation reports remain v0.2.2. Export GLB in the workshop for the current geometry; batch export scripts target a new v0.3.0 folder. Changes in this standalone repository are not automatically deployed into Skydancer.

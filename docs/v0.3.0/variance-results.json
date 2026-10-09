@@ -1,0 +1,13 @@
+{
+  "pumpkinDimensions": true,
+  "ribs": true,
+  "flowerOpening": true,
+  "flowerCountZero": true,
+  "supportExtremes": true,
+  "finiteGeometry": true,
+  "seedRepeatable": true,
+  "zeroVariation": true,
+  "vines": true,
+  "errors": [],
+  "device": "Windows Chrome, 390x844 emulation; not physical Safari"
+}
