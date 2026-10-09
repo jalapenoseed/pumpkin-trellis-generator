@@ -3,7 +3,7 @@
   "version": "0.2.2",
   "units": "metres",
   "up": "Y",
-  "license": "LicenseRef-User-Owned",
+  "license": "MIT",
   "provenance": {
     "original": true,
     "method": "Original analytic meshes and procedural PBR maps authored for the user. Three photo references and generated orthographic reference were visually consulted; no reference image pixels used in textures.",

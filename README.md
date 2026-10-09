@@ -2,9 +2,21 @@
 
 Reusable procedural autumn assets and a touch-friendly 3D workshop, extracted from Skydancer without replacing its integration.
 
+**Free to use, modify and share — including in commercial games.** Both the project code and included assets are available under the [MIT License](LICENSE). Keep the license notice with redistributed copies; see [asset permissions](ASSET_LICENSE.md).
+
+[Download ZIP](https://github.com/jalapenoseed/pumpkin-trellis-generator/archive/refs/heads/main.zip) · [Browse the 57 ready-to-import models](web/assets/autumn/v0.2.2) · [License](LICENSE)
+
+![Pumpkin surface inspection in the workshop](docs/v0.4.0/pumpkin-detail.png)
+
+![Placed trellises, yard light and string lights at dusk](docs/v0.4.0/garden-dusk.png)
+
+The current workshop is **v0.4.0**. The bundled model library is **v0.2.2**; use the workshop's **Export GLB** button for the newer geometry and materials. The workshop runs locally with Node.js; the screenshots above are actual renders. The reference board and rind color texture are AI-generated, with [prompts and provenance](web/assets/references/PROVENANCE.md).
+
 ## Run locally
 
 Requires Node.js 22+ and npm.
+
+Download and extract the ZIP, or clone this repository, then open a terminal in its folder:
 
 ```sh
 cd web
@@ -42,7 +54,7 @@ The imported reports describe the original Skydancer run, not a new certificatio
 
 Extracted from jalapenoseed/skydancer commit 450d9a5ff8d52837c391a3eb0feb91c9c9faa961, autumn system v0.2.2. Original procedural geometry and texture pixels; reference photographs are not redistributed. Three.js is an npm dependency under its own MIT license.
 
-Private project; no open-source license is granted. Asset Forge entries remain technical candidates pending human visual approval. The existing Skydancer implementation remains intact. This repository is a separate development snapshot; updates are not automatically synchronized.
+Code and included assets are released under MIT; third-party dependencies retain their own licenses. Asset Forge entries remain technical candidates pending human visual approval. The existing Skydancer implementation remains intact. This repository is a separate development snapshot; updates are not automatically synchronized.
 
 ## v0.4.0 — Garden building, lights and surface inspection
 
@@ -74,4 +86,4 @@ The renderer now uses mottled PBR skin and foliage, bark fissures, tapered ridge
 
 Validation: node web/tools/test-autumn.cjs and node web/tools/verify-variance.cjs. The browser check uses an isolated Chrome debugger and verifies actual geometry changes, all support types at extreme slider settings, zero flower density, deterministic seeds and finite vertices.
 
-The runtime is v0.3.0. Bundled asset exports and their historical validation reports remain v0.2.2. Export GLB in the workshop for the current geometry; batch export scripts target a new v0.3.0 folder. Changes in this standalone repository are not automatically deployed into Skydancer.
+This section describes the historical v0.3.0 update; the current runtime is v0.4.0. Bundled asset exports and their historical validation reports remain v0.2.2. Export GLB in the workshop for the current geometry; the legacy batch export scripts still target a v0.3.0 folder. Changes in this standalone repository are not automatically deployed into Skydancer.
