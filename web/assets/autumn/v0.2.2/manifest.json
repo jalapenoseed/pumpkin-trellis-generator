@@ -1,0 +1,1338 @@
+{
+  "schema": "autumn-procedural-pack-v1",
+  "version": "0.2.2",
+  "units": "metres",
+  "up": "Y",
+  "license": "LicenseRef-User-Owned",
+  "provenance": {
+    "original": true,
+    "method": "Original analytic meshes and procedural PBR maps authored for the user. Three photo references and generated orthographic reference were visually consulted; no reference image pixels used in textures.",
+    "source": "web/src/autumn-core.js",
+    "referenceRights": "Reference photos are not redistributed; source ownership unverified.",
+    "humanVisualApproval": false
+  },
+  "assets": [
+    {
+      "thumbnail": "mobile/pumpkin-round.png",
+      "id": "pumpkin-round-mobile",
+      "name": "pumpkin-round",
+      "tier": "mobile",
+      "file": "mobile/pumpkin-round.glb",
+      "triangles": 880,
+      "bounds": {
+        "min": [
+          -0.3172141909599304,
+          0.013827026821672916,
+          -0.31976160407066345
+        ],
+        "max": [
+          0.336899995803833,
+          0.7099161148071289,
+          0.33893048763275146
+        ]
+      },
+      "gltf": "mobile/pumpkin-round/model.gltf",
+      "vertices": 501,
+      "sha256": "b82446896c59cf10a04a9710633cb9d878946adcff4f480840d186f78df855c2"
+    },
+    {
+      "thumbnail": "mobile/pumpkin-tall.png",
+      "id": "pumpkin-tall-mobile",
+      "name": "pumpkin-tall",
+      "tier": "mobile",
+      "file": "mobile/pumpkin-tall.glb",
+      "triangles": 880,
+      "bounds": {
+        "min": [
+          -0.336899995803833,
+          0.018222594633698463,
+          -0.29278749227523804
+        ],
+        "max": [
+          0.336899995803833,
+          0.938676118850708,
+          0.3094612956047058
+        ]
+      },
+      "gltf": "mobile/pumpkin-tall/model.gltf",
+      "vertices": 501,
+      "sha256": "92e77b32480494b880235147bd52581976e204aeb24c266d63641ccf625dd5e9"
+    },
+    {
+      "thumbnail": "mobile/pumpkin-squat.png",
+      "id": "pumpkin-squat-mobile",
+      "name": "pumpkin-squat",
+      "tier": "mobile",
+      "file": "mobile/pumpkin-squat.glb",
+      "triangles": 880,
+      "bounds": {
+        "min": [
+          -0.3139815628528595,
+          0.010453683324158192,
+          -0.31194016337394714
+        ],
+        "max": [
+          0.336899995803833,
+          0.5343561172485352,
+          0.33064016699790955
+        ]
+      },
+      "gltf": "mobile/pumpkin-squat/model.gltf",
+      "vertices": 501,
+      "sha256": "83ddc0a0d50a70780dcc1d6283d365302352ebe7c4b2a68daaa39bf96f6a1682"
+    },
+    {
+      "thumbnail": "mobile/pumpkin-flat.png",
+      "id": "pumpkin-flat-mobile",
+      "name": "pumpkin-flat",
+      "tier": "mobile",
+      "file": "mobile/pumpkin-flat.glb",
+      "triangles": 880,
+      "bounds": {
+        "min": [
+          -0.336899995803833,
+          0.008511455729603767,
+          -0.32510849833488464
+        ],
+        "max": [
+          0.336899995803833,
+          0.43327608704566956,
+          0.34869149327278137
+        ]
+      },
+      "gltf": "mobile/pumpkin-flat/model.gltf",
+      "vertices": 501,
+      "sha256": "bdf01d15439add20b805ff53ff60214fc690602ae2397b6175229dc762440433"
+    },
+    {
+      "thumbnail": "mobile/pumpkin-white.png",
+      "id": "pumpkin-white-mobile",
+      "name": "pumpkin-white",
+      "tier": "mobile",
+      "file": "mobile/pumpkin-white.glb",
+      "triangles": 880,
+      "bounds": {
+        "min": [
+          -0.3172141909599304,
+          0.014338139444589615,
+          -0.31976160407066345
+        ],
+        "max": [
+          0.336899995803833,
+          0.7365161180496216,
+          0.33893048763275146
+        ]
+      },
+      "gltf": "mobile/pumpkin-white/model.gltf",
+      "vertices": 501,
+      "sha256": "1f51708cc2c9620ff7f17ceb26ac536c97ebc288f67fdf9d012cdbedf344b738"
+    },
+    {
+      "thumbnail": "mobile/pumpkin-green.png",
+      "id": "pumpkin-green-mobile",
+      "name": "pumpkin-green",
+      "tier": "mobile",
+      "file": "mobile/pumpkin-green.glb",
+      "triangles": 880,
+      "bounds": {
+        "min": [
+          -0.336899995803833,
+          0.011373686604201794,
+          -0.29278749227523804
+        ],
+        "max": [
+          0.336899995803833,
+          0.582236111164093,
+          0.3094612956047058
+        ]
+      },
+      "gltf": "mobile/pumpkin-green/model.gltf",
+      "vertices": 501,
+      "sha256": "afa9364438a2f4457f99467e53272a8eda2e8f1d80a580a3492ebe2aad748001"
+    },
+    {
+      "thumbnail": "mobile/pumpkin-warty.png",
+      "id": "pumpkin-warty-mobile",
+      "name": "pumpkin-warty",
+      "tier": "mobile",
+      "file": "mobile/pumpkin-warty.glb",
+      "triangles": 2112,
+      "bounds": {
+        "min": [
+          -0.3139815628528595,
+          0.003000000026077032,
+          -0.31197863817214966
+        ],
+        "max": [
+          0.3538999855518341,
+          0.6567161083221436,
+          0.33067864179611206
+        ]
+      },
+      "gltf": "mobile/pumpkin-warty/model.gltf",
+      "vertices": 6072,
+      "sha256": "f2e81a9b046e8957e9cdbb8f17812d17f0dc8d147e1bc22814859fbfd929ae56"
+    },
+    {
+      "thumbnail": "mobile/woody-stem.png",
+      "id": "woody-stem-mobile",
+      "name": "woody-stem",
+      "tier": "mobile",
+      "file": "mobile/woody-stem.glb",
+      "triangles": 112,
+      "bounds": {
+        "min": [
+          -0.022383542731404305,
+          -0.013335639610886574,
+          -0.02147565223276615
+        ],
+        "max": [
+          0.07902766019105911,
+          0.17791610956192017,
+          0.05114790052175522
+        ]
+      },
+      "gltf": "mobile/woody-stem/model.gltf",
+      "vertices": 72,
+      "sha256": "ed80edb7dc4fd1d8dd8ca272da2102528cc3d5a52fb01b7198c1cde1340a84ba"
+    },
+    {
+      "thumbnail": "mobile/leaf-green.png",
+      "id": "leaf-green-mobile",
+      "name": "leaf-green",
+      "tier": "mobile",
+      "file": "mobile/leaf-green.glb",
+      "triangles": 1140,
+      "bounds": {
+        "min": [
+          -0.2951369285583496,
+          -0.004000000189989805,
+          -0.2119104117155075
+        ],
+        "max": [
+          0.33665916323661804,
+          0.12486305087804794,
+          0.38171297311782837
+        ]
+      },
+      "gltf": "mobile/leaf-green/model.gltf",
+      "vertices": 2408,
+      "sha256": "8a3fa0ae89c04a7c9837137f300f48f4a1d430bf48299c85b5bd6b87b95d992e"
+    },
+    {
+      "thumbnail": "mobile/leaf-yellow.png",
+      "id": "leaf-yellow-mobile",
+      "name": "leaf-yellow",
+      "tier": "mobile",
+      "file": "mobile/leaf-yellow.glb",
+      "triangles": 420,
+      "bounds": {
+        "min": [
+          -0.3047094941139221,
+          -0.004000000189989805,
+          -0.19624768197536469
+        ],
+        "max": [
+          0.3494071662425995,
+          0.12471206486225128,
+          0.3757975399494171
+        ]
+      },
+      "gltf": "mobile/leaf-yellow/model.gltf",
+      "vertices": 248,
+      "sha256": "fd83eafcd3a8af8cce18181de5fbcd76cb11242ae628430b7b911314b05f3164"
+    },
+    {
+      "thumbnail": "mobile/leaf-damaged.png",
+      "id": "leaf-damaged-mobile",
+      "name": "leaf-damaged",
+      "tier": "mobile",
+      "file": "mobile/leaf-damaged.glb",
+      "triangles": 420,
+      "bounds": {
+        "min": [
+          -0.30296531319618225,
+          -0.004000000189989805,
+          -0.18860973417758942
+        ],
+        "max": [
+          0.3085869252681732,
+          0.12499866634607315,
+          0.3829626739025116
+        ]
+      },
+      "gltf": "mobile/leaf-damaged/model.gltf",
+      "vertices": 248,
+      "sha256": "99bb32cb0f52d7f36d13d219ec35ac32faa916a4378391aa2d7e51cd11dfa43f"
+    },
+    {
+      "thumbnail": "mobile/leaf-veins.png",
+      "id": "leaf-veins-mobile",
+      "name": "leaf-veins",
+      "tier": "mobile",
+      "file": "mobile/leaf-veins.glb",
+      "triangles": 720,
+      "bounds": {
+        "min": [
+          -0.21849112212657928,
+          0.004466575104743242,
+          -0.2119104117155075
+        ],
+        "max": [
+          0.26036718487739563,
+          0.07554183900356293,
+          0.28367629647254944
+        ]
+      },
+      "gltf": "mobile/leaf-veins/model.gltf",
+      "vertices": 2160,
+      "sha256": "2edc40be97cf6cc8103d786570be010c9d6f8a20296d69ddd1245f665b3e2a3b"
+    },
+    {
+      "thumbnail": "mobile/male-blossom.png",
+      "id": "male-blossom-mobile",
+      "name": "male-blossom",
+      "tier": "mobile",
+      "file": "mobile/male-blossom.glb",
+      "triangles": 270,
+      "bounds": {
+        "min": [
+          -0.08331240713596344,
+          -0.18300573527812958,
+          -0.09510564804077148
+        ],
+        "max": [
+          0.10000000149011612,
+          0.07999999821186066,
+          0.09510564804077148
+        ]
+      },
+      "gltf": "mobile/male-blossom/model.gltf",
+      "vertices": 186,
+      "sha256": "52a31f8869429c92958ddffd0fa213616915208c187b6dd37f5780e9f17c1959"
+    },
+    {
+      "thumbnail": "mobile/female-blossom.png",
+      "id": "female-blossom-mobile",
+      "name": "female-blossom",
+      "tier": "mobile",
+      "file": "mobile/female-blossom.glb",
+      "triangles": 1038,
+      "bounds": {
+        "min": [
+          -0.08331240713596344,
+          -0.18300573527812958,
+          -0.09510564804077148
+        ],
+        "max": [
+          0.10000000149011612,
+          0.07999999821186066,
+          0.09510564804077148
+        ]
+      },
+      "gltf": "mobile/female-blossom/model.gltf",
+      "vertices": 615,
+      "sha256": "2bd3f33594490748dd80719b923abb720ba5f6d8063271f3ba71006f3934cdfe"
+    },
+    {
+      "thumbnail": "mobile/vine-tendril.png",
+      "id": "vine-tendril-mobile",
+      "name": "vine-tendril",
+      "tier": "mobile",
+      "file": "mobile/vine-tendril.glb",
+      "triangles": 4716,
+      "bounds": {
+        "min": [
+          -0.2951369285583496,
+          -0.004000000189989805,
+          -0.20783066749572754
+        ],
+        "max": [
+          0.33665916323661804,
+          0.12486305087804794,
+          0.38171297311782837
+        ]
+      },
+      "gltf": "mobile/vine-tendril/model.gltf",
+      "vertices": 6092,
+      "sha256": "ff2772f4d7ce55a918775058872cacbfe886362e5fc8d4bdd44e593168d75a13"
+    },
+    {
+      "thumbnail": "mobile/metal-arch.png",
+      "id": "metal-arch-mobile",
+      "name": "metal-arch",
+      "tier": "mobile",
+      "file": "mobile/metal-arch.glb",
+      "triangles": 2520,
+      "bounds": {
+        "min": [
+          -1.2239550352096558,
+          -9.728071290737716e-07,
+          -1.019821286201477
+        ],
+        "max": [
+          1.2246884107589722,
+          2.5220000743865967,
+          1.0219999551773071
+        ]
+      },
+      "gltf": "mobile/metal-arch/model.gltf",
+      "vertices": 7560,
+      "sha256": "d467699fd1822019e419a1caf3ab16395548c4b2ba4814172758dba6dd0a58ad"
+    },
+    {
+      "thumbnail": "mobile/wooden-trellis.png",
+      "id": "wooden-trellis-mobile",
+      "name": "wooden-trellis",
+      "tier": "mobile",
+      "file": "mobile/wooden-trellis.glb",
+      "triangles": 216,
+      "bounds": {
+        "min": [
+          -1.2374999523162842,
+          0,
+          -0.03750000149011612
+        ],
+        "max": [
+          1.2374999523162842,
+          2.5,
+          0.07000000029802322
+        ]
+      },
+      "gltf": "mobile/wooden-trellis/model.gltf",
+      "vertices": 648,
+      "sha256": "dcdbeb7a94a1f63982c2b39361c65e3347d3fca9990d714cfc416c3f62795f70"
+    },
+    {
+      "thumbnail": "mobile/fence.png",
+      "id": "fence-mobile",
+      "name": "fence",
+      "tier": "mobile",
+      "file": "mobile/fence.glb",
+      "triangles": 120,
+      "bounds": {
+        "min": [
+          -1.2374999523162842,
+          0,
+          -0.03750000149011612
+        ],
+        "max": [
+          1.2374999523162842,
+          2.5,
+          0.03750000149011612
+        ]
+      },
+      "gltf": "mobile/fence/model.gltf",
+      "vertices": 360,
+      "sha256": "2296a7fb7e6464723d5d2a623a097052713777f75ef5dec0cc6a20ed7a6eacee"
+    },
+    {
+      "thumbnail": "mobile/trellis-modules.png",
+      "id": "trellis-modules-mobile",
+      "name": "trellis-modules",
+      "tier": "mobile",
+      "file": "mobile/trellis-modules.glb",
+      "triangles": 416,
+      "bounds": {
+        "min": [
+          -0.02500000037252903,
+          -0.011050931178033352,
+          -0.03200000151991844
+        ],
+        "max": [
+          1.4642083644866943,
+          1,
+          0.03200000151991844
+        ]
+      },
+      "gltf": "mobile/trellis-modules/model.gltf",
+      "vertices": 288,
+      "sha256": "fb779f2dba4e3465a147efe07e2515c96b8b17b47db61f96d5672feeb06229e2"
+    },
+    {
+      "thumbnail": "medium/pumpkin-round.png",
+      "id": "pumpkin-round-medium",
+      "name": "pumpkin-round",
+      "tier": "medium",
+      "file": "medium/pumpkin-round.glb",
+      "triangles": 1840,
+      "bounds": {
+        "min": [
+          -0.3179468810558319,
+          0.013896576128900051,
+          -0.31908729672431946
+        ],
+        "max": [
+          0.336899995803833,
+          0.7099161148071289,
+          0.3404127359390259
+        ]
+      },
+      "gltf": "medium/pumpkin-round/model.gltf",
+      "vertices": 1003,
+      "sha256": "0616585d95c06c0cd2c9f5e814837cd3bd97978a9a67f429fe6d8b534c24585e"
+    },
+    {
+      "thumbnail": "medium/pumpkin-tall.png",
+      "id": "pumpkin-tall-medium",
+      "name": "pumpkin-tall",
+      "tier": "medium",
+      "file": "medium/pumpkin-tall.glb",
+      "triangles": 1840,
+      "bounds": {
+        "min": [
+          -0.336899995803833,
+          0.01585637591779232,
+          -0.31033048033714294
+        ],
+        "max": [
+          0.336899995803833,
+          0.938676118850708,
+          0.326080858707428
+        ]
+      },
+      "gltf": "medium/pumpkin-tall/model.gltf",
+      "vertices": 1003,
+      "sha256": "5bafe7d970c097ca49b80628bbcefcabc21426a88117a6afbc7cb00c31bd75d1"
+    },
+    {
+      "thumbnail": "medium/pumpkin-squat.png",
+      "id": "pumpkin-squat-medium",
+      "name": "pumpkin-squat",
+      "tier": "medium",
+      "file": "medium/pumpkin-squat.glb",
+      "triangles": 1840,
+      "bounds": {
+        "min": [
+          -0.3315472900867462,
+          0.012392544187605381,
+          -0.32274526357650757
+        ],
+        "max": [
+          0.336899995803833,
+          0.5343561172485352,
+          0.34431517124176025
+        ]
+      },
+      "gltf": "medium/pumpkin-squat/model.gltf",
+      "vertices": 1003,
+      "sha256": "f21c29cd8a1e7598263636d375a8edc952d65f46c98eeb5513b216db7533b644"
+    },
+    {
+      "thumbnail": "medium/pumpkin-flat.png",
+      "id": "pumpkin-flat-medium",
+      "name": "pumpkin-flat",
+      "tier": "medium",
+      "file": "medium/pumpkin-flat.glb",
+      "triangles": 1840,
+      "bounds": {
+        "min": [
+          -0.336899995803833,
+          0.009635072201490402,
+          -0.32510849833488464
+        ],
+        "max": [
+          0.336899995803833,
+          0.43327608704566956,
+          0.34869149327278137
+        ]
+      },
+      "gltf": "medium/pumpkin-flat/model.gltf",
+      "vertices": 1003,
+      "sha256": "f1094acbfdae7572b40e8efa9c13fa570146f970012b2a87c3ff3190fc810ede"
+    },
+    {
+      "thumbnail": "medium/pumpkin-white.png",
+      "id": "pumpkin-white-medium",
+      "name": "pumpkin-white",
+      "tier": "medium",
+      "file": "medium/pumpkin-white.glb",
+      "triangles": 1840,
+      "bounds": {
+        "min": [
+          -0.3179468810558319,
+          0.014124460518360138,
+          -0.31908729672431946
+        ],
+        "max": [
+          0.336899995803833,
+          0.7365161180496216,
+          0.3404127359390259
+        ]
+      },
+      "gltf": "medium/pumpkin-white/model.gltf",
+      "vertices": 1003,
+      "sha256": "c5835293eb63eb0dee3a40f7f02ae15c6fed85325c9b036ad0a7e8ca2621dc7d"
+    },
+    {
+      "thumbnail": "medium/pumpkin-green.png",
+      "id": "pumpkin-green-medium",
+      "name": "pumpkin-green",
+      "tier": "medium",
+      "file": "medium/pumpkin-green.glb",
+      "triangles": 1840,
+      "bounds": {
+        "min": [
+          -0.336899995803833,
+          0.012802734971046448,
+          -0.31033048033714294
+        ],
+        "max": [
+          0.336899995803833,
+          0.582236111164093,
+          0.326080858707428
+        ]
+      },
+      "gltf": "medium/pumpkin-green/model.gltf",
+      "vertices": 1003,
+      "sha256": "751b3bf3db688d79f4ebce7b882081e8ff375ba83ee14df84165f8ea000c76eb"
+    },
+    {
+      "thumbnail": "medium/pumpkin-warty.png",
+      "id": "pumpkin-warty-medium",
+      "name": "pumpkin-warty",
+      "tier": "medium",
+      "file": "medium/pumpkin-warty.glb",
+      "triangles": 4192,
+      "bounds": {
+        "min": [
+          -0.3315472900867462,
+          0.003000000026077032,
+          -0.32275688648223877
+        ],
+        "max": [
+          0.3538999855518341,
+          0.6567161083221436,
+          0.34432682394981384
+        ]
+      },
+      "gltf": "medium/pumpkin-warty/model.gltf",
+      "vertices": 12312,
+      "sha256": "4b8127b9e834e2dd8d691b3dd9b527fc74e40639ac92bd95a038e585b2bc0709"
+    },
+    {
+      "thumbnail": "medium/woody-stem.png",
+      "id": "woody-stem-medium",
+      "name": "woody-stem",
+      "tier": "medium",
+      "file": "medium/woody-stem.glb",
+      "triangles": 112,
+      "bounds": {
+        "min": [
+          -0.022383542731404305,
+          -0.013335639610886574,
+          -0.02147565223276615
+        ],
+        "max": [
+          0.07902766019105911,
+          0.17791610956192017,
+          0.05114790052175522
+        ]
+      },
+      "gltf": "medium/woody-stem/model.gltf",
+      "vertices": 72,
+      "sha256": "ed80edb7dc4fd1d8dd8ca272da2102528cc3d5a52fb01b7198c1cde1340a84ba"
+    },
+    {
+      "thumbnail": "medium/leaf-green.png",
+      "id": "leaf-green-medium",
+      "name": "leaf-green",
+      "tier": "medium",
+      "file": "medium/leaf-green.glb",
+      "triangles": 1600,
+      "bounds": {
+        "min": [
+          -0.308366060256958,
+          -0.004000000189989805,
+          -0.2119104117155075
+        ],
+        "max": [
+          0.33665916323661804,
+          0.12377641350030899,
+          0.38171297311782837
+        ]
+      },
+      "gltf": "medium/leaf-green/model.gltf",
+      "vertices": 2652,
+      "sha256": "b30cc9d8ccf1084f33a13a5415c09b8d248a0c105cd3b17f5cac44497b0c6c24"
+    },
+    {
+      "thumbnail": "medium/leaf-yellow.png",
+      "id": "leaf-yellow-medium",
+      "name": "leaf-yellow",
+      "tier": "medium",
+      "file": "medium/leaf-yellow.glb",
+      "triangles": 880,
+      "bounds": {
+        "min": [
+          -0.30408260226249695,
+          -0.004000000189989805,
+          -0.19651705026626587
+        ],
+        "max": [
+          0.3494071662425995,
+          0.12495864927768707,
+          0.37792062759399414
+        ]
+      },
+      "gltf": "medium/leaf-yellow/model.gltf",
+      "vertices": 492,
+      "sha256": "2dc862f54d303bc37203db7da6c27459dc23eb96a41942b272dfb2694d064fbc"
+    },
+    {
+      "thumbnail": "medium/leaf-damaged.png",
+      "id": "leaf-damaged-medium",
+      "name": "leaf-damaged",
+      "tier": "medium",
+      "file": "medium/leaf-damaged.glb",
+      "triangles": 880,
+      "bounds": {
+        "min": [
+          -0.2916726768016815,
+          -0.004000000189989805,
+          -0.18860973417758942
+        ],
+        "max": [
+          0.3125655949115753,
+          0.12450604885816574,
+          0.3829626739025116
+        ]
+      },
+      "gltf": "medium/leaf-damaged/model.gltf",
+      "vertices": 492,
+      "sha256": "656e48aa9c1e4cd5ef98b7c25681184cce999dc5dc5a10494c9bfeb2b42cfbe2"
+    },
+    {
+      "thumbnail": "medium/leaf-veins.png",
+      "id": "leaf-veins-medium",
+      "name": "leaf-veins",
+      "tier": "medium",
+      "file": "medium/leaf-veins.glb",
+      "triangles": 720,
+      "bounds": {
+        "min": [
+          -0.21849112212657928,
+          0.004466575104743242,
+          -0.2119104117155075
+        ],
+        "max": [
+          0.26036718487739563,
+          0.07554183900356293,
+          0.28367629647254944
+        ]
+      },
+      "gltf": "medium/leaf-veins/model.gltf",
+      "vertices": 2160,
+      "sha256": "2edc40be97cf6cc8103d786570be010c9d6f8a20296d69ddd1245f665b3e2a3b"
+    },
+    {
+      "thumbnail": "medium/male-blossom.png",
+      "id": "male-blossom-medium",
+      "name": "male-blossom",
+      "tier": "medium",
+      "file": "medium/male-blossom.glb",
+      "triangles": 270,
+      "bounds": {
+        "min": [
+          -0.08331240713596344,
+          -0.18300573527812958,
+          -0.09510564804077148
+        ],
+        "max": [
+          0.10000000149011612,
+          0.07999999821186066,
+          0.09510564804077148
+        ]
+      },
+      "gltf": "medium/male-blossom/model.gltf",
+      "vertices": 186,
+      "sha256": "c6b36be7fd54dd4b670b1f6c3c18b32f0d6b262500445eebecbc7236e1f13c68"
+    },
+    {
+      "thumbnail": "medium/female-blossom.png",
+      "id": "female-blossom-medium",
+      "name": "female-blossom",
+      "tier": "medium",
+      "file": "medium/female-blossom.glb",
+      "triangles": 1998,
+      "bounds": {
+        "min": [
+          -0.08331240713596344,
+          -0.18300573527812958,
+          -0.09510564804077148
+        ],
+        "max": [
+          0.10000000149011612,
+          0.07999999821186066,
+          0.09510564804077148
+        ]
+      },
+      "gltf": "medium/female-blossom/model.gltf",
+      "vertices": 1117,
+      "sha256": "0396e76125f1820bc6c0e2d4486fec45d7bf2b7789ed7ae50a13e229917142c5"
+    },
+    {
+      "thumbnail": "medium/vine-tendril.png",
+      "id": "vine-tendril-medium",
+      "name": "vine-tendril",
+      "tier": "medium",
+      "file": "medium/vine-tendril.glb",
+      "triangles": 20024,
+      "bounds": {
+        "min": [
+          -0.308366060256958,
+          -0.004000000189989805,
+          -0.2119104117155075
+        ],
+        "max": [
+          0.33665916323661804,
+          0.12437319755554199,
+          0.38171297311782837
+        ]
+      },
+      "gltf": "medium/vine-tendril/model.gltf",
+      "vertices": 35472,
+      "sha256": "7b7e4a976dfc18ec0cafb8331661876421a79676e70fccc01c76988954126c8d"
+    },
+    {
+      "thumbnail": "medium/metal-arch.png",
+      "id": "metal-arch-medium",
+      "name": "metal-arch",
+      "tier": "medium",
+      "file": "medium/metal-arch.glb",
+      "triangles": 2520,
+      "bounds": {
+        "min": [
+          -1.2239550352096558,
+          -9.728071290737716e-07,
+          -1.019821286201477
+        ],
+        "max": [
+          1.2246884107589722,
+          2.5220000743865967,
+          1.0219999551773071
+        ]
+      },
+      "gltf": "medium/metal-arch/model.gltf",
+      "vertices": 7560,
+      "sha256": "d467699fd1822019e419a1caf3ab16395548c4b2ba4814172758dba6dd0a58ad"
+    },
+    {
+      "thumbnail": "medium/wooden-trellis.png",
+      "id": "wooden-trellis-medium",
+      "name": "wooden-trellis",
+      "tier": "medium",
+      "file": "medium/wooden-trellis.glb",
+      "triangles": 216,
+      "bounds": {
+        "min": [
+          -1.2374999523162842,
+          0,
+          -0.03750000149011612
+        ],
+        "max": [
+          1.2374999523162842,
+          2.5,
+          0.07000000029802322
+        ]
+      },
+      "gltf": "medium/wooden-trellis/model.gltf",
+      "vertices": 648,
+      "sha256": "dcdbeb7a94a1f63982c2b39361c65e3347d3fca9990d714cfc416c3f62795f70"
+    },
+    {
+      "thumbnail": "medium/fence.png",
+      "id": "fence-medium",
+      "name": "fence",
+      "tier": "medium",
+      "file": "medium/fence.glb",
+      "triangles": 120,
+      "bounds": {
+        "min": [
+          -1.2374999523162842,
+          0,
+          -0.03750000149011612
+        ],
+        "max": [
+          1.2374999523162842,
+          2.5,
+          0.03750000149011612
+        ]
+      },
+      "gltf": "medium/fence/model.gltf",
+      "vertices": 360,
+      "sha256": "2296a7fb7e6464723d5d2a623a097052713777f75ef5dec0cc6a20ed7a6eacee"
+    },
+    {
+      "thumbnail": "medium/trellis-modules.png",
+      "id": "trellis-modules-medium",
+      "name": "trellis-modules",
+      "tier": "medium",
+      "file": "medium/trellis-modules.glb",
+      "triangles": 416,
+      "bounds": {
+        "min": [
+          -0.02500000037252903,
+          -0.011050931178033352,
+          -0.03200000151991844
+        ],
+        "max": [
+          1.4642083644866943,
+          1,
+          0.03200000151991844
+        ]
+      },
+      "gltf": "medium/trellis-modules/model.gltf",
+      "vertices": 288,
+      "sha256": "fb779f2dba4e3465a147efe07e2515c96b8b17b47db61f96d5672feeb06229e2"
+    },
+    {
+      "thumbnail": "high/pumpkin-round.png",
+      "id": "pumpkin-round-high",
+      "name": "pumpkin-round",
+      "tier": "high",
+      "file": "high/pumpkin-round.glb",
+      "triangles": 4144,
+      "bounds": {
+        "min": [
+          -0.32617834210395813,
+          0.013201074674725533,
+          -0.32172513008117676
+        ],
+        "max": [
+          0.33783620595932007,
+          0.7099161148071289,
+          0.3418383300304413
+        ]
+      },
+      "gltf": "high/pumpkin-round/model.gltf",
+      "vertices": 2189,
+      "sha256": "65211a767a4ba793ac94c08e32fdcb9848c6b30ebcbcbfd2927030428df1b71c"
+    },
+    {
+      "thumbnail": "high/pumpkin-tall.png",
+      "id": "pumpkin-tall-high",
+      "name": "pumpkin-tall",
+      "tier": "high",
+      "file": "high/pumpkin-tall.glb",
+      "triangles": 4144,
+      "bounds": {
+        "min": [
+          -0.33783620595932007,
+          0.016435373574495316,
+          -0.3107281029224396
+        ],
+        "max": [
+          0.33783620595932007,
+          0.938676118850708,
+          0.326080858707428
+        ]
+      },
+      "gltf": "high/pumpkin-tall/model.gltf",
+      "vertices": 2189,
+      "sha256": "4848c7490b31931a321f456ba5ec130239692fe02b50f5b5d0199aa68d51c40f"
+    },
+    {
+      "thumbnail": "high/pumpkin-squat.png",
+      "id": "pumpkin-squat-high",
+      "name": "pumpkin-squat",
+      "tier": "high",
+      "file": "high/pumpkin-squat.glb",
+      "triangles": 4144,
+      "bounds": {
+        "min": [
+          -0.3315472900867462,
+          0.0107189379632473,
+          -0.3184558153152466
+        ],
+        "max": [
+          0.33783620595932007,
+          0.5343561172485352,
+          0.3383646309375763
+        ]
+      },
+      "gltf": "high/pumpkin-squat/model.gltf",
+      "vertices": 2189,
+      "sha256": "86e8f4b171e86e557abb28f45b9ba78eb150494fb860d5aa129f4eb26807dc74"
+    },
+    {
+      "thumbnail": "high/pumpkin-flat.png",
+      "id": "pumpkin-flat-high",
+      "name": "pumpkin-flat",
+      "tier": "high",
+      "file": "high/pumpkin-flat.glb",
+      "triangles": 4144,
+      "bounds": {
+        "min": [
+          -0.33783620595932007,
+          0.009258138947188854,
+          -0.32510849833488464
+        ],
+        "max": [
+          0.33783620595932007,
+          0.43327608704566956,
+          0.34869149327278137
+        ]
+      },
+      "gltf": "high/pumpkin-flat/model.gltf",
+      "vertices": 2189,
+      "sha256": "aa38ee63177e5af7baa98f214e5d7aa7c8295b15965b0020b55740543b5cd821"
+    },
+    {
+      "thumbnail": "high/pumpkin-white.png",
+      "id": "pumpkin-white-high",
+      "name": "pumpkin-white",
+      "tier": "high",
+      "file": "high/pumpkin-white.glb",
+      "triangles": 4144,
+      "bounds": {
+        "min": [
+          -0.32617834210395813,
+          0.013577156700193882,
+          -0.32172513008117676
+        ],
+        "max": [
+          0.33783620595932007,
+          0.7365161180496216,
+          0.3418383300304413
+        ]
+      },
+      "gltf": "high/pumpkin-white/model.gltf",
+      "vertices": 2189,
+      "sha256": "86929beb825785d7b63b4845018945c283a49721338adec601085eff0aec56eb"
+    },
+    {
+      "thumbnail": "high/pumpkin-green.png",
+      "id": "pumpkin-green-high",
+      "name": "pumpkin-green",
+      "tier": "high",
+      "file": "high/pumpkin-green.glb",
+      "triangles": 4144,
+      "bounds": {
+        "min": [
+          -0.33783620595932007,
+          0.011395884677767754,
+          -0.3107281029224396
+        ],
+        "max": [
+          0.33783620595932007,
+          0.582236111164093,
+          0.326080858707428
+        ]
+      },
+      "gltf": "high/pumpkin-green/model.gltf",
+      "vertices": 2189,
+      "sha256": "41c53cf299c0ae7c5e21104e529ad64cc4b6533aedbd8adb99acc17f2ca98697"
+    },
+    {
+      "thumbnail": "high/pumpkin-warty.png",
+      "id": "pumpkin-warty-high",
+      "name": "pumpkin-warty",
+      "tier": "high",
+      "file": "high/pumpkin-warty.glb",
+      "triangles": 6496,
+      "bounds": {
+        "min": [
+          -0.33718448877334595,
+          0.003000000026077032,
+          -0.32328104972839355
+        ],
+        "max": [
+          0.3538999855518341,
+          0.6567161083221436,
+          0.3431898355484009
+        ]
+      },
+      "gltf": "high/pumpkin-warty/model.gltf",
+      "vertices": 19224,
+      "sha256": "e1d6ea38888f746ca7700a56c2108ad24cc28516b2e1786e6a1b1ac9b6f577a5"
+    },
+    {
+      "thumbnail": "high/woody-stem.png",
+      "id": "woody-stem-high",
+      "name": "woody-stem",
+      "tier": "high",
+      "file": "high/woody-stem.glb",
+      "triangles": 112,
+      "bounds": {
+        "min": [
+          -0.022383542731404305,
+          -0.013335639610886574,
+          -0.02147565223276615
+        ],
+        "max": [
+          0.07902766019105911,
+          0.17791610956192017,
+          0.05114790052175522
+        ]
+      },
+      "gltf": "high/woody-stem/model.gltf",
+      "vertices": 72,
+      "sha256": "ed80edb7dc4fd1d8dd8ca272da2102528cc3d5a52fb01b7198c1cde1340a84ba"
+    },
+    {
+      "thumbnail": "high/leaf-green.png",
+      "id": "leaf-green-high",
+      "name": "leaf-green",
+      "tier": "high",
+      "file": "high/leaf-green.glb",
+      "triangles": 2520,
+      "bounds": {
+        "min": [
+          -0.29942449927330017,
+          -0.004000000189989805,
+          -0.2119104117155075
+        ],
+        "max": [
+          0.33665916323661804,
+          0.12486305087804794,
+          0.3925012946128845
+        ]
+      },
+      "gltf": "high/leaf-green/model.gltf",
+      "vertices": 3136,
+      "sha256": "474eb652c7e9d64946511e991b9d93340a903e6833d0e480421dd5b97d8062b6"
+    },
+    {
+      "thumbnail": "high/leaf-yellow.png",
+      "id": "leaf-yellow-high",
+      "name": "leaf-yellow",
+      "tier": "high",
+      "file": "high/leaf-yellow.glb",
+      "triangles": 1800,
+      "bounds": {
+        "min": [
+          -0.3047094941139221,
+          -0.004000000189989805,
+          -0.19648170471191406
+        ],
+        "max": [
+          0.3494071662425995,
+          0.12471206486225128,
+          0.3899826109409332
+        ]
+      },
+      "gltf": "high/leaf-yellow/model.gltf",
+      "vertices": 976,
+      "sha256": "166bbeb561a71a68fb0bbfd39f1467cb9da3dd4dc42a708d921796eaa3f8b97a"
+    },
+    {
+      "thumbnail": "high/leaf-damaged.png",
+      "id": "leaf-damaged-high",
+      "name": "leaf-damaged",
+      "tier": "high",
+      "file": "high/leaf-damaged.glb",
+      "triangles": 1800,
+      "bounds": {
+        "min": [
+          -0.30296531319618225,
+          -0.004000000189989805,
+          -0.18860973417758942
+        ],
+        "max": [
+          0.3296745717525482,
+          0.12499866634607315,
+          0.3923117220401764
+        ]
+      },
+      "gltf": "high/leaf-damaged/model.gltf",
+      "vertices": 976,
+      "sha256": "57291f383330314174df7a50cf79bb029033fb3b31347ec633906f0a22e09784"
+    },
+    {
+      "thumbnail": "high/leaf-veins.png",
+      "id": "leaf-veins-high",
+      "name": "leaf-veins",
+      "tier": "high",
+      "file": "high/leaf-veins.glb",
+      "triangles": 720,
+      "bounds": {
+        "min": [
+          -0.21849112212657928,
+          0.004466575104743242,
+          -0.2119104117155075
+        ],
+        "max": [
+          0.26036718487739563,
+          0.07554183900356293,
+          0.28367629647254944
+        ]
+      },
+      "gltf": "high/leaf-veins/model.gltf",
+      "vertices": 2160,
+      "sha256": "2edc40be97cf6cc8103d786570be010c9d6f8a20296d69ddd1245f665b3e2a3b"
+    },
+    {
+      "thumbnail": "high/male-blossom.png",
+      "id": "male-blossom-high",
+      "name": "male-blossom",
+      "tier": "high",
+      "file": "high/male-blossom.glb",
+      "triangles": 270,
+      "bounds": {
+        "min": [
+          -0.08331240713596344,
+          -0.18300573527812958,
+          -0.09510564804077148
+        ],
+        "max": [
+          0.10000000149011612,
+          0.07999999821186066,
+          0.09510564804077148
+        ]
+      },
+      "gltf": "high/male-blossom/model.gltf",
+      "vertices": 186,
+      "sha256": "21c2eda1785b1e3edbcc9a74bc6bca86feed4568df07873160dd30ed58393b51"
+    },
+    {
+      "thumbnail": "high/female-blossom.png",
+      "id": "female-blossom-high",
+      "name": "female-blossom",
+      "tier": "high",
+      "file": "high/female-blossom.glb",
+      "triangles": 4302,
+      "bounds": {
+        "min": [
+          -0.08331240713596344,
+          -0.18300573527812958,
+          -0.09510564804077148
+        ],
+        "max": [
+          0.10000000149011612,
+          0.07999999821186066,
+          0.09510564804077148
+        ]
+      },
+      "gltf": "high/female-blossom/model.gltf",
+      "vertices": 2303,
+      "sha256": "23ccb60070c896ddaab8cc58f3f8abf5fb092ba9565f30c83bd7eaee90fede82"
+    },
+    {
+      "thumbnail": "high/vine-tendril.png",
+      "id": "vine-tendril-high",
+      "name": "vine-tendril",
+      "tier": "high",
+      "file": "high/vine-tendril.glb",
+      "triangles": 35490,
+      "bounds": {
+        "min": [
+          -0.29942449927330017,
+          -0.004000000189989805,
+          -0.2119104117155075
+        ],
+        "max": [
+          0.33665916323661804,
+          0.125,
+          0.39686936140060425
+        ]
+      },
+      "gltf": "high/vine-tendril/model.gltf",
+      "vertices": 47500,
+      "sha256": "a0be9745eb1fa7471f55dbd3b446ff9cf916716daf3a57b4d6d2e7cc9b72267f"
+    },
+    {
+      "thumbnail": "high/metal-arch.png",
+      "id": "metal-arch-high",
+      "name": "metal-arch",
+      "tier": "high",
+      "file": "high/metal-arch.glb",
+      "triangles": 2520,
+      "bounds": {
+        "min": [
+          -1.2239550352096558,
+          -9.728071290737716e-07,
+          -1.019821286201477
+        ],
+        "max": [
+          1.2246884107589722,
+          2.5220000743865967,
+          1.0219999551773071
+        ]
+      },
+      "gltf": "high/metal-arch/model.gltf",
+      "vertices": 7560,
+      "sha256": "d467699fd1822019e419a1caf3ab16395548c4b2ba4814172758dba6dd0a58ad"
+    },
+    {
+      "thumbnail": "high/wooden-trellis.png",
+      "id": "wooden-trellis-high",
+      "name": "wooden-trellis",
+      "tier": "high",
+      "file": "high/wooden-trellis.glb",
+      "triangles": 216,
+      "bounds": {
+        "min": [
+          -1.2374999523162842,
+          0,
+          -0.03750000149011612
+        ],
+        "max": [
+          1.2374999523162842,
+          2.5,
+          0.07000000029802322
+        ]
+      },
+      "gltf": "high/wooden-trellis/model.gltf",
+      "vertices": 648,
+      "sha256": "dcdbeb7a94a1f63982c2b39361c65e3347d3fca9990d714cfc416c3f62795f70"
+    },
+    {
+      "thumbnail": "high/fence.png",
+      "id": "fence-high",
+      "name": "fence",
+      "tier": "high",
+      "file": "high/fence.glb",
+      "triangles": 120,
+      "bounds": {
+        "min": [
+          -1.2374999523162842,
+          0,
+          -0.03750000149011612
+        ],
+        "max": [
+          1.2374999523162842,
+          2.5,
+          0.03750000149011612
+        ]
+      },
+      "gltf": "high/fence/model.gltf",
+      "vertices": 360,
+      "sha256": "2296a7fb7e6464723d5d2a623a097052713777f75ef5dec0cc6a20ed7a6eacee"
+    },
+    {
+      "thumbnail": "high/trellis-modules.png",
+      "id": "trellis-modules-high",
+      "name": "trellis-modules",
+      "tier": "high",
+      "file": "high/trellis-modules.glb",
+      "triangles": 416,
+      "bounds": {
+        "min": [
+          -0.02500000037252903,
+          -0.011050931178033352,
+          -0.03200000151991844
+        ],
+        "max": [
+          1.4642083644866943,
+          1,
+          0.03200000151991844
+        ]
+      },
+      "gltf": "high/trellis-modules/model.gltf",
+      "vertices": 288,
+      "sha256": "fb779f2dba4e3465a147efe07e2515c96b8b17b47db61f96d5672feeb06229e2"
+    }
+  ],
+  "qualityNotes": [
+    "Runtime wind is a Three.js shader; exported GLB is static.",
+    "Height maps are supplied separately; glTF does not encode displacement.",
+    "Normal and roughness maps are procedural, not scanned."
+  ],
+  "review": "Technical candidate; awaiting user visual review",
+  "validation": {
+    "passed": true,
+    "scope": "GLB container, finite positions, triangle primitives, material ranges, decodable image signatures, dependency closure",
+    "assets": 57
+  }
+}

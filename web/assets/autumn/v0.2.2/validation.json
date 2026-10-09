@@ -1,0 +1,2098 @@
+[
+  {
+    "id": "pumpkin-round-mobile",
+    "passed": true,
+    "triangles": 880,
+    "vertices": 501,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "1479c39846344bae007579de282fb2065111939179e71d42ca3e1174f45c482a",
+        "bytes": 567756
+      },
+      "model.gltf": {
+        "sha256": "6a3f21c96b8351a6884820adb3b86b7018e2619c1c162b20cb521e2b3bd9ba35",
+        "bytes": 3968
+      },
+      "texture-0.png": {
+        "sha256": "b9605f3b417dbe319f8b62d0df9e8e550a3e8753bb4b6677aeb5b2654d0eb958",
+        "bytes": 45480
+      },
+      "texture-1.png": {
+        "sha256": "19e4427e31a374e6e0afea960ee380d0ce119dff557a151665271b708c529685",
+        "bytes": 123440
+      },
+      "texture-2.png": {
+        "sha256": "f3d68f0422a5af8c2f200d2ad53f806719f9df8d6b8e3f9e2d6872694ad2fc84",
+        "bytes": 97952
+      },
+      "texture-3.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-4.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-5.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "pumpkin-tall-mobile",
+    "passed": true,
+    "triangles": 880,
+    "vertices": 501,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "bbece553d4a8bd36225d4fd2609ba8e66d72693c86d445141679bde1285fd1cf",
+        "bytes": 567756
+      },
+      "model.gltf": {
+        "sha256": "38b508d1f03325ea2360ace1415b38557478a6b0caeb98e5202c1cf3a674faa2",
+        "bytes": 3938
+      },
+      "texture-0.png": {
+        "sha256": "b9605f3b417dbe319f8b62d0df9e8e550a3e8753bb4b6677aeb5b2654d0eb958",
+        "bytes": 45480
+      },
+      "texture-1.png": {
+        "sha256": "19e4427e31a374e6e0afea960ee380d0ce119dff557a151665271b708c529685",
+        "bytes": 123440
+      },
+      "texture-2.png": {
+        "sha256": "f3d68f0422a5af8c2f200d2ad53f806719f9df8d6b8e3f9e2d6872694ad2fc84",
+        "bytes": 97952
+      },
+      "texture-3.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-4.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-5.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "pumpkin-squat-mobile",
+    "passed": true,
+    "triangles": 880,
+    "vertices": 501,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "95ece7a6da00a5eece14cacc89d494c65cd885ca05d4cb03e0f0f11064974c67",
+        "bytes": 567756
+      },
+      "model.gltf": {
+        "sha256": "07ddf4d5b735f64ed40d8c0c91212015dde3db40eab74501955a3c65c5808a9c",
+        "bytes": 3984
+      },
+      "texture-0.png": {
+        "sha256": "b9605f3b417dbe319f8b62d0df9e8e550a3e8753bb4b6677aeb5b2654d0eb958",
+        "bytes": 45480
+      },
+      "texture-1.png": {
+        "sha256": "19e4427e31a374e6e0afea960ee380d0ce119dff557a151665271b708c529685",
+        "bytes": 123440
+      },
+      "texture-2.png": {
+        "sha256": "f3d68f0422a5af8c2f200d2ad53f806719f9df8d6b8e3f9e2d6872694ad2fc84",
+        "bytes": 97952
+      },
+      "texture-3.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-4.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-5.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "pumpkin-flat-mobile",
+    "passed": true,
+    "triangles": 880,
+    "vertices": 501,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "028992721a26479def3547325dd26fdc6f0a1e064250b373022151f388856695",
+        "bytes": 567756
+      },
+      "model.gltf": {
+        "sha256": "a52cbe6a988d1fd170f7cdd6eb31e9f3d4e5d58a4517e629629229873ce9a1a9",
+        "bytes": 3955
+      },
+      "texture-0.png": {
+        "sha256": "b9605f3b417dbe319f8b62d0df9e8e550a3e8753bb4b6677aeb5b2654d0eb958",
+        "bytes": 45480
+      },
+      "texture-1.png": {
+        "sha256": "19e4427e31a374e6e0afea960ee380d0ce119dff557a151665271b708c529685",
+        "bytes": 123440
+      },
+      "texture-2.png": {
+        "sha256": "f3d68f0422a5af8c2f200d2ad53f806719f9df8d6b8e3f9e2d6872694ad2fc84",
+        "bytes": 97952
+      },
+      "texture-3.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-4.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-5.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "pumpkin-white-mobile",
+    "passed": true,
+    "triangles": 880,
+    "vertices": 501,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "0c5557a5d95e0fa1a94c4d0817534f355cb803a9aa3a203519d2fa8421561c31",
+        "bytes": 567756
+      },
+      "model.gltf": {
+        "sha256": "4500f20b4298ef7f3fa8f9c3a949453a31ee40a4305f924bbd31a05410a32677",
+        "bytes": 3981
+      },
+      "texture-0.png": {
+        "sha256": "b9605f3b417dbe319f8b62d0df9e8e550a3e8753bb4b6677aeb5b2654d0eb958",
+        "bytes": 45480
+      },
+      "texture-1.png": {
+        "sha256": "19e4427e31a374e6e0afea960ee380d0ce119dff557a151665271b708c529685",
+        "bytes": 123440
+      },
+      "texture-2.png": {
+        "sha256": "f3d68f0422a5af8c2f200d2ad53f806719f9df8d6b8e3f9e2d6872694ad2fc84",
+        "bytes": 97952
+      },
+      "texture-3.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-4.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-5.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "pumpkin-green-mobile",
+    "passed": true,
+    "triangles": 880,
+    "vertices": 501,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "bf3ba5c2eb07f1e4a1b405659170e9a98bceef712a3670bd92da1f9d87195395",
+        "bytes": 567756
+      },
+      "model.gltf": {
+        "sha256": "c66d0e5f281e14d3404e03eb292b9be802ea232e49d8975aeaf68171fbb4d0b6",
+        "bytes": 3953
+      },
+      "texture-0.png": {
+        "sha256": "b9605f3b417dbe319f8b62d0df9e8e550a3e8753bb4b6677aeb5b2654d0eb958",
+        "bytes": 45480
+      },
+      "texture-1.png": {
+        "sha256": "19e4427e31a374e6e0afea960ee380d0ce119dff557a151665271b708c529685",
+        "bytes": 123440
+      },
+      "texture-2.png": {
+        "sha256": "f3d68f0422a5af8c2f200d2ad53f806719f9df8d6b8e3f9e2d6872694ad2fc84",
+        "bytes": 97952
+      },
+      "texture-3.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-4.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-5.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "pumpkin-warty-mobile",
+    "passed": true,
+    "triangles": 2112,
+    "vertices": 6072,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "d5dedb80d4a7b16d25b4737851bd8938bb7d5b88aec52706ce8e8684f3167270",
+        "bytes": 741420
+      },
+      "model.gltf": {
+        "sha256": "ed6a16be0155e606e3bfabc41da8fd35804f9c3dc1292c9356dfb3440c825589",
+        "bytes": 3786
+      },
+      "texture-0.png": {
+        "sha256": "b9605f3b417dbe319f8b62d0df9e8e550a3e8753bb4b6677aeb5b2654d0eb958",
+        "bytes": 45480
+      },
+      "texture-1.png": {
+        "sha256": "19e4427e31a374e6e0afea960ee380d0ce119dff557a151665271b708c529685",
+        "bytes": 123440
+      },
+      "texture-2.png": {
+        "sha256": "f3d68f0422a5af8c2f200d2ad53f806719f9df8d6b8e3f9e2d6872694ad2fc84",
+        "bytes": 97952
+      },
+      "texture-3.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-4.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-5.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "woody-stem-mobile",
+    "passed": true,
+    "triangles": 112,
+    "vertices": 72,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "84f558bf39fabebd21e1dc504e67cc8872722fc71edf9462f1c5d77a845dc535",
+        "bytes": 282548
+      },
+      "model.gltf": {
+        "sha256": "0bb45abf16d501ef7edcf603f79b16efc6411b9e1bd75e1141d556886fd28d83",
+        "bytes": 2090
+      },
+      "texture-0.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-1.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-2.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "leaf-green-mobile",
+    "passed": true,
+    "triangles": 1140,
+    "vertices": 2408,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "7a8c27110bb5dff7d379857ea5b92f27c56f3fb5ad1a24915ef0d1e3e77c50cd",
+        "bytes": 419712
+      },
+      "model.gltf": {
+        "sha256": "e81d304595ee55e361344dcdf45b25c7299d0658db96b76290d74a6c3efc125f",
+        "bytes": 3411
+      },
+      "texture-0.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-1.png": {
+        "sha256": "171c9fb1982c3bd15c549e246da7f748a3859b0bc5f90eef8f1b1bed3b26ebc3",
+        "bytes": 142904
+      },
+      "texture-2.png": {
+        "sha256": "b73f9c93da907784f77e44828a8496ae8ffd33fedc2613d70462b9094eb829dc",
+        "bytes": 134720
+      }
+    }
+  },
+  {
+    "id": "leaf-yellow-mobile",
+    "passed": true,
+    "triangles": 420,
+    "vertices": 248,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "5ee7c6454c0b98cca47e74adc775546ef9df92039bf0431404537ba0eaa96c36",
+        "bytes": 350592
+      },
+      "model.gltf": {
+        "sha256": "4b57dd39fbf03e6a928573febd63b1bdd9f6583c2b868d75e6fb05058aa0eb09",
+        "bytes": 2404
+      },
+      "texture-0.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-1.png": {
+        "sha256": "171c9fb1982c3bd15c549e246da7f748a3859b0bc5f90eef8f1b1bed3b26ebc3",
+        "bytes": 142904
+      },
+      "texture-2.png": {
+        "sha256": "b73f9c93da907784f77e44828a8496ae8ffd33fedc2613d70462b9094eb829dc",
+        "bytes": 134720
+      }
+    }
+  },
+  {
+    "id": "leaf-damaged-mobile",
+    "passed": true,
+    "triangles": 420,
+    "vertices": 248,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "2ed96527109f9a1496e63422c4c02bd9c570e84794e50fb3a3b19ba6fbdbaa30",
+        "bytes": 350592
+      },
+      "model.gltf": {
+        "sha256": "545c44a5256e95331f73e3d7ae9d0039cc3aedb1e7cde755164b76107c3677eb",
+        "bytes": 2404
+      },
+      "texture-0.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-1.png": {
+        "sha256": "171c9fb1982c3bd15c549e246da7f748a3859b0bc5f90eef8f1b1bed3b26ebc3",
+        "bytes": 142904
+      },
+      "texture-2.png": {
+        "sha256": "b73f9c93da907784f77e44828a8496ae8ffd33fedc2613d70462b9094eb829dc",
+        "bytes": 134720
+      }
+    }
+  },
+  {
+    "id": "leaf-veins-mobile",
+    "passed": true,
+    "triangles": 720,
+    "vertices": 2160,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "c50d51061a18b6a54f0c51f3795d3d6a5d1a4fc3422c50c3a5b46c46ddc3a64b",
+        "bytes": 69120
+      },
+      "model.gltf": {
+        "sha256": "d589dc993f751df7aa1a77e37c0d062b49e538030bd215958683755335da882b",
+        "bytes": 1244
+      }
+    }
+  },
+  {
+    "id": "male-blossom-mobile",
+    "passed": true,
+    "triangles": 270,
+    "vertices": 186,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "71df80aeab3efc0770dae215d22b062b2fed7c951acec9281c67febb74649599",
+        "bytes": 554016
+      },
+      "model.gltf": {
+        "sha256": "5e6ec4f8ab8cd22ecbd6a7a0992e58fb93d94ae679616f5724f06727d00bc8fc",
+        "bytes": 3970
+      },
+      "texture-0.png": {
+        "sha256": "b9605f3b417dbe319f8b62d0df9e8e550a3e8753bb4b6677aeb5b2654d0eb958",
+        "bytes": 45480
+      },
+      "texture-1.png": {
+        "sha256": "19e4427e31a374e6e0afea960ee380d0ce119dff557a151665271b708c529685",
+        "bytes": 123440
+      },
+      "texture-2.png": {
+        "sha256": "f3d68f0422a5af8c2f200d2ad53f806719f9df8d6b8e3f9e2d6872694ad2fc84",
+        "bytes": 97952
+      },
+      "texture-3.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-4.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-5.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "female-blossom-mobile",
+    "passed": true,
+    "triangles": 1038,
+    "vertices": 615,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "34f7596eda03ef28debe70fc1838ea41b650673174ab2a7fd5a0bdba241d32e8",
+        "bytes": 617832
+      },
+      "model.gltf": {
+        "sha256": "a89aa654ab541eaf07911a00a709c13325ebb98f0225295d4468462dcac768e0",
+        "bytes": 5449
+      },
+      "texture-0.png": {
+        "sha256": "b9605f3b417dbe319f8b62d0df9e8e550a3e8753bb4b6677aeb5b2654d0eb958",
+        "bytes": 45480
+      },
+      "texture-1.png": {
+        "sha256": "19e4427e31a374e6e0afea960ee380d0ce119dff557a151665271b708c529685",
+        "bytes": 123440
+      },
+      "texture-2.png": {
+        "sha256": "f3d68f0422a5af8c2f200d2ad53f806719f9df8d6b8e3f9e2d6872694ad2fc84",
+        "bytes": 97952
+      },
+      "texture-3.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-4.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-5.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      },
+      "texture-6.png": {
+        "sha256": "b9605f3b417dbe319f8b62d0df9e8e550a3e8753bb4b6677aeb5b2654d0eb958",
+        "bytes": 45480
+      }
+    }
+  },
+  {
+    "id": "vine-tendril-mobile",
+    "passed": true,
+    "triangles": 4716,
+    "vertices": 6092,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "626c945c224a47c1dee0b94548cbd6d396dddb4468c49beabf35eb85b2e06f40",
+        "bytes": 1435776
+      },
+      "model.gltf": {
+        "sha256": "b64a0256665c505d6f7af369778a6b07dac4ed1bc4aa6620e7756a1549802894",
+        "bytes": 12513
+      },
+      "texture-0.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-1.png": {
+        "sha256": "171c9fb1982c3bd15c549e246da7f748a3859b0bc5f90eef8f1b1bed3b26ebc3",
+        "bytes": 142904
+      },
+      "texture-10.png": {
+        "sha256": "19e4427e31a374e6e0afea960ee380d0ce119dff557a151665271b708c529685",
+        "bytes": 123440
+      },
+      "texture-11.png": {
+        "sha256": "f3d68f0422a5af8c2f200d2ad53f806719f9df8d6b8e3f9e2d6872694ad2fc84",
+        "bytes": 97952
+      },
+      "texture-12.png": {
+        "sha256": "b9605f3b417dbe319f8b62d0df9e8e550a3e8753bb4b6677aeb5b2654d0eb958",
+        "bytes": 45480
+      },
+      "texture-13.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-14.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-15.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      },
+      "texture-2.png": {
+        "sha256": "b73f9c93da907784f77e44828a8496ae8ffd33fedc2613d70462b9094eb829dc",
+        "bytes": 134720
+      },
+      "texture-3.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-4.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-5.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-6.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-7.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-8.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-9.png": {
+        "sha256": "b9605f3b417dbe319f8b62d0df9e8e550a3e8753bb4b6677aeb5b2654d0eb958",
+        "bytes": 45480
+      }
+    }
+  },
+  {
+    "id": "metal-arch-mobile",
+    "passed": true,
+    "triangles": 2520,
+    "vertices": 7560,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "563db1e94ad8482fda8c65ed6b33df3aea3f302064ce3c7fd4ab343514788729",
+        "bytes": 521492
+      },
+      "model.gltf": {
+        "sha256": "24586609ba9b846f6daef2a764e4dc20b592f2466bdd2f701ec0099543ae7d61",
+        "bytes": 1929
+      },
+      "texture-0.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-1.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-2.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "wooden-trellis-mobile",
+    "passed": true,
+    "triangles": 216,
+    "vertices": 648,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "5e95f4dacdf1a7d4c56a6280dfbafa156deb937fc031053d122a2a1eb30cd696",
+        "bytes": 300308
+      },
+      "model.gltf": {
+        "sha256": "95bad0f6c47084e8213929c04d15e144f30ae1aa9ac7c182bc871c9ec6bee319",
+        "bytes": 1815
+      },
+      "texture-0.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-1.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-2.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "fence-mobile",
+    "passed": true,
+    "triangles": 120,
+    "vertices": 360,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "d15917ed345eaf2072d27004502cdf23a3e3831877dc778162204802f288268c",
+        "bytes": 291092
+      },
+      "model.gltf": {
+        "sha256": "ccdb5d5883c51f29cb5d9b0e74944c263b74f20559ebe368cf34c32f2dacaebe",
+        "bytes": 1814
+      },
+      "texture-0.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-1.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-2.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "trellis-modules-mobile",
+    "passed": true,
+    "triangles": 416,
+    "vertices": 288,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "d4d333e1f80e715a724fa79b6771b261db1b51946a5fcf91cbcf9e1e4e5c9bd5",
+        "bytes": 291284
+      },
+      "model.gltf": {
+        "sha256": "9317d5ccbb6a4ee5777d0f24aa7f88fde461408cda6e3fa58950455bfa759418",
+        "bytes": 6484
+      },
+      "texture-0.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-1.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-2.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "pumpkin-round-medium",
+    "passed": true,
+    "triangles": 1840,
+    "vertices": 1003,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "a1a3c89d343ad147a2e618e274338f37e7fc17df2866a270a18b301293d29e6d",
+        "bytes": 589580
+      },
+      "model.gltf": {
+        "sha256": "9016ae9120cec9ec1916d245cb90a3f084b72c37f867cb2531b7a9fb561b3c54",
+        "bytes": 3974
+      },
+      "texture-0.png": {
+        "sha256": "b9605f3b417dbe319f8b62d0df9e8e550a3e8753bb4b6677aeb5b2654d0eb958",
+        "bytes": 45480
+      },
+      "texture-1.png": {
+        "sha256": "19e4427e31a374e6e0afea960ee380d0ce119dff557a151665271b708c529685",
+        "bytes": 123440
+      },
+      "texture-2.png": {
+        "sha256": "f3d68f0422a5af8c2f200d2ad53f806719f9df8d6b8e3f9e2d6872694ad2fc84",
+        "bytes": 97952
+      },
+      "texture-3.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-4.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-5.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "pumpkin-tall-medium",
+    "passed": true,
+    "triangles": 1840,
+    "vertices": 1003,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "08c040823f0dc2b0269df77e76beba5cbab5f94e543b2c523fca86782c2cf958",
+        "bytes": 589580
+      },
+      "model.gltf": {
+        "sha256": "ee196529a7471124906d31f7a91880c040cbd94b0bb9b04c21354c989ebba976",
+        "bytes": 3943
+      },
+      "texture-0.png": {
+        "sha256": "b9605f3b417dbe319f8b62d0df9e8e550a3e8753bb4b6677aeb5b2654d0eb958",
+        "bytes": 45480
+      },
+      "texture-1.png": {
+        "sha256": "19e4427e31a374e6e0afea960ee380d0ce119dff557a151665271b708c529685",
+        "bytes": 123440
+      },
+      "texture-2.png": {
+        "sha256": "f3d68f0422a5af8c2f200d2ad53f806719f9df8d6b8e3f9e2d6872694ad2fc84",
+        "bytes": 97952
+      },
+      "texture-3.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-4.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-5.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "pumpkin-squat-medium",
+    "passed": true,
+    "triangles": 1840,
+    "vertices": 1003,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "507303e9553100c11b0c0989892f2236d610a90a2d6e79886844fccb41bbdd1c",
+        "bytes": 589580
+      },
+      "model.gltf": {
+        "sha256": "645a5644ef0755fc9302f8b22e7fe5758d87caa1134f4e295ab49836d158ed0c",
+        "bytes": 3991
+      },
+      "texture-0.png": {
+        "sha256": "b9605f3b417dbe319f8b62d0df9e8e550a3e8753bb4b6677aeb5b2654d0eb958",
+        "bytes": 45480
+      },
+      "texture-1.png": {
+        "sha256": "19e4427e31a374e6e0afea960ee380d0ce119dff557a151665271b708c529685",
+        "bytes": 123440
+      },
+      "texture-2.png": {
+        "sha256": "f3d68f0422a5af8c2f200d2ad53f806719f9df8d6b8e3f9e2d6872694ad2fc84",
+        "bytes": 97952
+      },
+      "texture-3.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-4.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-5.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "pumpkin-flat-medium",
+    "passed": true,
+    "triangles": 1840,
+    "vertices": 1003,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "189cf144aaff2385c388d29dcf7fabf367a289e4475364027c0e23073fcddf7d",
+        "bytes": 589580
+      },
+      "model.gltf": {
+        "sha256": "4949070090373a6bbc41870258e2ca19f9761a51a8d8078a2b37856de9e9af68",
+        "bytes": 3961
+      },
+      "texture-0.png": {
+        "sha256": "b9605f3b417dbe319f8b62d0df9e8e550a3e8753bb4b6677aeb5b2654d0eb958",
+        "bytes": 45480
+      },
+      "texture-1.png": {
+        "sha256": "19e4427e31a374e6e0afea960ee380d0ce119dff557a151665271b708c529685",
+        "bytes": 123440
+      },
+      "texture-2.png": {
+        "sha256": "f3d68f0422a5af8c2f200d2ad53f806719f9df8d6b8e3f9e2d6872694ad2fc84",
+        "bytes": 97952
+      },
+      "texture-3.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-4.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-5.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "pumpkin-white-medium",
+    "passed": true,
+    "triangles": 1840,
+    "vertices": 1003,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "19b4de90c5be43bea331c8e304bcb86cf99c504c66eec334fb4647a5b6633810",
+        "bytes": 589580
+      },
+      "model.gltf": {
+        "sha256": "9b9e44ad9f34fa04dfe6c263f6bc040e310406ac0c53800946ad61b60d632efb",
+        "bytes": 3985
+      },
+      "texture-0.png": {
+        "sha256": "b9605f3b417dbe319f8b62d0df9e8e550a3e8753bb4b6677aeb5b2654d0eb958",
+        "bytes": 45480
+      },
+      "texture-1.png": {
+        "sha256": "19e4427e31a374e6e0afea960ee380d0ce119dff557a151665271b708c529685",
+        "bytes": 123440
+      },
+      "texture-2.png": {
+        "sha256": "f3d68f0422a5af8c2f200d2ad53f806719f9df8d6b8e3f9e2d6872694ad2fc84",
+        "bytes": 97952
+      },
+      "texture-3.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-4.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-5.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "pumpkin-green-medium",
+    "passed": true,
+    "triangles": 1840,
+    "vertices": 1003,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "31ea2c94a2f5574ca7f0ed692b11e25c2f1317e34d6e2f7ad70b2b36e7cea15f",
+        "bytes": 589580
+      },
+      "model.gltf": {
+        "sha256": "b3b4e14bb4a9c4577934f34321454f79cc9e7e00e6f2ed5e80a133d5645f012c",
+        "bytes": 3958
+      },
+      "texture-0.png": {
+        "sha256": "b9605f3b417dbe319f8b62d0df9e8e550a3e8753bb4b6677aeb5b2654d0eb958",
+        "bytes": 45480
+      },
+      "texture-1.png": {
+        "sha256": "19e4427e31a374e6e0afea960ee380d0ce119dff557a151665271b708c529685",
+        "bytes": 123440
+      },
+      "texture-2.png": {
+        "sha256": "f3d68f0422a5af8c2f200d2ad53f806719f9df8d6b8e3f9e2d6872694ad2fc84",
+        "bytes": 97952
+      },
+      "texture-3.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-4.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-5.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "pumpkin-warty-medium",
+    "passed": true,
+    "triangles": 4192,
+    "vertices": 12312,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "be287d6b52d6dd2f6cf5660bfe3d004fa407682175f8c99bd7531910cbb49df3",
+        "bytes": 941100
+      },
+      "model.gltf": {
+        "sha256": "16341ef6a6282730fcefe51e6c65ad27c3b10119ec7e81298e93e17cff522cbf",
+        "bytes": 3792
+      },
+      "texture-0.png": {
+        "sha256": "b9605f3b417dbe319f8b62d0df9e8e550a3e8753bb4b6677aeb5b2654d0eb958",
+        "bytes": 45480
+      },
+      "texture-1.png": {
+        "sha256": "19e4427e31a374e6e0afea960ee380d0ce119dff557a151665271b708c529685",
+        "bytes": 123440
+      },
+      "texture-2.png": {
+        "sha256": "f3d68f0422a5af8c2f200d2ad53f806719f9df8d6b8e3f9e2d6872694ad2fc84",
+        "bytes": 97952
+      },
+      "texture-3.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-4.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-5.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "woody-stem-medium",
+    "passed": true,
+    "triangles": 112,
+    "vertices": 72,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "84f558bf39fabebd21e1dc504e67cc8872722fc71edf9462f1c5d77a845dc535",
+        "bytes": 282548
+      },
+      "model.gltf": {
+        "sha256": "0bb45abf16d501ef7edcf603f79b16efc6411b9e1bd75e1141d556886fd28d83",
+        "bytes": 2090
+      },
+      "texture-0.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-1.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-2.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "leaf-green-medium",
+    "passed": true,
+    "triangles": 1600,
+    "vertices": 2652,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "8dd784b86de84a165210ceffc331fcc9aa032f107b3a441e5b0b4459bcc1a5fa",
+        "bytes": 433208
+      },
+      "model.gltf": {
+        "sha256": "df9c372c513053afc6215f65eeddb993fa2110de62a1c3da8048e04136f6de7a",
+        "bytes": 3413
+      },
+      "texture-0.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-1.png": {
+        "sha256": "171c9fb1982c3bd15c549e246da7f748a3859b0bc5f90eef8f1b1bed3b26ebc3",
+        "bytes": 142904
+      },
+      "texture-2.png": {
+        "sha256": "b73f9c93da907784f77e44828a8496ae8ffd33fedc2613d70462b9094eb829dc",
+        "bytes": 134720
+      }
+    }
+  },
+  {
+    "id": "leaf-yellow-medium",
+    "passed": true,
+    "triangles": 880,
+    "vertices": 492,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "29dbcd1a32327db7e47a904637105204d9c97e9eac992cc7b8c613249a103aeb",
+        "bytes": 364088
+      },
+      "model.gltf": {
+        "sha256": "027a028507fe129a83853fb82cba229f19f5baccc0c316ccbaf17939891ce237",
+        "bytes": 2405
+      },
+      "texture-0.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-1.png": {
+        "sha256": "171c9fb1982c3bd15c549e246da7f748a3859b0bc5f90eef8f1b1bed3b26ebc3",
+        "bytes": 142904
+      },
+      "texture-2.png": {
+        "sha256": "b73f9c93da907784f77e44828a8496ae8ffd33fedc2613d70462b9094eb829dc",
+        "bytes": 134720
+      }
+    }
+  },
+  {
+    "id": "leaf-damaged-medium",
+    "passed": true,
+    "triangles": 880,
+    "vertices": 492,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "e22506cc318086f091b78fb984218d00c8702f92ab5dd17d3fd6b18b6854ebb7",
+        "bytes": 364088
+      },
+      "model.gltf": {
+        "sha256": "a2e7db03116f6d4e440d24a96eade4d19a48a9b3850d0a8ee97f9c6277da76c2",
+        "bytes": 2405
+      },
+      "texture-0.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-1.png": {
+        "sha256": "171c9fb1982c3bd15c549e246da7f748a3859b0bc5f90eef8f1b1bed3b26ebc3",
+        "bytes": 142904
+      },
+      "texture-2.png": {
+        "sha256": "b73f9c93da907784f77e44828a8496ae8ffd33fedc2613d70462b9094eb829dc",
+        "bytes": 134720
+      }
+    }
+  },
+  {
+    "id": "leaf-veins-medium",
+    "passed": true,
+    "triangles": 720,
+    "vertices": 2160,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "c50d51061a18b6a54f0c51f3795d3d6a5d1a4fc3422c50c3a5b46c46ddc3a64b",
+        "bytes": 69120
+      },
+      "model.gltf": {
+        "sha256": "d589dc993f751df7aa1a77e37c0d062b49e538030bd215958683755335da882b",
+        "bytes": 1244
+      }
+    }
+  },
+  {
+    "id": "male-blossom-medium",
+    "passed": true,
+    "triangles": 270,
+    "vertices": 186,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "311bb588a5aba52dc479130e4e2249fda4ac524e801c2d762891cc132832b493",
+        "bytes": 554016
+      },
+      "model.gltf": {
+        "sha256": "10283ed28c67155abf4cab25b270d0438d5bfda90cd7a2ab36a2fbda8e60111d",
+        "bytes": 3970
+      },
+      "texture-0.png": {
+        "sha256": "b9605f3b417dbe319f8b62d0df9e8e550a3e8753bb4b6677aeb5b2654d0eb958",
+        "bytes": 45480
+      },
+      "texture-1.png": {
+        "sha256": "19e4427e31a374e6e0afea960ee380d0ce119dff557a151665271b708c529685",
+        "bytes": 123440
+      },
+      "texture-2.png": {
+        "sha256": "f3d68f0422a5af8c2f200d2ad53f806719f9df8d6b8e3f9e2d6872694ad2fc84",
+        "bytes": 97952
+      },
+      "texture-3.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-4.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-5.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "female-blossom-medium",
+    "passed": true,
+    "triangles": 1998,
+    "vertices": 1117,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "334b35587ef54d1bb62eb186dee0ded5a5e8b29a980207d043530f3400a01a85",
+        "bytes": 639656
+      },
+      "model.gltf": {
+        "sha256": "033715759a2b3e757f11409ef228bb2fd421b980e3b53362001a756d37fe01d7",
+        "bytes": 5453
+      },
+      "texture-0.png": {
+        "sha256": "b9605f3b417dbe319f8b62d0df9e8e550a3e8753bb4b6677aeb5b2654d0eb958",
+        "bytes": 45480
+      },
+      "texture-1.png": {
+        "sha256": "19e4427e31a374e6e0afea960ee380d0ce119dff557a151665271b708c529685",
+        "bytes": 123440
+      },
+      "texture-2.png": {
+        "sha256": "f3d68f0422a5af8c2f200d2ad53f806719f9df8d6b8e3f9e2d6872694ad2fc84",
+        "bytes": 97952
+      },
+      "texture-3.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-4.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-5.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      },
+      "texture-6.png": {
+        "sha256": "b9605f3b417dbe319f8b62d0df9e8e550a3e8753bb4b6677aeb5b2654d0eb958",
+        "bytes": 45480
+      }
+    }
+  },
+  {
+    "id": "vine-tendril-medium",
+    "passed": true,
+    "triangles": 20024,
+    "vertices": 35472,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "09e772289c3210470b3a6b2c2e4b25083eb11157d0c5f86a56054269feec980e",
+        "bytes": 1818744
+      },
+      "model.gltf": {
+        "sha256": "973f91259f21f03ed437fa4c29233b3311697602f19032ad2327e5c9010b9a38",
+        "bytes": 22683
+      },
+      "texture-0.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-1.png": {
+        "sha256": "171c9fb1982c3bd15c549e246da7f748a3859b0bc5f90eef8f1b1bed3b26ebc3",
+        "bytes": 142904
+      },
+      "texture-10.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-11.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-12.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-13.png": {
+        "sha256": "b9605f3b417dbe319f8b62d0df9e8e550a3e8753bb4b6677aeb5b2654d0eb958",
+        "bytes": 45480
+      },
+      "texture-14.png": {
+        "sha256": "19e4427e31a374e6e0afea960ee380d0ce119dff557a151665271b708c529685",
+        "bytes": 123440
+      },
+      "texture-15.png": {
+        "sha256": "f3d68f0422a5af8c2f200d2ad53f806719f9df8d6b8e3f9e2d6872694ad2fc84",
+        "bytes": 97952
+      },
+      "texture-16.png": {
+        "sha256": "b9605f3b417dbe319f8b62d0df9e8e550a3e8753bb4b6677aeb5b2654d0eb958",
+        "bytes": 45480
+      },
+      "texture-17.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-18.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-19.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      },
+      "texture-2.png": {
+        "sha256": "b73f9c93da907784f77e44828a8496ae8ffd33fedc2613d70462b9094eb829dc",
+        "bytes": 134720
+      },
+      "texture-3.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-4.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-5.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-6.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-7.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-8.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-9.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      }
+    }
+  },
+  {
+    "id": "metal-arch-medium",
+    "passed": true,
+    "triangles": 2520,
+    "vertices": 7560,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "563db1e94ad8482fda8c65ed6b33df3aea3f302064ce3c7fd4ab343514788729",
+        "bytes": 521492
+      },
+      "model.gltf": {
+        "sha256": "24586609ba9b846f6daef2a764e4dc20b592f2466bdd2f701ec0099543ae7d61",
+        "bytes": 1929
+      },
+      "texture-0.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-1.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-2.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "wooden-trellis-medium",
+    "passed": true,
+    "triangles": 216,
+    "vertices": 648,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "5e95f4dacdf1a7d4c56a6280dfbafa156deb937fc031053d122a2a1eb30cd696",
+        "bytes": 300308
+      },
+      "model.gltf": {
+        "sha256": "95bad0f6c47084e8213929c04d15e144f30ae1aa9ac7c182bc871c9ec6bee319",
+        "bytes": 1815
+      },
+      "texture-0.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-1.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-2.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "fence-medium",
+    "passed": true,
+    "triangles": 120,
+    "vertices": 360,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "d15917ed345eaf2072d27004502cdf23a3e3831877dc778162204802f288268c",
+        "bytes": 291092
+      },
+      "model.gltf": {
+        "sha256": "ccdb5d5883c51f29cb5d9b0e74944c263b74f20559ebe368cf34c32f2dacaebe",
+        "bytes": 1814
+      },
+      "texture-0.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-1.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-2.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "trellis-modules-medium",
+    "passed": true,
+    "triangles": 416,
+    "vertices": 288,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "d4d333e1f80e715a724fa79b6771b261db1b51946a5fcf91cbcf9e1e4e5c9bd5",
+        "bytes": 291284
+      },
+      "model.gltf": {
+        "sha256": "9317d5ccbb6a4ee5777d0f24aa7f88fde461408cda6e3fa58950455bfa759418",
+        "bytes": 6484
+      },
+      "texture-0.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-1.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-2.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "pumpkin-round-high",
+    "passed": true,
+    "triangles": 4144,
+    "vertices": 2189,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "33b4d19b70193bf8c6a40829d2f37a6033cd819695a9fb0ac905bb0efc50e356",
+        "bytes": 641356
+      },
+      "model.gltf": {
+        "sha256": "519e955248b48c966c8b65f4b73b2d2baf50d7f178dfe6f40bea618d2c5fb36d",
+        "bytes": 3985
+      },
+      "texture-0.png": {
+        "sha256": "b9605f3b417dbe319f8b62d0df9e8e550a3e8753bb4b6677aeb5b2654d0eb958",
+        "bytes": 45480
+      },
+      "texture-1.png": {
+        "sha256": "19e4427e31a374e6e0afea960ee380d0ce119dff557a151665271b708c529685",
+        "bytes": 123440
+      },
+      "texture-2.png": {
+        "sha256": "f3d68f0422a5af8c2f200d2ad53f806719f9df8d6b8e3f9e2d6872694ad2fc84",
+        "bytes": 97952
+      },
+      "texture-3.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-4.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-5.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "pumpkin-tall-high",
+    "passed": true,
+    "triangles": 4144,
+    "vertices": 2189,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "e9ea838401d640fb98fd0847facbbde6503eafaea1709bfb4439e79fd104b820",
+        "bytes": 641356
+      },
+      "model.gltf": {
+        "sha256": "9cb44a2d1d97860afc12716316129fa628284b83dd462e3aa320fcb2d449c003",
+        "bytes": 3954
+      },
+      "texture-0.png": {
+        "sha256": "b9605f3b417dbe319f8b62d0df9e8e550a3e8753bb4b6677aeb5b2654d0eb958",
+        "bytes": 45480
+      },
+      "texture-1.png": {
+        "sha256": "19e4427e31a374e6e0afea960ee380d0ce119dff557a151665271b708c529685",
+        "bytes": 123440
+      },
+      "texture-2.png": {
+        "sha256": "f3d68f0422a5af8c2f200d2ad53f806719f9df8d6b8e3f9e2d6872694ad2fc84",
+        "bytes": 97952
+      },
+      "texture-3.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-4.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-5.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "pumpkin-squat-high",
+    "passed": true,
+    "triangles": 4144,
+    "vertices": 2189,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "b326091b870dbfed1b1aa861bf6eae2b3f8dbf6eb41da501c12f34ed0e9474ba",
+        "bytes": 641356
+      },
+      "model.gltf": {
+        "sha256": "337abde6cc25326eef24ddf05c60e9a87334db05f3ecd1ba5e0d3f4359b6c6f8",
+        "bytes": 3996
+      },
+      "texture-0.png": {
+        "sha256": "b9605f3b417dbe319f8b62d0df9e8e550a3e8753bb4b6677aeb5b2654d0eb958",
+        "bytes": 45480
+      },
+      "texture-1.png": {
+        "sha256": "19e4427e31a374e6e0afea960ee380d0ce119dff557a151665271b708c529685",
+        "bytes": 123440
+      },
+      "texture-2.png": {
+        "sha256": "f3d68f0422a5af8c2f200d2ad53f806719f9df8d6b8e3f9e2d6872694ad2fc84",
+        "bytes": 97952
+      },
+      "texture-3.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-4.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-5.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "pumpkin-flat-high",
+    "passed": true,
+    "triangles": 4144,
+    "vertices": 2189,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "3470a6c93b0f18690e8256c9a08a80e1ae62625216299bc6f7642ca2011ba4a5",
+        "bytes": 641356
+      },
+      "model.gltf": {
+        "sha256": "9d5413c8bb2b9f4df3d585beb74d72b88dfcc73039e66c5a83dafcdeef4e7d13",
+        "bytes": 3970
+      },
+      "texture-0.png": {
+        "sha256": "b9605f3b417dbe319f8b62d0df9e8e550a3e8753bb4b6677aeb5b2654d0eb958",
+        "bytes": 45480
+      },
+      "texture-1.png": {
+        "sha256": "19e4427e31a374e6e0afea960ee380d0ce119dff557a151665271b708c529685",
+        "bytes": 123440
+      },
+      "texture-2.png": {
+        "sha256": "f3d68f0422a5af8c2f200d2ad53f806719f9df8d6b8e3f9e2d6872694ad2fc84",
+        "bytes": 97952
+      },
+      "texture-3.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-4.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-5.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "pumpkin-white-high",
+    "passed": true,
+    "triangles": 4144,
+    "vertices": 2189,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "0da66c1add2765df03bf188e11a18d609467bef146c4e48ad2fc5469d370f47f",
+        "bytes": 641356
+      },
+      "model.gltf": {
+        "sha256": "9f148d8e179bb4267c1e7170555f6e1faaa822f36ed9b838e2f4f173a4782141",
+        "bytes": 3996
+      },
+      "texture-0.png": {
+        "sha256": "b9605f3b417dbe319f8b62d0df9e8e550a3e8753bb4b6677aeb5b2654d0eb958",
+        "bytes": 45480
+      },
+      "texture-1.png": {
+        "sha256": "19e4427e31a374e6e0afea960ee380d0ce119dff557a151665271b708c529685",
+        "bytes": 123440
+      },
+      "texture-2.png": {
+        "sha256": "f3d68f0422a5af8c2f200d2ad53f806719f9df8d6b8e3f9e2d6872694ad2fc84",
+        "bytes": 97952
+      },
+      "texture-3.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-4.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-5.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "pumpkin-green-high",
+    "passed": true,
+    "triangles": 4144,
+    "vertices": 2189,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "3b97091fb4c4c6d0acc1612a03ded3b4506a0f8c2f78d0779a1b862dbbcce06b",
+        "bytes": 641356
+      },
+      "model.gltf": {
+        "sha256": "d1b24ed6dda057aa75ed322041ad8c444cb7823f6458556efa38a209dffe636f",
+        "bytes": 3967
+      },
+      "texture-0.png": {
+        "sha256": "b9605f3b417dbe319f8b62d0df9e8e550a3e8753bb4b6677aeb5b2654d0eb958",
+        "bytes": 45480
+      },
+      "texture-1.png": {
+        "sha256": "19e4427e31a374e6e0afea960ee380d0ce119dff557a151665271b708c529685",
+        "bytes": 123440
+      },
+      "texture-2.png": {
+        "sha256": "f3d68f0422a5af8c2f200d2ad53f806719f9df8d6b8e3f9e2d6872694ad2fc84",
+        "bytes": 97952
+      },
+      "texture-3.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-4.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-5.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "pumpkin-warty-high",
+    "passed": true,
+    "triangles": 6496,
+    "vertices": 19224,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "bcd4c3d06ab13559db68fddc1cfaa1a05f6d4390450e51035bd03b88c3e8cd41",
+        "bytes": 1162284
+      },
+      "model.gltf": {
+        "sha256": "d0d27f12cb5a07012a26c016c47a18fde4ee1f15a8149e702a383d5b9aed5afd",
+        "bytes": 3811
+      },
+      "texture-0.png": {
+        "sha256": "b9605f3b417dbe319f8b62d0df9e8e550a3e8753bb4b6677aeb5b2654d0eb958",
+        "bytes": 45480
+      },
+      "texture-1.png": {
+        "sha256": "19e4427e31a374e6e0afea960ee380d0ce119dff557a151665271b708c529685",
+        "bytes": 123440
+      },
+      "texture-2.png": {
+        "sha256": "f3d68f0422a5af8c2f200d2ad53f806719f9df8d6b8e3f9e2d6872694ad2fc84",
+        "bytes": 97952
+      },
+      "texture-3.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-4.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-5.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "woody-stem-high",
+    "passed": true,
+    "triangles": 112,
+    "vertices": 72,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "84f558bf39fabebd21e1dc504e67cc8872722fc71edf9462f1c5d77a845dc535",
+        "bytes": 282548
+      },
+      "model.gltf": {
+        "sha256": "0bb45abf16d501ef7edcf603f79b16efc6411b9e1bd75e1141d556886fd28d83",
+        "bytes": 2090
+      },
+      "texture-0.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-1.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-2.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "leaf-green-high",
+    "passed": true,
+    "triangles": 2520,
+    "vertices": 3136,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "d3f34e20319e2aefb4543c4e21991fb1018a0c319561a0128939e13d0f03dfe9",
+        "bytes": 460024
+      },
+      "model.gltf": {
+        "sha256": "b3cb3bc2f99109f88878b9dc621f1e487a35a1e393b9c1572d8d84a38e38d741",
+        "bytes": 3421
+      },
+      "texture-0.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-1.png": {
+        "sha256": "171c9fb1982c3bd15c549e246da7f748a3859b0bc5f90eef8f1b1bed3b26ebc3",
+        "bytes": 142904
+      },
+      "texture-2.png": {
+        "sha256": "b73f9c93da907784f77e44828a8496ae8ffd33fedc2613d70462b9094eb829dc",
+        "bytes": 134720
+      }
+    }
+  },
+  {
+    "id": "leaf-yellow-high",
+    "passed": true,
+    "triangles": 1800,
+    "vertices": 976,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "3b06fdf234a4ab7c71cf8d312106e99d29cd75e95dcac5a700d59d92bd0dc292",
+        "bytes": 390904
+      },
+      "model.gltf": {
+        "sha256": "7319dae2bdc98a2e0d173979451d7ff29ab99f84215de39357c2a6aa6fb15e0d",
+        "bytes": 2411
+      },
+      "texture-0.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-1.png": {
+        "sha256": "171c9fb1982c3bd15c549e246da7f748a3859b0bc5f90eef8f1b1bed3b26ebc3",
+        "bytes": 142904
+      },
+      "texture-2.png": {
+        "sha256": "b73f9c93da907784f77e44828a8496ae8ffd33fedc2613d70462b9094eb829dc",
+        "bytes": 134720
+      }
+    }
+  },
+  {
+    "id": "leaf-damaged-high",
+    "passed": true,
+    "triangles": 1800,
+    "vertices": 976,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "d475cf2567cfee2cf82816b3a10ba5482a1aa4848623e36100b250c9c05f5626",
+        "bytes": 390904
+      },
+      "model.gltf": {
+        "sha256": "113132bfa113f1d9a6c530702384c1b8562c304071b606488b6df6a90ae169ab",
+        "bytes": 2414
+      },
+      "texture-0.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-1.png": {
+        "sha256": "171c9fb1982c3bd15c549e246da7f748a3859b0bc5f90eef8f1b1bed3b26ebc3",
+        "bytes": 142904
+      },
+      "texture-2.png": {
+        "sha256": "b73f9c93da907784f77e44828a8496ae8ffd33fedc2613d70462b9094eb829dc",
+        "bytes": 134720
+      }
+    }
+  },
+  {
+    "id": "leaf-veins-high",
+    "passed": true,
+    "triangles": 720,
+    "vertices": 2160,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "c50d51061a18b6a54f0c51f3795d3d6a5d1a4fc3422c50c3a5b46c46ddc3a64b",
+        "bytes": 69120
+      },
+      "model.gltf": {
+        "sha256": "d589dc993f751df7aa1a77e37c0d062b49e538030bd215958683755335da882b",
+        "bytes": 1244
+      }
+    }
+  },
+  {
+    "id": "male-blossom-high",
+    "passed": true,
+    "triangles": 270,
+    "vertices": 186,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "d54285007011592d212f1829262c4b972029953312bc4cd56c2694f20928d4b9",
+        "bytes": 554016
+      },
+      "model.gltf": {
+        "sha256": "03aec762a465737d55c6b856b09c121e67beb103b08e409d43c9a86711e6b362",
+        "bytes": 3970
+      },
+      "texture-0.png": {
+        "sha256": "b9605f3b417dbe319f8b62d0df9e8e550a3e8753bb4b6677aeb5b2654d0eb958",
+        "bytes": 45480
+      },
+      "texture-1.png": {
+        "sha256": "19e4427e31a374e6e0afea960ee380d0ce119dff557a151665271b708c529685",
+        "bytes": 123440
+      },
+      "texture-2.png": {
+        "sha256": "f3d68f0422a5af8c2f200d2ad53f806719f9df8d6b8e3f9e2d6872694ad2fc84",
+        "bytes": 97952
+      },
+      "texture-3.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-4.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-5.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "female-blossom-high",
+    "passed": true,
+    "triangles": 4302,
+    "vertices": 2303,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "a5e65c675da6e5166a9061f84409556f689bc486d06223e8ee4347d0b7d73d1e",
+        "bytes": 691432
+      },
+      "model.gltf": {
+        "sha256": "8708d38d1f3ee548586ffd61fa4f447b59291a8487cefeed1b917061c995623f",
+        "bytes": 5464
+      },
+      "texture-0.png": {
+        "sha256": "b9605f3b417dbe319f8b62d0df9e8e550a3e8753bb4b6677aeb5b2654d0eb958",
+        "bytes": 45480
+      },
+      "texture-1.png": {
+        "sha256": "19e4427e31a374e6e0afea960ee380d0ce119dff557a151665271b708c529685",
+        "bytes": 123440
+      },
+      "texture-2.png": {
+        "sha256": "f3d68f0422a5af8c2f200d2ad53f806719f9df8d6b8e3f9e2d6872694ad2fc84",
+        "bytes": 97952
+      },
+      "texture-3.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-4.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-5.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      },
+      "texture-6.png": {
+        "sha256": "b9605f3b417dbe319f8b62d0df9e8e550a3e8753bb4b6677aeb5b2654d0eb958",
+        "bytes": 45480
+      }
+    }
+  },
+  {
+    "id": "vine-tendril-high",
+    "passed": true,
+    "triangles": 35490,
+    "vertices": 47500,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "6bdf593591e85f302289c450dbe9cf75b0bd699223851ea7e20411c1f7835937",
+        "bytes": 2019328
+      },
+      "model.gltf": {
+        "sha256": "b3a638aaa962290c025ea3525b656151e6a0ba89c2b33e249429bb8431e9bfae",
+        "bytes": 26385
+      },
+      "texture-0.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-1.png": {
+        "sha256": "171c9fb1982c3bd15c549e246da7f748a3859b0bc5f90eef8f1b1bed3b26ebc3",
+        "bytes": 142904
+      },
+      "texture-10.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-11.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-12.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-13.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-14.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-15.png": {
+        "sha256": "b9605f3b417dbe319f8b62d0df9e8e550a3e8753bb4b6677aeb5b2654d0eb958",
+        "bytes": 45480
+      },
+      "texture-16.png": {
+        "sha256": "19e4427e31a374e6e0afea960ee380d0ce119dff557a151665271b708c529685",
+        "bytes": 123440
+      },
+      "texture-17.png": {
+        "sha256": "f3d68f0422a5af8c2f200d2ad53f806719f9df8d6b8e3f9e2d6872694ad2fc84",
+        "bytes": 97952
+      },
+      "texture-18.png": {
+        "sha256": "b9605f3b417dbe319f8b62d0df9e8e550a3e8753bb4b6677aeb5b2654d0eb958",
+        "bytes": 45480
+      },
+      "texture-19.png": {
+        "sha256": "b9605f3b417dbe319f8b62d0df9e8e550a3e8753bb4b6677aeb5b2654d0eb958",
+        "bytes": 45480
+      },
+      "texture-2.png": {
+        "sha256": "b73f9c93da907784f77e44828a8496ae8ffd33fedc2613d70462b9094eb829dc",
+        "bytes": 134720
+      },
+      "texture-20.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-21.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-22.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      },
+      "texture-3.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-4.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-5.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-6.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-7.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-8.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      },
+      "texture-9.png": {
+        "sha256": "d11b5a66669bbb395f8810e591601be64142e1b89e7d4f86608ba554c07ffdd0",
+        "bytes": 59536
+      }
+    }
+  },
+  {
+    "id": "metal-arch-high",
+    "passed": true,
+    "triangles": 2520,
+    "vertices": 7560,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "563db1e94ad8482fda8c65ed6b33df3aea3f302064ce3c7fd4ab343514788729",
+        "bytes": 521492
+      },
+      "model.gltf": {
+        "sha256": "24586609ba9b846f6daef2a764e4dc20b592f2466bdd2f701ec0099543ae7d61",
+        "bytes": 1929
+      },
+      "texture-0.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-1.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-2.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "wooden-trellis-high",
+    "passed": true,
+    "triangles": 216,
+    "vertices": 648,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "5e95f4dacdf1a7d4c56a6280dfbafa156deb937fc031053d122a2a1eb30cd696",
+        "bytes": 300308
+      },
+      "model.gltf": {
+        "sha256": "95bad0f6c47084e8213929c04d15e144f30ae1aa9ac7c182bc871c9ec6bee319",
+        "bytes": 1815
+      },
+      "texture-0.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-1.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-2.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "fence-high",
+    "passed": true,
+    "triangles": 120,
+    "vertices": 360,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "d15917ed345eaf2072d27004502cdf23a3e3831877dc778162204802f288268c",
+        "bytes": 291092
+      },
+      "model.gltf": {
+        "sha256": "ccdb5d5883c51f29cb5d9b0e74944c263b74f20559ebe368cf34c32f2dacaebe",
+        "bytes": 1814
+      },
+      "texture-0.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-1.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-2.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  },
+  {
+    "id": "trellis-modules-high",
+    "passed": true,
+    "triangles": 416,
+    "vertices": 288,
+    "dependencies": {
+      "mesh.bin": {
+        "sha256": "d4d333e1f80e715a724fa79b6771b261db1b51946a5fcf91cbcf9e1e4e5c9bd5",
+        "bytes": 291284
+      },
+      "model.gltf": {
+        "sha256": "9317d5ccbb6a4ee5777d0f24aa7f88fde461408cda6e3fa58950455bfa759418",
+        "bytes": 6484
+      },
+      "texture-0.png": {
+        "sha256": "32d9d520dcc36b41cb1fd7fdf773f49f9b06e0be1ee34fc67951f9efe8d386e0",
+        "bytes": 2376
+      },
+      "texture-1.png": {
+        "sha256": "d8aabb88a988c0b7b43b190203020f3df791c5c3302c43e895edfd0b51432b15",
+        "bytes": 142144
+      },
+      "texture-2.png": {
+        "sha256": "40bcc27b864e5991f05d4c64657669ea03f58d0357cdd07bac534f69f5c8483b",
+        "bytes": 135052
+      }
+    }
+  }
+]

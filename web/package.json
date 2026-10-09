@@ -1,0 +1,14 @@
+{
+  "name": "pumpkin-trellis-generator",
+  "version": "0.2.2",
+  "private": true,
+  "description": "Procedural pumpkins, foliage and modular trellises with a mobile Three.js workshop.",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "node tools/serve.cjs",
+    "test": "node tools/test-autumn.cjs"
+  },
+  "dependencies": {
+    "three": "0.147.0"
+  }
+}

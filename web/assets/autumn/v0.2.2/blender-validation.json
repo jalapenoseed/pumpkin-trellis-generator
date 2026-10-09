@@ -1,0 +1,462 @@
+{
+  "passed": true,
+  "blender": "4.4.3",
+  "assets": [
+    {
+      "id": "pumpkin-round-mobile",
+      "passed": true,
+      "meshes": 2,
+      "vertices": 501,
+      "materials": 2,
+      "images": 6
+    },
+    {
+      "id": "pumpkin-tall-mobile",
+      "passed": true,
+      "meshes": 2,
+      "vertices": 501,
+      "materials": 2,
+      "images": 6
+    },
+    {
+      "id": "pumpkin-squat-mobile",
+      "passed": true,
+      "meshes": 2,
+      "vertices": 501,
+      "materials": 2,
+      "images": 6
+    },
+    {
+      "id": "pumpkin-flat-mobile",
+      "passed": true,
+      "meshes": 2,
+      "vertices": 501,
+      "materials": 2,
+      "images": 6
+    },
+    {
+      "id": "pumpkin-white-mobile",
+      "passed": true,
+      "meshes": 2,
+      "vertices": 501,
+      "materials": 2,
+      "images": 6
+    },
+    {
+      "id": "pumpkin-green-mobile",
+      "passed": true,
+      "meshes": 2,
+      "vertices": 501,
+      "materials": 2,
+      "images": 6
+    },
+    {
+      "id": "pumpkin-warty-mobile",
+      "passed": true,
+      "meshes": 2,
+      "vertices": 6072,
+      "materials": 2,
+      "images": 6
+    },
+    {
+      "id": "woody-stem-mobile",
+      "passed": true,
+      "meshes": 1,
+      "vertices": 72,
+      "materials": 1,
+      "images": 3
+    },
+    {
+      "id": "leaf-green-mobile",
+      "passed": true,
+      "meshes": 2,
+      "vertices": 2408,
+      "materials": 2,
+      "images": 3
+    },
+    {
+      "id": "leaf-yellow-mobile",
+      "passed": true,
+      "meshes": 1,
+      "vertices": 248,
+      "materials": 1,
+      "images": 3
+    },
+    {
+      "id": "leaf-damaged-mobile",
+      "passed": true,
+      "meshes": 1,
+      "vertices": 248,
+      "materials": 1,
+      "images": 3
+    },
+    {
+      "id": "leaf-veins-mobile",
+      "passed": true,
+      "meshes": 1,
+      "vertices": 2160,
+      "materials": 1,
+      "images": 0
+    },
+    {
+      "id": "male-blossom-mobile",
+      "passed": true,
+      "meshes": 2,
+      "vertices": 186,
+      "materials": 2,
+      "images": 6
+    },
+    {
+      "id": "female-blossom-mobile",
+      "passed": true,
+      "meshes": 3,
+      "vertices": 615,
+      "materials": 3,
+      "images": 7
+    },
+    {
+      "id": "vine-tendril-mobile",
+      "passed": true,
+      "meshes": 10,
+      "vertices": 6092,
+      "materials": 10,
+      "images": 16
+    },
+    {
+      "id": "metal-arch-mobile",
+      "passed": true,
+      "meshes": 1,
+      "vertices": 7560,
+      "materials": 1,
+      "images": 3
+    },
+    {
+      "id": "wooden-trellis-mobile",
+      "passed": true,
+      "meshes": 1,
+      "vertices": 648,
+      "materials": 1,
+      "images": 3
+    },
+    {
+      "id": "fence-mobile",
+      "passed": true,
+      "meshes": 1,
+      "vertices": 360,
+      "materials": 1,
+      "images": 3
+    },
+    {
+      "id": "trellis-modules-mobile",
+      "passed": true,
+      "meshes": 6,
+      "vertices": 288,
+      "materials": 1,
+      "images": 3
+    },
+    {
+      "id": "pumpkin-round-medium",
+      "passed": true,
+      "meshes": 2,
+      "vertices": 1003,
+      "materials": 2,
+      "images": 6
+    },
+    {
+      "id": "pumpkin-tall-medium",
+      "passed": true,
+      "meshes": 2,
+      "vertices": 1003,
+      "materials": 2,
+      "images": 6
+    },
+    {
+      "id": "pumpkin-squat-medium",
+      "passed": true,
+      "meshes": 2,
+      "vertices": 1003,
+      "materials": 2,
+      "images": 6
+    },
+    {
+      "id": "pumpkin-flat-medium",
+      "passed": true,
+      "meshes": 2,
+      "vertices": 1003,
+      "materials": 2,
+      "images": 6
+    },
+    {
+      "id": "pumpkin-white-medium",
+      "passed": true,
+      "meshes": 2,
+      "vertices": 1003,
+      "materials": 2,
+      "images": 6
+    },
+    {
+      "id": "pumpkin-green-medium",
+      "passed": true,
+      "meshes": 2,
+      "vertices": 1003,
+      "materials": 2,
+      "images": 6
+    },
+    {
+      "id": "pumpkin-warty-medium",
+      "passed": true,
+      "meshes": 2,
+      "vertices": 12312,
+      "materials": 2,
+      "images": 6
+    },
+    {
+      "id": "woody-stem-medium",
+      "passed": true,
+      "meshes": 1,
+      "vertices": 72,
+      "materials": 1,
+      "images": 3
+    },
+    {
+      "id": "leaf-green-medium",
+      "passed": true,
+      "meshes": 2,
+      "vertices": 2652,
+      "materials": 2,
+      "images": 3
+    },
+    {
+      "id": "leaf-yellow-medium",
+      "passed": true,
+      "meshes": 1,
+      "vertices": 492,
+      "materials": 1,
+      "images": 3
+    },
+    {
+      "id": "leaf-damaged-medium",
+      "passed": true,
+      "meshes": 1,
+      "vertices": 492,
+      "materials": 1,
+      "images": 3
+    },
+    {
+      "id": "leaf-veins-medium",
+      "passed": true,
+      "meshes": 1,
+      "vertices": 2160,
+      "materials": 1,
+      "images": 0
+    },
+    {
+      "id": "male-blossom-medium",
+      "passed": true,
+      "meshes": 2,
+      "vertices": 186,
+      "materials": 2,
+      "images": 6
+    },
+    {
+      "id": "female-blossom-medium",
+      "passed": true,
+      "meshes": 3,
+      "vertices": 1117,
+      "materials": 3,
+      "images": 7
+    },
+    {
+      "id": "vine-tendril-medium",
+      "passed": true,
+      "meshes": 25,
+      "vertices": 35472,
+      "materials": 25,
+      "images": 20
+    },
+    {
+      "id": "metal-arch-medium",
+      "passed": true,
+      "meshes": 1,
+      "vertices": 7560,
+      "materials": 1,
+      "images": 3
+    },
+    {
+      "id": "wooden-trellis-medium",
+      "passed": true,
+      "meshes": 1,
+      "vertices": 648,
+      "materials": 1,
+      "images": 3
+    },
+    {
+      "id": "fence-medium",
+      "passed": true,
+      "meshes": 1,
+      "vertices": 360,
+      "materials": 1,
+      "images": 3
+    },
+    {
+      "id": "trellis-modules-medium",
+      "passed": true,
+      "meshes": 6,
+      "vertices": 288,
+      "materials": 1,
+      "images": 3
+    },
+    {
+      "id": "pumpkin-round-high",
+      "passed": true,
+      "meshes": 2,
+      "vertices": 2189,
+      "materials": 2,
+      "images": 6
+    },
+    {
+      "id": "pumpkin-tall-high",
+      "passed": true,
+      "meshes": 2,
+      "vertices": 2189,
+      "materials": 2,
+      "images": 6
+    },
+    {
+      "id": "pumpkin-squat-high",
+      "passed": true,
+      "meshes": 2,
+      "vertices": 2189,
+      "materials": 2,
+      "images": 6
+    },
+    {
+      "id": "pumpkin-flat-high",
+      "passed": true,
+      "meshes": 2,
+      "vertices": 2189,
+      "materials": 2,
+      "images": 6
+    },
+    {
+      "id": "pumpkin-white-high",
+      "passed": true,
+      "meshes": 2,
+      "vertices": 2189,
+      "materials": 2,
+      "images": 6
+    },
+    {
+      "id": "pumpkin-green-high",
+      "passed": true,
+      "meshes": 2,
+      "vertices": 2189,
+      "materials": 2,
+      "images": 6
+    },
+    {
+      "id": "pumpkin-warty-high",
+      "passed": true,
+      "meshes": 2,
+      "vertices": 19224,
+      "materials": 2,
+      "images": 6
+    },
+    {
+      "id": "woody-stem-high",
+      "passed": true,
+      "meshes": 1,
+      "vertices": 72,
+      "materials": 1,
+      "images": 3
+    },
+    {
+      "id": "leaf-green-high",
+      "passed": true,
+      "meshes": 2,
+      "vertices": 3136,
+      "materials": 2,
+      "images": 3
+    },
+    {
+      "id": "leaf-yellow-high",
+      "passed": true,
+      "meshes": 1,
+      "vertices": 976,
+      "materials": 1,
+      "images": 3
+    },
+    {
+      "id": "leaf-damaged-high",
+      "passed": true,
+      "meshes": 1,
+      "vertices": 976,
+      "materials": 1,
+      "images": 3
+    },
+    {
+      "id": "leaf-veins-high",
+      "passed": true,
+      "meshes": 1,
+      "vertices": 2160,
+      "materials": 1,
+      "images": 0
+    },
+    {
+      "id": "male-blossom-high",
+      "passed": true,
+      "meshes": 2,
+      "vertices": 186,
+      "materials": 2,
+      "images": 6
+    },
+    {
+      "id": "female-blossom-high",
+      "passed": true,
+      "meshes": 3,
+      "vertices": 2303,
+      "materials": 3,
+      "images": 7
+    },
+    {
+      "id": "vine-tendril-high",
+      "passed": true,
+      "meshes": 30,
+      "vertices": 47500,
+      "materials": 30,
+      "images": 23
+    },
+    {
+      "id": "metal-arch-high",
+      "passed": true,
+      "meshes": 1,
+      "vertices": 7560,
+      "materials": 1,
+      "images": 3
+    },
+    {
+      "id": "wooden-trellis-high",
+      "passed": true,
+      "meshes": 1,
+      "vertices": 648,
+      "materials": 1,
+      "images": 3
+    },
+    {
+      "id": "fence-high",
+      "passed": true,
+      "meshes": 1,
+      "vertices": 360,
+      "materials": 1,
+      "images": 3
+    },
+    {
+      "id": "trellis-modules-high",
+      "passed": true,
+      "meshes": 6,
+      "vertices": 288,
+      "materials": 1,
+      "images": 3
+    }
+  ]
+}

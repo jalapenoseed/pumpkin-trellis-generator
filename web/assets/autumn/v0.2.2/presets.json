@@ -1,0 +1,28 @@
+{
+  "homestead": {
+    "seed": 19351,
+    "width": 11,
+    "length": 9,
+    "density": 0.24
+  },
+  "field": {
+    "seed": 19353,
+    "width": 32,
+    "length": 24,
+    "density": 0.38
+  },
+  "arch": {
+    "seed": 19352,
+    "width": 4,
+    "length": 4,
+    "density": 0.13,
+    "trellis": "arch"
+  },
+  "fence": {
+    "seed": 19355,
+    "width": 6,
+    "length": 3,
+    "density": 0.22,
+    "trellis": "fence"
+  }
+}

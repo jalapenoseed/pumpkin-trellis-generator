@@ -1,0 +1,10 @@
+const fs=require('node:fs');
+(async()=>{const tabs=await(await fetch('http://127.0.0.1:9275/json')).json(),ws=new WebSocket(tabs.find(t=>t.type==='page').webSocketDebuggerUrl);await new Promise(r=>ws.onopen=r);let id=0,pending=new Map(),errors=[];ws.onmessage=e=>{const m=JSON.parse(e.data);if(m.id){pending.get(m.id)?.(m);pending.delete(m.id);}else if(m.method==='Runtime.exceptionThrown')errors.push(m.params.exceptionDetails);};
+const send=(method,params={})=>new Promise((resolve,reject)=>{const n=++id,t=setTimeout(()=>reject(Error(method+' timeout')),60000);pending.set(n,m=>{clearTimeout(t);m.error?reject(Error(JSON.stringify(m.error))):resolve(m.result)});ws.send(JSON.stringify({id:n,method,params}));});
+const ev=async expression=>{const v=await send('Runtime.evaluate',{expression,returnByValue:true,awaitPromise:true});if(v.exceptionDetails)throw Error(JSON.stringify(v.exceptionDetails));return v.result?.value;};
+await send('Runtime.enable');await send('Page.enable');const mode=process.argv[2];
+if(mode==='open'){await send('Page.navigate',{url:process.argv[3]||(process.env.AUTUMN_PREVIEW_URL||'http://127.0.0.1:8136/autumn.html')});await new Promise(r=>setTimeout(r,5500));console.log(JSON.stringify({ready:await ev('!!window.autumnPreview'),error:await ev('document.getElementById("error")?.textContent'),stats:await ev('window.autumnPreview?.stats'),errors}));}
+if(mode==='eval')console.log(JSON.stringify(await ev(process.argv[3])));
+if(mode==='shot'){await ev('autumnPreview.renderer.render(autumnPreview.scene,autumnPreview.camera)');fs.mkdirSync('web/.qa/autumn',{recursive:true});const s=await send('Page.captureScreenshot',{format:'png'});fs.writeFileSync('web/.qa/autumn/'+process.argv[3]+'.png',Buffer.from(s.data,'base64'));console.log('saved '+process.argv[3]);}
+if(mode==='mobile'){await send('Emulation.setDeviceMetricsOverride',{width:390,height:844,deviceScaleFactor:1,mobile:true});await send('Emulation.setTouchEmulationEnabled',{enabled:true});console.log('mobile emulation');}
+ws.close();})().catch(e=>{console.error(e);process.exit(1)});
