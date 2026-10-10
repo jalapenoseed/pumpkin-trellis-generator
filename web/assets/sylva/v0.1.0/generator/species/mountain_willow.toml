@@ -1,0 +1,96 @@
+id = "mountain_willow"
+common = "Mountain Willow"
+latin = "Salix monticola (and allied Salix spp.)"
+group = "deciduous"
+habitat = "Dense thickets along wet riverfronts, beaver meadows and alpine meadows."
+elevation_m = [1800, 3100]
+fall_note = "Deep, warm yellow; leafless stems glow red or yellow through winter."
+silhouette_cues = [
+  "Erect shrub 1.5-4 m in dense clumps of many slender stems",
+  "Wand-like, nearly vertical stems; no single trunk",
+  "Narrow lanceolate leaves clustered along the stems",
+  "Stem colour is a key read: red-brown to yellow, glossy",
+]
+sources = [
+  { title = "USFS FEIS: Salix monticola", url = "https://www.fs.usda.gov/database/feis/plants/shrub/salmot/all.html" },
+  { title = "CSU Extension: Colorful winter stems", url = "https://extension.colostate.edu/resource/colorful-winter-stems" },
+  { title = "Pagosa.com: Fall colors in Pagosa Springs", url = "https://pagosa.com/fall-colors-pagosa-springs-colorado/" },
+  { title = "Wikimedia Commons: Salix monticola", url = "https://commons.wikimedia.org/wiki/Category:Salix_monticola" },
+]
+
+[form]
+archetype = "shrub"
+height_m = [1.8, 3.8]
+dbh_m = [0.05, 0.1]
+crown_base = 0.1
+crown_width = 0.85
+envelope = "vase"
+stems = [12, 24]
+stem_spread_m = 0.4
+stem_angle_deg = [3, 24]
+wobble = 0.12
+taper = [[0, 1.0], [1, 0.12]]
+flare = 0.05
+segments = 10
+
+[[levels]]
+count = 14
+down_angle = [[0, 35], [1, 22]]
+angle_var = 8
+length = 0.6
+tropism = [0.3, 0.5]
+wobble = 0.25
+radius_ratio = 0.55
+segments = 5
+
+[leaves]
+kind = "broadleaf"
+outline = "lanceolate"
+length_cm = [4.0, 10.0]
+width_ratio = 0.25
+petiole_ratio = 0.12
+teeth = 60
+tooth_depth = 0.004
+card_m = [0.2, 0.3]
+cards_per_m = 22.0
+on_levels = [0, 1]
+start = 0.35
+spread_deg = 35
+up_bias = 0.3
+per_card = [7, 12]
+
+[bark]
+type = "smooth_lenticel"
+twig = "#9a3e26"
+colors = ["#8a6a58", "#6a4c3e", "#2c1e18"]
+accent = "#9a3e26"
+tile_m = 0.35
+roughness = [0.45, 0.7]
+normal_strength = 1.5
+
+[material]
+leaf_roughness = 0.5
+leaf_specular = 0.4
+translucency = 0.6
+normal_bend = 0.5
+flutter = 0.5
+sway = 0.5
+stiffness = 0.3
+
+[seasons.summer]
+colors = ["#5f7a42", "#6f8a4a", "#889c5c"]
+weights = [3, 4, 2]
+[seasons.turning]
+colors = ["#889c5c", "#b0a844", "#d2b03a"]
+weights = [3, 3, 2]
+[seasons.peak]
+colors = ["#e2b83a", "#cfa02e", "#b8922e", "#e8c850"]
+weights = [4, 4, 2, 1.5]
+presence = 0.95
+[seasons.late]
+colors = ["#b88a2e", "#8e6e34"]
+weights = [3, 2]
+presence = 0.35
+[seasons.bare]
+colors = ["#8e6e34"]
+presence = 0.0

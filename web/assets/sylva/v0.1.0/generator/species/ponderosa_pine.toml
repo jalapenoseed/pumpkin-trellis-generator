@@ -1,0 +1,93 @@
+id = "ponderosa_pine"
+common = "Ponderosa Pine"
+latin = "Pinus ponderosa var. scopulorum"
+group = "evergreen"
+habitat = "Sunny, dry elevations around town; open park-like stands with grass beneath."
+elevation_m = [2000, 2800]
+fall_note = "Evergreen. Older needles yellow and drop in autumn; mature bark warms to cinnamon-orange in low sun."
+silhouette_cues = [
+  "Tall, straight, clear bole; open, irregular crown that flattens with age",
+  "Branches thick, few, horizontal to drooping with upturned ends",
+  "Needles in dense bottle-brush tufts at branch tips only",
+  "Mature bark: large cinnamon-orange jigsaw plates split by black furrows; young trees dark ('blackjack')",
+]
+sources = [
+  { title = "USU Forestry: Ponderosa Pine identification", url = "https://extension.usu.edu/forestry/tree-identification/pines/ponderosa-pine" },
+  { title = "NC State Extension: Pinus ponderosa", url = "https://plants.ces.ncsu.edu/plants/all/pinus-ponderosa/" },
+  { title = "Wikimedia Commons: Pinus ponderosa", url = "https://commons.wikimedia.org/wiki/Category:Pinus_ponderosa" },
+]
+
+[form]
+height_m = [22.0, 34.0]
+dbh_m = [0.5, 1.0]
+crown_base = 0.45
+crown_width = 0.42
+envelope = "irregular_open"
+lean_deg = 2.0
+wobble = 0.05
+taper = [[0, 1.0], [0.5, 0.62], [1, 0.04]]
+flare = 0.3
+segments = 26
+
+[[levels]]
+count = 46
+down_angle = [[0, 100], [0.5, 88], [1, 55]]
+angle_var = 10
+length = 1.0
+tropism = [-0.25, 0.7]
+wobble = 0.45
+radius_ratio = 0.4
+segments = 9
+
+[[levels]]
+count = 3.0
+start = 0.3
+down_angle = [55, 45]
+length = [[0, 0.45], [1, 0.25]]
+tropism = [0.1, 0.6]
+wobble = 0.5
+radius_ratio = 0.6
+segments = 4
+
+[leaves]
+kind = "needle_spray"
+outline = "pine_tuft"
+needle_cm = [8.0, 18.0]
+needles_per_fascicle = 3
+card_m = [0.5, 0.75]
+cards_per_m = 18.0
+on_levels = [1, 2]
+start = 0.55
+tip_bias = 3.0
+spread_deg = 30
+up_bias = 0.6
+per_card = [1, 1]
+card_budget = 7000
+
+[bark]
+type = "ponderosa"
+twig = "#6e4a32"
+colors = ["#d08a50", "#b5602e", "#1e140e"]
+accent = "#22180f"
+young_colors = ["#3a2e26", "#2e2620"]
+tile_m = 1.6
+roughness = [0.78, 0.95]
+normal_strength = 7.0
+
+[material]
+leaf_roughness = 0.55
+leaf_specular = 0.35
+translucency = 0.25
+normal_bend = 0.45
+flutter = 0.1
+sway = 0.25
+stiffness = 0.7
+
+[seasons.summer]
+colors = ["#4f6b2e", "#5f7a34", "#6b8238"]
+weights = [3, 4, 2]
+[seasons.peak]
+colors = ["#4f6b2e", "#5f7a34", "#8a8a3a"]
+weights = [4, 4, 1]
+[seasons.bare]
+colors = ["#465f2c", "#55692f"]

@@ -1,0 +1,759 @@
+{
+  "schema": "sylva-forge-pack-v1",
+  "version": "0.1.0",
+  "name": "Sylva \u00b7 Pagosa Springs autumn trees",
+  "studio": "Jalape\u00f1o Seed Productions",
+  "license": "LicenseRef-User-Owned",
+  "provenance": {
+    "original": true,
+    "source_type": "authored",
+    "generator": "Sylva 0.1.0",
+    "method": "Procedural generation from species presets; no scanned or third-party geometry/textures",
+    "botanical_references": "generator/SOURCES.md"
+  },
+  "assets": [
+    {
+      "id": "sylva_alpine_avens",
+      "species": "alpine_avens",
+      "name": "Alpine Avens (Ross' Avens)",
+      "common": "Alpine Avens (Ross' Avens)",
+      "latin": "Geum rossii",
+      "group": "groundcover",
+      "lod": 0,
+      "seed": 1,
+      "gltf": "models/sylva_alpine_avens/sylva_alpine_avens.gltf",
+      "triangles": 138,
+      "extra_lods": [
+        {
+          "lod": 1,
+          "file": "lod1.glb",
+          "triangles": 62
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.1127,
+          -0.0,
+          -0.0967
+        ],
+        "max": [
+          0.1075,
+          0.0844,
+          0.1093
+        ]
+      },
+      "dimensions_m": [
+        0.22,
+        0.084,
+        0.206
+      ],
+      "baked_season": "peak",
+      "tags": [
+        "sylva",
+        "procedural",
+        "pagosa",
+        "groundcover",
+        "alpine_avens"
+      ]
+    },
+    {
+      "id": "sylva_blue_spruce",
+      "species": "blue_spruce",
+      "name": "Colorado Blue Spruce",
+      "common": "Colorado Blue Spruce",
+      "latin": "Picea pungens",
+      "group": "evergreen",
+      "lod": 0,
+      "seed": 1,
+      "gltf": "models/sylva_blue_spruce/sylva_blue_spruce.gltf",
+      "triangles": 53671,
+      "extra_lods": [
+        {
+          "lod": 1,
+          "file": "lod1.glb",
+          "triangles": 18059
+        }
+      ],
+      "bounds": {
+        "min": [
+          -4.9054,
+          -0.7479,
+          -4.5843
+        ],
+        "max": [
+          5.0087,
+          23.3298,
+          5.2875
+        ]
+      },
+      "dimensions_m": [
+        9.914,
+        24.078,
+        9.872
+      ],
+      "baked_season": "peak",
+      "tags": [
+        "sylva",
+        "procedural",
+        "pagosa",
+        "evergreen",
+        "blue_spruce"
+      ]
+    },
+    {
+      "id": "sylva_douglas_fir",
+      "species": "douglas_fir",
+      "name": "Rocky Mountain Douglas-fir",
+      "common": "Rocky Mountain Douglas-fir",
+      "latin": "Pseudotsuga menziesii var. glauca",
+      "group": "evergreen",
+      "lod": 0,
+      "seed": 1,
+      "gltf": "models/sylva_douglas_fir/sylva_douglas_fir.gltf",
+      "triangles": 58401,
+      "extra_lods": [
+        {
+          "lod": 1,
+          "file": "lod1.glb",
+          "triangles": 21068
+        }
+      ],
+      "bounds": {
+        "min": [
+          -6.253,
+          -0.0141,
+          -6.2813
+        ],
+        "max": [
+          6.6653,
+          32.8963,
+          6.5077
+        ]
+      },
+      "dimensions_m": [
+        12.918,
+        32.91,
+        12.789
+      ],
+      "baked_season": "peak",
+      "tags": [
+        "sylva",
+        "procedural",
+        "pagosa",
+        "evergreen",
+        "douglas_fir"
+      ]
+    },
+    {
+      "id": "sylva_gambel_oak",
+      "species": "gambel_oak",
+      "name": "Gambel Oak (Scrub Oak)",
+      "common": "Gambel Oak (Scrub Oak)",
+      "latin": "Quercus gambelii",
+      "group": "deciduous",
+      "lod": 0,
+      "seed": 1,
+      "gltf": "models/sylva_gambel_oak/sylva_gambel_oak.gltf",
+      "triangles": 19038,
+      "extra_lods": [
+        {
+          "lod": 1,
+          "file": "lod1.glb",
+          "triangles": 6930
+        }
+      ],
+      "bounds": {
+        "min": [
+          -2.8928,
+          -0.0175,
+          -2.8502
+        ],
+        "max": [
+          2.4642,
+          3.3716,
+          2.9182
+        ]
+      },
+      "dimensions_m": [
+        5.357,
+        3.389,
+        5.768
+      ],
+      "baked_season": "peak",
+      "tags": [
+        "sylva",
+        "procedural",
+        "pagosa",
+        "deciduous",
+        "gambel_oak"
+      ]
+    },
+    {
+      "id": "sylva_mountain_bunchgrass",
+      "species": "mountain_bunchgrass",
+      "name": "Mountain Bunchgrass (Fescue / Muhly)",
+      "common": "Mountain Bunchgrass (Fescue / Muhly)",
+      "latin": "Festuca thurberi, F. arizonica, Muhlenbergia montana (art-directed composite)",
+      "group": "groundcover",
+      "lod": 0,
+      "seed": 1,
+      "gltf": "models/sylva_mountain_bunchgrass/sylva_mountain_bunchgrass.gltf",
+      "triangles": 1566,
+      "extra_lods": [
+        {
+          "lod": 1,
+          "file": "lod1.glb",
+          "triangles": 398
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.2817,
+          0.0,
+          -0.2761
+        ],
+        "max": [
+          0.2471,
+          0.5451,
+          0.2641
+        ]
+      },
+      "dimensions_m": [
+        0.529,
+        0.545,
+        0.54
+      ],
+      "baked_season": "peak",
+      "tags": [
+        "sylva",
+        "procedural",
+        "pagosa",
+        "groundcover",
+        "mountain_bunchgrass"
+      ]
+    },
+    {
+      "id": "sylva_mountain_willow",
+      "species": "mountain_willow",
+      "name": "Mountain Willow",
+      "common": "Mountain Willow",
+      "latin": "Salix monticola (and allied Salix spp.)",
+      "group": "deciduous",
+      "lod": 0,
+      "seed": 1,
+      "gltf": "models/sylva_mountain_willow/sylva_mountain_willow.gltf",
+      "triangles": 15064,
+      "extra_lods": [
+        {
+          "lod": 1,
+          "file": "lod1.glb",
+          "triangles": 6868
+        }
+      ],
+      "bounds": {
+        "min": [
+          -1.3139,
+          -0.0049,
+          -1.7004
+        ],
+        "max": [
+          1.6453,
+          4.1756,
+          1.4404
+        ]
+      },
+      "dimensions_m": [
+        2.959,
+        4.181,
+        3.141
+      ],
+      "baked_season": "peak",
+      "tags": [
+        "sylva",
+        "procedural",
+        "pagosa",
+        "deciduous",
+        "mountain_willow"
+      ]
+    },
+    {
+      "id": "sylva_narrowleaf_cottonwood",
+      "species": "narrowleaf_cottonwood",
+      "name": "Narrowleaf Cottonwood",
+      "common": "Narrowleaf Cottonwood",
+      "latin": "Populus angustifolia",
+      "group": "deciduous",
+      "lod": 0,
+      "seed": 1,
+      "gltf": "models/sylva_narrowleaf_cottonwood/sylva_narrowleaf_cottonwood.gltf",
+      "triangles": 39232,
+      "extra_lods": [
+        {
+          "lod": 1,
+          "file": "lod1.glb",
+          "triangles": 14668
+        }
+      ],
+      "bounds": {
+        "min": [
+          -3.6729,
+          -0.0188,
+          -3.0202
+        ],
+        "max": [
+          4.1308,
+          17.4535,
+          4.0654
+        ]
+      },
+      "dimensions_m": [
+        7.804,
+        17.472,
+        7.086
+      ],
+      "baked_season": "peak",
+      "tags": [
+        "sylva",
+        "procedural",
+        "pagosa",
+        "deciduous",
+        "narrowleaf_cottonwood"
+      ]
+    },
+    {
+      "id": "sylva_pinyon_pine",
+      "species": "pinyon_pine",
+      "name": "Two-needle Pinyon",
+      "common": "Two-needle Pinyon",
+      "latin": "Pinus edulis",
+      "group": "evergreen",
+      "lod": 0,
+      "seed": 1,
+      "gltf": "models/sylva_pinyon_pine/sylva_pinyon_pine.gltf",
+      "triangles": 47848,
+      "extra_lods": [
+        {
+          "lod": 1,
+          "file": "lod1.glb",
+          "triangles": 19057
+        }
+      ],
+      "bounds": {
+        "min": [
+          -4.6453,
+          -0.025,
+          -4.6666
+        ],
+        "max": [
+          4.3616,
+          10.4958,
+          4.5155
+        ]
+      },
+      "dimensions_m": [
+        9.007,
+        10.521,
+        9.182
+      ],
+      "baked_season": "peak",
+      "tags": [
+        "sylva",
+        "procedural",
+        "pagosa",
+        "evergreen",
+        "pinyon_pine"
+      ]
+    },
+    {
+      "id": "sylva_plains_cottonwood",
+      "species": "plains_cottonwood",
+      "name": "Plains Cottonwood",
+      "common": "Plains Cottonwood",
+      "latin": "Populus deltoides ssp. monilifera",
+      "group": "deciduous",
+      "lod": 0,
+      "seed": 1,
+      "gltf": "models/sylva_plains_cottonwood/sylva_plains_cottonwood.gltf",
+      "triangles": 106013,
+      "extra_lods": [
+        {
+          "lod": 1,
+          "file": "lod1.glb",
+          "triangles": 47014
+        }
+      ],
+      "bounds": {
+        "min": [
+          -13.3038,
+          -0.0247,
+          -14.003
+        ],
+        "max": [
+          13.5044,
+          27.2783,
+          12.6647
+        ]
+      },
+      "dimensions_m": [
+        26.808,
+        27.303,
+        26.668
+      ],
+      "baked_season": "peak",
+      "tags": [
+        "sylva",
+        "procedural",
+        "pagosa",
+        "deciduous",
+        "plains_cottonwood"
+      ]
+    },
+    {
+      "id": "sylva_ponderosa_pine",
+      "species": "ponderosa_pine",
+      "name": "Ponderosa Pine",
+      "common": "Ponderosa Pine",
+      "latin": "Pinus ponderosa var. scopulorum",
+      "group": "evergreen",
+      "lod": 0,
+      "seed": 1,
+      "gltf": "models/sylva_ponderosa_pine/sylva_ponderosa_pine.gltf",
+      "triangles": 38230,
+      "extra_lods": [
+        {
+          "lod": 1,
+          "file": "lod1.glb",
+          "triangles": 14178
+        }
+      ],
+      "bounds": {
+        "min": [
+          -6.9877,
+          -0.0069,
+          -7.6559
+        ],
+        "max": [
+          7.3681,
+          34.5956,
+          6.9513
+        ]
+      },
+      "dimensions_m": [
+        14.356,
+        34.602,
+        14.607
+      ],
+      "baked_season": "peak",
+      "tags": [
+        "sylva",
+        "procedural",
+        "pagosa",
+        "evergreen",
+        "ponderosa_pine"
+      ]
+    },
+    {
+      "id": "sylva_quaking_aspen",
+      "species": "quaking_aspen",
+      "name": "Quaking Aspen",
+      "common": "Quaking Aspen",
+      "latin": "Populus tremuloides",
+      "group": "deciduous",
+      "lod": 0,
+      "seed": 1,
+      "gltf": "models/sylva_quaking_aspen/sylva_quaking_aspen.gltf",
+      "triangles": 20166,
+      "extra_lods": [
+        {
+          "lod": 1,
+          "file": "lod1.glb",
+          "triangles": 8143
+        }
+      ],
+      "bounds": {
+        "min": [
+          -3.0626,
+          -0.0023,
+          -2.8016
+        ],
+        "max": [
+          3.074,
+          19.833,
+          2.7227
+        ]
+      },
+      "dimensions_m": [
+        6.137,
+        19.835,
+        5.524
+      ],
+      "baked_season": "peak",
+      "tags": [
+        "sylva",
+        "procedural",
+        "pagosa",
+        "deciduous",
+        "quaking_aspen"
+      ]
+    },
+    {
+      "id": "sylva_rocky_mountain_juniper",
+      "species": "rocky_mountain_juniper",
+      "name": "Rocky Mountain Juniper",
+      "common": "Rocky Mountain Juniper",
+      "latin": "Juniperus scopulorum (Utah juniper, J. osteosperma, shares the scrub)",
+      "group": "evergreen",
+      "lod": 0,
+      "seed": 1,
+      "gltf": "models/sylva_rocky_mountain_juniper/sylva_rocky_mountain_juniper.gltf",
+      "triangles": 36502,
+      "extra_lods": [
+        {
+          "lod": 1,
+          "file": "lod1.glb",
+          "triangles": 13969
+        }
+      ],
+      "bounds": {
+        "min": [
+          -2.5347,
+          -0.0481,
+          -2.1965
+        ],
+        "max": [
+          2.7549,
+          7.0987,
+          2.1276
+        ]
+      },
+      "dimensions_m": [
+        5.29,
+        7.147,
+        4.324
+      ],
+      "baked_season": "peak",
+      "tags": [
+        "sylva",
+        "procedural",
+        "pagosa",
+        "evergreen",
+        "rocky_mountain_juniper"
+      ]
+    },
+    {
+      "id": "sylva_rocky_mountain_maple",
+      "species": "rocky_mountain_maple",
+      "name": "Rocky Mountain Maple",
+      "common": "Rocky Mountain Maple",
+      "latin": "Acer glabrum",
+      "group": "deciduous",
+      "lod": 0,
+      "seed": 1,
+      "gltf": "models/sylva_rocky_mountain_maple/sylva_rocky_mountain_maple.gltf",
+      "triangles": 10469,
+      "extra_lods": [
+        {
+          "lod": 1,
+          "file": "lod1.glb",
+          "triangles": 4068
+        }
+      ],
+      "bounds": {
+        "min": [
+          -2.6537,
+          -0.0058,
+          -2.9641
+        ],
+        "max": [
+          3.1572,
+          6.7436,
+          2.1481
+        ]
+      },
+      "dimensions_m": [
+        5.811,
+        6.749,
+        5.112
+      ],
+      "baked_season": "peak",
+      "tags": [
+        "sylva",
+        "procedural",
+        "pagosa",
+        "deciduous",
+        "rocky_mountain_maple"
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "sylva_blue_spruce_bark",
+      "name": "Colorado Blue Spruce bark",
+      "species": "blue_spruce",
+      "bark_type": "spruce",
+      "maps": {
+        "baseColor": "materials/blue_spruce-bark-baseColor.png",
+        "normal": "materials/blue_spruce-bark-normal.png",
+        "roughness": "materials/blue_spruce-bark-roughness.png",
+        "height": "materials/blue_spruce-bark-height.png",
+        "ao": "materials/blue_spruce-bark-ao.png"
+      },
+      "physical_width_m": 0.9,
+      "physical_height_m": 0.9
+    },
+    {
+      "id": "sylva_douglas_fir_bark",
+      "name": "Rocky Mountain Douglas-fir bark",
+      "species": "douglas_fir",
+      "bark_type": "douglas_fir",
+      "maps": {
+        "baseColor": "materials/douglas_fir-bark-baseColor.png",
+        "normal": "materials/douglas_fir-bark-normal.png",
+        "roughness": "materials/douglas_fir-bark-roughness.png",
+        "height": "materials/douglas_fir-bark-height.png",
+        "ao": "materials/douglas_fir-bark-ao.png"
+      },
+      "physical_width_m": 1.3,
+      "physical_height_m": 1.3
+    },
+    {
+      "id": "sylva_gambel_oak_bark",
+      "name": "Gambel Oak (Scrub Oak) bark",
+      "species": "gambel_oak",
+      "bark_type": "scaly_plates",
+      "maps": {
+        "baseColor": "materials/gambel_oak-bark-baseColor.png",
+        "normal": "materials/gambel_oak-bark-normal.png",
+        "roughness": "materials/gambel_oak-bark-roughness.png",
+        "height": "materials/gambel_oak-bark-height.png",
+        "ao": "materials/gambel_oak-bark-ao.png"
+      },
+      "physical_width_m": 0.7,
+      "physical_height_m": 0.7
+    },
+    {
+      "id": "sylva_mountain_willow_bark",
+      "name": "Mountain Willow bark",
+      "species": "mountain_willow",
+      "bark_type": "smooth_lenticel",
+      "maps": {
+        "baseColor": "materials/mountain_willow-bark-baseColor.png",
+        "normal": "materials/mountain_willow-bark-normal.png",
+        "roughness": "materials/mountain_willow-bark-roughness.png",
+        "height": "materials/mountain_willow-bark-height.png",
+        "ao": "materials/mountain_willow-bark-ao.png"
+      },
+      "physical_width_m": 0.35,
+      "physical_height_m": 0.35
+    },
+    {
+      "id": "sylva_narrowleaf_cottonwood_bark",
+      "name": "Narrowleaf Cottonwood bark",
+      "species": "narrowleaf_cottonwood",
+      "bark_type": "furrowed",
+      "maps": {
+        "baseColor": "materials/narrowleaf_cottonwood-bark-baseColor.png",
+        "normal": "materials/narrowleaf_cottonwood-bark-normal.png",
+        "roughness": "materials/narrowleaf_cottonwood-bark-roughness.png",
+        "height": "materials/narrowleaf_cottonwood-bark-height.png",
+        "ao": "materials/narrowleaf_cottonwood-bark-ao.png"
+      },
+      "physical_width_m": 1.0,
+      "physical_height_m": 1.0
+    },
+    {
+      "id": "sylva_pinyon_pine_bark",
+      "name": "Two-needle Pinyon bark",
+      "species": "pinyon_pine",
+      "bark_type": "shallow_furrow",
+      "maps": {
+        "baseColor": "materials/pinyon_pine-bark-baseColor.png",
+        "normal": "materials/pinyon_pine-bark-normal.png",
+        "roughness": "materials/pinyon_pine-bark-roughness.png",
+        "height": "materials/pinyon_pine-bark-height.png",
+        "ao": "materials/pinyon_pine-bark-ao.png"
+      },
+      "physical_width_m": 0.7,
+      "physical_height_m": 0.7
+    },
+    {
+      "id": "sylva_plains_cottonwood_bark",
+      "name": "Plains Cottonwood bark",
+      "species": "plains_cottonwood",
+      "bark_type": "furrowed",
+      "maps": {
+        "baseColor": "materials/plains_cottonwood-bark-baseColor.png",
+        "normal": "materials/plains_cottonwood-bark-normal.png",
+        "roughness": "materials/plains_cottonwood-bark-roughness.png",
+        "height": "materials/plains_cottonwood-bark-height.png",
+        "ao": "materials/plains_cottonwood-bark-ao.png"
+      },
+      "physical_width_m": 1.4,
+      "physical_height_m": 1.4
+    },
+    {
+      "id": "sylva_ponderosa_pine_bark",
+      "name": "Ponderosa Pine bark",
+      "species": "ponderosa_pine",
+      "bark_type": "ponderosa",
+      "maps": {
+        "baseColor": "materials/ponderosa_pine-bark-baseColor.png",
+        "normal": "materials/ponderosa_pine-bark-normal.png",
+        "roughness": "materials/ponderosa_pine-bark-roughness.png",
+        "height": "materials/ponderosa_pine-bark-height.png",
+        "ao": "materials/ponderosa_pine-bark-ao.png"
+      },
+      "physical_width_m": 1.6,
+      "physical_height_m": 1.6
+    },
+    {
+      "id": "sylva_quaking_aspen_bark",
+      "name": "Quaking Aspen bark",
+      "species": "quaking_aspen",
+      "bark_type": "aspen",
+      "maps": {
+        "baseColor": "materials/quaking_aspen-bark-baseColor.png",
+        "normal": "materials/quaking_aspen-bark-normal.png",
+        "roughness": "materials/quaking_aspen-bark-roughness.png",
+        "height": "materials/quaking_aspen-bark-height.png",
+        "ao": "materials/quaking_aspen-bark-ao.png"
+      },
+      "physical_width_m": 0.9,
+      "physical_height_m": 0.9
+    },
+    {
+      "id": "sylva_rocky_mountain_juniper_bark",
+      "name": "Rocky Mountain Juniper bark",
+      "species": "rocky_mountain_juniper",
+      "bark_type": "shreddy",
+      "maps": {
+        "baseColor": "materials/rocky_mountain_juniper-bark-baseColor.png",
+        "normal": "materials/rocky_mountain_juniper-bark-normal.png",
+        "roughness": "materials/rocky_mountain_juniper-bark-roughness.png",
+        "height": "materials/rocky_mountain_juniper-bark-height.png",
+        "ao": "materials/rocky_mountain_juniper-bark-ao.png"
+      },
+      "physical_width_m": 0.8,
+      "physical_height_m": 0.8
+    },
+    {
+      "id": "sylva_rocky_mountain_maple_bark",
+      "name": "Rocky Mountain Maple bark",
+      "species": "rocky_mountain_maple",
+      "bark_type": "smooth_lenticel",
+      "maps": {
+        "baseColor": "materials/rocky_mountain_maple-bark-baseColor.png",
+        "normal": "materials/rocky_mountain_maple-bark-normal.png",
+        "roughness": "materials/rocky_mountain_maple-bark-roughness.png",
+        "height": "materials/rocky_mountain_maple-bark-height.png",
+        "ao": "materials/rocky_mountain_maple-bark-ao.png"
+      },
+      "physical_width_m": 0.5,
+      "physical_height_m": 0.5
+    }
+  ],
+  "validation": {
+    "passed": true,
+    "file": "validation.json"
+  }
+}

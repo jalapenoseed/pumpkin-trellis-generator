@@ -1,0 +1,60 @@
+id = "mountain_bunchgrass"
+common = "Mountain Bunchgrass (Fescue / Muhly)"
+latin = "Festuca thurberi, F. arizonica, Muhlenbergia montana (art-directed composite)"
+group = "groundcover"
+habitat = "Montane parks, ponderosa understory and slopes up to the alpine; tufts that cure in autumn."
+elevation_m = [2100, 3600]
+fall_note = "Dries into rust-red, deep orange, straw and soft brown that sweep across the slopes."
+silhouette_cues = [
+  "Dense tussock of fine, arching blades; fountain silhouette",
+  "Seed stalks stand above the blade mound",
+  "Colour gradient root to tip: greener / darker at the base, bleached tips",
+]
+sources = [
+  { title = "Pagosa Daily Post: So many colorful trees, so little time", url = "https://pagosadailypost.com/2021/09/30/so-many-colorful-trees-so-little-time/" },
+  { title = "Pagosa.com: Fall colors in Pagosa Springs", url = "https://pagosa.com/fall-colors-pagosa-springs-colorado/" },
+  { title = "Wikimedia Commons: Festuca thurberi", url = "https://commons.wikimedia.org/wiki/Category:Festuca_thurberi" },
+]
+
+[form]
+archetype = "clump"
+height_m = [0.3, 0.7]
+
+[clump]
+blades = [70, 130]
+height_m = [0.3, 0.65]
+width_cm = [0.2, 0.45]
+base_radius_m = 0.07
+splay_deg = [3, 42]
+droop = 1.1
+seed_heads = 9
+
+[leaves]
+kind = "blade"
+outline = "grass_blade"
+on_levels = []
+
+[material]
+leaf_roughness = 0.6
+leaf_specular = 0.3
+translucency = 0.45
+normal_bend = 0.3
+flutter = 0.6
+sway = 0.8
+stiffness = 0.2
+
+[seasons.summer]
+colors = ["#6f7f42", "#7a8a4a", "#8a9656"]
+weights = [3, 4, 2]
+[seasons.turning]
+colors = ["#8a8a4a", "#a8964e", "#b07a3a"]
+weights = [3, 3, 2]
+[seasons.peak]
+colors = ["#b0502a", "#c8742e", "#8a3a26", "#d4a25a", "#9a7a5a"]
+weights = [3, 3, 2, 2, 2]
+[seasons.late]
+colors = ["#b89a6a", "#9a7a5a", "#c8ae7e"]
+weights = [3, 3, 2]
+[seasons.bare]
+colors = ["#a8946e", "#8e7a5c", "#c2b08a"]
+weights = [3, 3, 2]

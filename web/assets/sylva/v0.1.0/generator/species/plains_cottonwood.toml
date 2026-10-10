@@ -1,0 +1,119 @@
+id = "plains_cottonwood"
+common = "Plains Cottonwood"
+latin = "Populus deltoides ssp. monilifera"
+group = "deciduous"
+habitat = "Lower river bottoms and lake margins; the big shade trees of the valley floor."
+elevation_m = [1200, 2200]
+fall_note = "Bright butter-yellow; rattling triangular leaves."
+silhouette_cues = [
+  "Massive tree with a short, thick trunk that forks into a few huge leaders",
+  "Broad, spreading, open crown, often wider than tall",
+  "Triangular (deltoid) leaves with coarse rounded teeth and flat petioles",
+  "Thick, deeply ridged and furrowed gray-brown bark",
+]
+sources = [
+  { title = "Minnesota Wildflowers: Plains Cottonwood", url = "https://www.minnesotawildflowers.info/tree/plains-cottonwood" },
+  { title = "Wikipedia: Populus deltoides", url = "https://en.wikipedia.org/wiki/Populus_deltoides" },
+  { title = "Pagosa Daily Post: So many colorful trees, so little time", url = "https://pagosadailypost.com/2021/09/30/so-many-colorful-trees-so-little-time/" },
+  { title = "Wikimedia Commons: Populus deltoides", url = "https://commons.wikimedia.org/wiki/Category:Populus_deltoides" },
+]
+
+[form]
+height_m = [18.0, 28.0]
+dbh_m = [0.7, 1.2]
+crown_base = 0.22
+crown_width = 0.9
+envelope = "spreading"
+lean_deg = 4.0
+wobble = 0.15
+taper = [[0, 1.0], [0.4, 0.62], [1, 0.12]]
+flare = 0.3
+trunk_reach = 0.32
+leaders = [3, 4]
+leader_angle_deg = [28, 48]
+segments = 18
+
+[[levels]]
+count = 22
+down_angle = [[0, 70], [0.5, 55], [1, 40]]
+angle_var = 12
+length = 0.95
+tropism = [0.1, 0.25]
+wobble = 0.5
+radius_ratio = 0.5
+segments = 9
+
+[[levels]]
+count = 1.6
+start = 0.12
+down_angle = [55, 40]
+length = [[0, 0.5], [1, 0.25]]
+tropism = [0.05, 0.2]
+wobble = 0.55
+radius_ratio = 0.55
+segments = 5
+
+[[levels]]
+count = 2.5
+start = 0.2
+max_children = 14
+down_angle = 45
+length = [[0, 0.45], [1, 0.3]]
+tropism = [0.0, 0.1]
+wobble = 0.5
+radius_ratio = 0.6
+segments = 3
+
+[leaves]
+kind = "broadleaf"
+outline = "deltoid"
+length_cm = [5.0, 10.0]
+width_ratio = 1.05
+petiole_ratio = 0.7
+teeth = 40
+tooth_depth = 0.018
+card_m = [0.5, 0.75]
+cards_per_m = 10.0
+on_levels = [1, 2, 3]
+start = 0.3
+spread_deg = 50
+up_bias = 0.45
+per_card = [5, 8]
+card_budget = 14000
+
+[bark]
+type = "furrowed"
+twig = "#8a7048"
+colors = ["#6d6860", "#55504a", "#26231f"]
+accent = "#8a8478"
+young_colors = ["#b6b49c", "#a3a68e"]
+tile_m = 1.4
+roughness = [0.85, 0.97]
+normal_strength = 7.0
+
+[material]
+leaf_roughness = 0.45
+leaf_specular = 0.5
+translucency = 0.5
+normal_bend = 0.6
+flutter = 0.7
+sway = 0.2
+stiffness = 0.7
+
+[seasons.summer]
+colors = ["#46702e", "#507a35", "#628a3e"]
+weights = [3, 4, 2]
+[seasons.turning]
+colors = ["#628a3e", "#a8aa3c", "#d8bc3a"]
+weights = [3, 3, 2]
+[seasons.peak]
+colors = ["#f0c83a", "#e0b02c", "#c8a63a", "#f6da5a"]
+weights = [5, 3, 2, 2]
+presence = 0.95
+[seasons.late]
+colors = ["#c99a30", "#a27c34", "#7a6038"]
+weights = [3, 3, 2]
+presence = 0.4
+[seasons.bare]
+colors = ["#7a6038"]
+presence = 0.0

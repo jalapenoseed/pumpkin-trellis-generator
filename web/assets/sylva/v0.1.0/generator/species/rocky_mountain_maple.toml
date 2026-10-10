@@ -1,0 +1,109 @@
+id = "rocky_mountain_maple"
+common = "Rocky Mountain Maple"
+latin = "Acer glabrum"
+group = "deciduous"
+habitat = "Moist canyons, stream banks and lower mountain slopes; tucked under conifers."
+elevation_m = [1800, 3000]
+fall_note = "Rare bursts of vivid orange and bright red against the conifers; some plants only go yellow."
+silhouette_cues = [
+  "Small multi-stemmed shrubby tree 3-9 m with a rounded crown",
+  "Opposite branching (pairs) - reads very differently from the alternate poplars",
+  "3-lobed, sharply double-toothed leaves on long red petioles",
+  "Thin, smooth red-brown bark; red twigs and buds",
+]
+sources = [
+  { title = "USU Tree Browser: Maple, Rocky Mountain", url = "https://extension.usu.edu/treebrowser/catalog/maple-rocky-mountain" },
+  { title = "WSU: Acer glabrum description", url = "https://public.wsu.edu/~lohr/wcl/trees/acerglab/wacgldes.html" },
+  { title = "Pagosa Daily Post: So many colorful trees, so little time", url = "https://pagosadailypost.com/2021/09/30/so-many-colorful-trees-so-little-time/" },
+  { title = "Wikimedia Commons: Acer glabrum", url = "https://commons.wikimedia.org/wiki/Category:Acer_glabrum" },
+]
+
+[form]
+archetype = "shrub"
+height_m = [3.5, 7.5]
+dbh_m = [0.1, 0.2]
+crown_base = 0.15
+crown_width = 0.75
+envelope = "rounded"
+stems = [3, 7]
+stem_spread_m = 0.35
+stem_angle_deg = [4, 20]
+wobble = 0.18
+taper = [[0, 1.0], [1, 0.1]]
+flare = 0.12
+
+[[levels]]
+count = 14
+opposite = true
+down_angle = [[0, 50], [1, 32]]
+angle_var = 8
+length = 0.95
+tropism = [0.15, 0.35]
+wobble = 0.35
+radius_ratio = 0.55
+segments = 7
+
+[[levels]]
+count = 4.0
+opposite = true
+start = 0.1
+down_angle = [50, 40]
+length = [[0, 0.55], [1, 0.3]]
+tropism = [0.05, 0.25]
+wobble = 0.35
+radius_ratio = 0.6
+segments = 4
+
+[leaves]
+kind = "broadleaf"
+outline = "maple"
+length_cm = [5.0, 11.0]
+width_ratio = 1.0
+petiole_ratio = 0.8
+teeth = 46
+tooth_depth = 0.016
+lobes = 3
+lobe_depth = 0.45
+card_m = [0.22, 0.34]
+cards_per_m = 10.0
+on_levels = [1, 2]
+start = 0.35
+spread_deg = 55
+up_bias = 0.6
+per_card = [4, 6]
+
+[bark]
+type = "smooth_lenticel"
+twig = "#7a2e24"
+colors = ["#6e5044", "#5a4038", "#2c201c"]
+accent = "#8a7a6e"
+tile_m = 0.5
+roughness = [0.6, 0.8]
+normal_strength = 2.0
+
+[material]
+leaf_roughness = 0.5
+leaf_specular = 0.45
+translucency = 0.7
+normal_bend = 0.55
+flutter = 0.35
+sway = 0.3
+stiffness = 0.5
+
+[seasons.summer]
+colors = ["#3a6a2c", "#3e6b2f", "#4f7d38"]
+weights = [3, 4, 2]
+[seasons.turning]
+colors = ["#6a8a34", "#c8a03a", "#e0802e"]
+weights = [3, 2, 2]
+[seasons.peak]
+colors = ["#e0702a", "#d4452a", "#b8282a", "#e8a83a", "#f0c44a"]
+weights = [4, 3, 2, 2, 1.5]
+presence = 0.95
+[seasons.late]
+colors = ["#a83a28", "#8a3a2a", "#7a5232"]
+weights = [2, 3, 2]
+presence = 0.4
+[seasons.bare]
+colors = ["#7a5232"]
+presence = 0.0

@@ -1,0 +1,105 @@
+id = "douglas_fir"
+common = "Rocky Mountain Douglas-fir"
+latin = "Pseudotsuga menziesii var. glauca"
+group = "evergreen"
+habitat = "Densely populated north slopes and the high country; the dark backdrop that makes aspen pop."
+elevation_m = [2100, 3000]
+fall_note = "Evergreen; dark blue-green year round."
+silhouette_cues = [
+  "Tall tapered spire with a long, limby trunk; becomes irregular with age",
+  "Main branches angle upward more steeply than coastal Douglas-fir",
+  "Soft flat needles spiral around twigs, forming dense hanging sprays",
+  "Pendant cones with three-pronged bracts sticking out past the scales",
+  "Mature bark very thick, deeply furrowed, dark reddish-brown",
+]
+sources = [
+  { title = "NRCan Trees of Canada: Douglas-fir factsheet", url = "https://tidcf.nrcan.gc.ca/en/trees/factsheet/285" },
+  { title = "Wild Utah: Rocky Mountain Douglas-fir", url = "https://wildutah.us/html/plants_scenery/h_fir_douglas.html" },
+  { title = "Wikimedia Commons: Pseudotsuga menziesii var. glauca", url = "https://commons.wikimedia.org/wiki/Category:Pseudotsuga_menziesii_var._glauca" },
+]
+
+[form]
+height_m = [20.0, 34.0]
+dbh_m = [0.4, 0.9]
+crown_base = 0.18
+crown_width = 0.42
+envelope = "conical"
+lean_deg = 2.0
+wobble = 0.05
+taper = [[0, 1.0], [0.5, 0.55], [1, 0.02]]
+flare = 0.3
+segments = 28
+
+[[levels]]
+count = 70
+down_angle = [[0, 92], [0.6, 75], [1, 50]]
+angle_var = 9
+length = 1.0
+tropism = [-0.15, 0.35]
+wobble = 0.3
+radius_ratio = 0.35
+segments = 8
+
+[[levels]]
+count = 4.0
+start = 0.1
+down_angle = [60, 50]
+length = [[0, 0.45], [1, 0.2]]
+tropism = [-0.25, 0.0]
+wobble = 0.3
+radius_ratio = 0.55
+segments = 4
+
+[[levels]]
+count = 3.5
+start = 0.15
+max_children = 12
+down_angle = 50
+length = [[0, 0.45], [1, 0.25]]
+tropism = [-0.2, -0.1]
+wobble = 0.3
+radius_ratio = 0.6
+segments = 3
+
+[leaves]
+kind = "needle_spray"
+outline = "fir_spray"
+needle_cm = [2.0, 3.0]
+card_m = [0.34, 0.48]
+cards_per_m = 11.0
+on_levels = [2, 3]
+start = 0.15
+spread_deg = 25
+up_bias = 0.75
+per_card = [1, 1]
+card_budget = 9000
+
+[bark]
+type = "douglas_fir"
+twig = "#7a5a3e"
+colors = ["#5e4030", "#4a3428", "#1e140f"]
+accent = "#8a5a3e"
+young_colors = ["#7a7570", "#8a8580"]
+tile_m = 1.3
+roughness = [0.82, 0.97]
+normal_strength = 8.0
+
+[material]
+leaf_roughness = 0.58
+leaf_specular = 0.35
+translucency = 0.2
+normal_bend = 0.5
+wax = 0.25
+wax_color = "#bcd0cc"
+flutter = 0.08
+sway = 0.25
+stiffness = 0.65
+
+[seasons.summer]
+colors = ["#2f4f3a", "#3b5d45", "#3f6152", "#466a4e"]
+weights = [3, 4, 3, 2]
+[seasons.peak]
+colors = ["#2f4f3a", "#3b5d45", "#3f6152"]
+weights = [3, 4, 3]
+[seasons.bare]
+colors = ["#2a4636", "#34523f"]

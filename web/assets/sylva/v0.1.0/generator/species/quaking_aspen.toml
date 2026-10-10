@@ -1,0 +1,114 @@
+id = "quaking_aspen"
+common = "Quaking Aspen"
+latin = "Populus tremuloides"
+group = "deciduous"
+habitat = "High-elevation slopes and passes (e.g. Wolf Creek Pass); clonal stands of hundreds of stems from one root system."
+elevation_m = [2400, 3400]
+fall_note = "Clone-synchronous gold; whole hillsides turn at once, with occasional orange to red clones."
+silhouette_cues = [
+  "Tall, straight, clean white boles: self-pruned to half height or more",
+  "Short, narrow, rounded crown that sits on top like a lollipop",
+  "Branches short and upswept; crown reads light, never dense",
+  "Black 'eye' branch scars and dark, rough bark at the base",
+  "Leaves on flattened petioles: they flutter edge-on in the faintest breeze",
+]
+sources = [
+  { title = "Virginia Tech Dendrology: Quaking aspen factsheet", url = "https://dendro.cnre.vt.edu/dendrology/syllabus/factsheet.cfm?ID=160" },
+  { title = "Pagosa Outside: Top 10 places to see fall colors near Pagosa Springs", url = "https://pagosaoutside.com/blog/top-10-places-to-see-the-fall-colors-near-pagosa-springs-2" },
+  { title = "Pagosa Sun: What causes our beautiful fall landscape", url = "https://pagosasun.com/stories/what-causes-our-beautiful-fall-landscape,1673" },
+  { title = "Wikimedia Commons: Populus tremuloides (photo library)", url = "https://commons.wikimedia.org/wiki/Category:Populus_tremuloides" },
+]
+
+[form]
+height_m = [12.0, 20.0]
+dbh_m = [0.2, 0.42]
+crown_base = 0.55
+crown_width = 0.26
+envelope = "columnar_round"
+lean_deg = 3.0
+wobble = 0.06
+taper = [[0, 1.0], [0.6, 0.55], [1, 0.05]]
+flare = 0.25
+
+[[levels]]
+count = 44
+down_angle = [[0, 72], [0.6, 55], [1, 35]]
+angle_var = 10
+length = 1.0
+tropism = [0.25, 0.55]
+wobble = 0.35
+radius_ratio = 0.42
+segments = 8
+
+[[levels]]
+count = 3.2
+start = 0.15
+down_angle = [55, 40]
+length = [[0, 0.55], [1, 0.25]]
+tropism = [0.1, 0.4]
+wobble = 0.4
+radius_ratio = 0.55
+segments = 5
+
+[[levels]]
+count = 6.0
+start = 0.2
+down_angle = [50, 40]
+length = [[0, 0.5], [1, 0.3]]
+tropism = [0.0, 0.2]
+wobble = 0.5
+radius_ratio = 0.6
+segments = 3
+
+[leaves]
+kind = "broadleaf"
+outline = "aspen"
+length_cm = [3.0, 7.0]
+width_ratio = 0.95
+petiole_ratio = 0.75
+teeth = 52
+tooth_depth = 0.011
+card_m = [0.2, 0.32]
+cards_per_m = 9.0
+on_levels = [2, 3]
+start = 0.25
+spread_deg = 45
+up_bias = 0.45
+per_card = [6, 10]
+
+[bark]
+type = "aspen"
+twig = "#6e4a3a"
+colors = ["#e8e3d3", "#d4d2bf", "#c3c9ad"]
+accent = "#25211d"
+young_colors = ["#d9dcc4", "#c7d0b0"]
+tile_m = 0.9
+roughness = [0.55, 0.85]
+normal_strength = 3.0
+
+[material]
+leaf_roughness = 0.5
+leaf_specular = 0.45
+translucency = 0.65
+normal_bend = 0.65
+flutter = 1.0
+sway = 0.35
+stiffness = 0.45
+
+[seasons.summer]
+colors = ["#3f6a28", "#4f7a2e", "#6b8f35", "#5a8231"]
+weights = [3, 4, 2, 2]
+[seasons.turning]
+colors = ["#6b8f35", "#9aa83a", "#c7b53a", "#e0c040"]
+weights = [2, 3, 3, 2]
+[seasons.peak]
+colors = ["#f5d547", "#f2c230", "#e8a91e", "#d9831f", "#c9541f"]
+weights = [5, 6, 3, 1.2, 0.3]
+presence = 0.95
+[seasons.late]
+colors = ["#e0a92a", "#b8862e", "#8c6a3a"]
+weights = [3, 3, 2]
+presence = 0.45
+[seasons.bare]
+colors = ["#8c6a3a"]
+presence = 0.0

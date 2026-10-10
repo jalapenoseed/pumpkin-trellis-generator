@@ -1,0 +1,105 @@
+id = "blue_spruce"
+common = "Colorado Blue Spruce"
+latin = "Picea pungens"
+group = "evergreen"
+habitat = "Stream bottoms and moist high-country slopes; silvery-blue canvas behind the aspen."
+elevation_m = [2100, 3000]
+fall_note = "Evergreen; waxy bloom is strongest on new growth and dulls through summer."
+silhouette_cues = [
+  "Dense, symmetrical cone when young; more open and ragged with age",
+  "Stout horizontal branches in well-defined whorls; lower branches droop",
+  "Stiff, sharp, four-sided needles radiate all round the shoot and curve upward",
+  "Colour ranges dull green to steel-blue to near white on the same hillside",
+  "Cones only in the top tenth to quarter of the crown",
+]
+sources = [
+  { title = "Wikipedia: Blue spruce", url = "https://en.wikipedia.org/wiki/Blue_spruce" },
+  { title = "Colorado Wildbuds: Picea pungens", url = "https://coloradowildbuds.com/picea-pungens.html" },
+  { title = "Wikimedia Commons: Picea pungens", url = "https://commons.wikimedia.org/wiki/Category:Picea_pungens" },
+]
+
+[form]
+height_m = [18.0, 30.0]
+dbh_m = [0.4, 0.8]
+crown_base = 0.04
+crown_width = 0.44
+envelope = "conical"
+lean_deg = 1.0
+wobble = 0.03
+taper = [[0, 1.0], [0.5, 0.52], [1, 0.02]]
+flare = 0.25
+segments = 30
+
+[[levels]]
+count = 110
+whorl = 5
+down_angle = [[0, 100], [0.5, 88], [1, 55]]
+angle_var = 6
+length = 1.0
+tropism = [-0.4, 0.45]
+wobble = 0.2
+radius_ratio = 0.32
+segments = 8
+
+[[levels]]
+count = 5.0
+start = 0.08
+down_angle = [62, 52]
+length = [[0, 0.42], [1, 0.18]]
+tropism = [-0.1, 0.15]
+wobble = 0.25
+radius_ratio = 0.55
+segments = 4
+
+[[levels]]
+count = 3.5
+start = 0.15
+max_children = 12
+down_angle = 55
+length = [[0, 0.4], [1, 0.25]]
+tropism = [0.0, 0.1]
+wobble = 0.3
+radius_ratio = 0.6
+segments = 3
+
+[leaves]
+kind = "needle_spray"
+outline = "spruce_brush"
+needle_cm = [1.6, 3.0]
+card_m = [0.36, 0.5]
+cards_per_m = 14.0
+on_levels = [2, 3]
+start = 0.1
+spread_deg = 25
+up_bias = 0.7
+per_card = [1, 1]
+card_budget = 9000
+
+[bark]
+type = "spruce"
+twig = "#8a6a4a"
+colors = ["#7a706a", "#5e5550", "#2a2422"]
+accent = "#8a6a5a"
+tile_m = 0.9
+roughness = [0.8, 0.95]
+normal_strength = 5.0
+
+[material]
+leaf_roughness = 0.62
+leaf_specular = 0.4
+translucency = 0.15
+normal_bend = 0.45
+wax = 0.8
+wax_color = "#d6e6ea"
+flutter = 0.05
+sway = 0.2
+stiffness = 0.8
+
+[seasons.summer]
+colors = ["#4f6a6a", "#5d7f8a", "#7c9ca6", "#9fb8bf"]
+weights = [2, 4, 3, 1.5]
+[seasons.peak]
+colors = ["#4f6a6a", "#5d7f8a", "#7c9ca6"]
+weights = [2, 4, 2]
+[seasons.bare]
+colors = ["#4a6264", "#58747c"]

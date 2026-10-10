@@ -1,0 +1,299 @@
+{
+  "passed": true,
+  "checked_with": "sylva 0.1.0 glTF closure/buffer/index checks; Godot 4.5 GLTFDocument import of every entry point",
+  "assets": [
+    {
+      "passed": true,
+      "errors": [],
+      "triangles": 138,
+      "bounds": {
+        "min": [
+          -0.1127,
+          -0.0,
+          -0.0967
+        ],
+        "max": [
+          0.1075,
+          0.0844,
+          0.1093
+        ]
+      },
+      "id": "sylva_alpine_avens"
+    },
+    {
+      "passed": true,
+      "errors": [],
+      "triangles": 53671,
+      "bounds": {
+        "min": [
+          -4.9054,
+          -0.7479,
+          -4.5843
+        ],
+        "max": [
+          5.0087,
+          23.3298,
+          5.2875
+        ]
+      },
+      "id": "sylva_blue_spruce"
+    },
+    {
+      "passed": true,
+      "errors": [],
+      "triangles": 58401,
+      "bounds": {
+        "min": [
+          -6.253,
+          -0.0141,
+          -6.2813
+        ],
+        "max": [
+          6.6653,
+          32.8963,
+          6.5077
+        ]
+      },
+      "id": "sylva_douglas_fir"
+    },
+    {
+      "passed": true,
+      "errors": [],
+      "triangles": 19038,
+      "bounds": {
+        "min": [
+          -2.8928,
+          -0.0175,
+          -2.8502
+        ],
+        "max": [
+          2.4642,
+          3.3716,
+          2.9182
+        ]
+      },
+      "id": "sylva_gambel_oak"
+    },
+    {
+      "passed": true,
+      "errors": [],
+      "triangles": 1566,
+      "bounds": {
+        "min": [
+          -0.2817,
+          0.0,
+          -0.2761
+        ],
+        "max": [
+          0.2471,
+          0.5451,
+          0.2641
+        ]
+      },
+      "id": "sylva_mountain_bunchgrass"
+    },
+    {
+      "passed": true,
+      "errors": [],
+      "triangles": 15064,
+      "bounds": {
+        "min": [
+          -1.3139,
+          -0.0049,
+          -1.7004
+        ],
+        "max": [
+          1.6453,
+          4.1756,
+          1.4404
+        ]
+      },
+      "id": "sylva_mountain_willow"
+    },
+    {
+      "passed": true,
+      "errors": [],
+      "triangles": 39232,
+      "bounds": {
+        "min": [
+          -3.6729,
+          -0.0188,
+          -3.0202
+        ],
+        "max": [
+          4.1308,
+          17.4535,
+          4.0654
+        ]
+      },
+      "id": "sylva_narrowleaf_cottonwood"
+    },
+    {
+      "passed": true,
+      "errors": [],
+      "triangles": 47848,
+      "bounds": {
+        "min": [
+          -4.6453,
+          -0.025,
+          -4.6666
+        ],
+        "max": [
+          4.3616,
+          10.4958,
+          4.5155
+        ]
+      },
+      "id": "sylva_pinyon_pine"
+    },
+    {
+      "passed": true,
+      "errors": [],
+      "triangles": 106013,
+      "bounds": {
+        "min": [
+          -13.3038,
+          -0.0247,
+          -14.003
+        ],
+        "max": [
+          13.5044,
+          27.2783,
+          12.6647
+        ]
+      },
+      "id": "sylva_plains_cottonwood"
+    },
+    {
+      "passed": true,
+      "errors": [],
+      "triangles": 38230,
+      "bounds": {
+        "min": [
+          -6.9877,
+          -0.0069,
+          -7.6559
+        ],
+        "max": [
+          7.3681,
+          34.5956,
+          6.9513
+        ]
+      },
+      "id": "sylva_ponderosa_pine"
+    },
+    {
+      "passed": true,
+      "errors": [],
+      "triangles": 20166,
+      "bounds": {
+        "min": [
+          -3.0626,
+          -0.0023,
+          -2.8016
+        ],
+        "max": [
+          3.074,
+          19.833,
+          2.7227
+        ]
+      },
+      "id": "sylva_quaking_aspen"
+    },
+    {
+      "passed": true,
+      "errors": [],
+      "triangles": 36502,
+      "bounds": {
+        "min": [
+          -2.5347,
+          -0.0481,
+          -2.1965
+        ],
+        "max": [
+          2.7549,
+          7.0987,
+          2.1276
+        ]
+      },
+      "id": "sylva_rocky_mountain_juniper"
+    },
+    {
+      "passed": true,
+      "errors": [],
+      "triangles": 10469,
+      "bounds": {
+        "min": [
+          -2.6537,
+          -0.0058,
+          -2.9641
+        ],
+        "max": [
+          3.1572,
+          6.7436,
+          2.1481
+        ]
+      },
+      "id": "sylva_rocky_mountain_maple"
+    }
+  ],
+  "godot_import": {
+    "engine": "Godot 4.5-stable (GLTFDocument.append_from_file + generate_scene)",
+    "date": "2026-10-10",
+    "passed": true,
+    "assets": {
+      "sylva_alpine_avens": {
+        "passed": true,
+        "mesh_instances": 1
+      },
+      "sylva_blue_spruce": {
+        "passed": true,
+        "mesh_instances": 1
+      },
+      "sylva_douglas_fir": {
+        "passed": true,
+        "mesh_instances": 1
+      },
+      "sylva_gambel_oak": {
+        "passed": true,
+        "mesh_instances": 1
+      },
+      "sylva_mountain_bunchgrass": {
+        "passed": true,
+        "mesh_instances": 1
+      },
+      "sylva_mountain_willow": {
+        "passed": true,
+        "mesh_instances": 1
+      },
+      "sylva_narrowleaf_cottonwood": {
+        "passed": true,
+        "mesh_instances": 1
+      },
+      "sylva_pinyon_pine": {
+        "passed": true,
+        "mesh_instances": 1
+      },
+      "sylva_plains_cottonwood": {
+        "passed": true,
+        "mesh_instances": 1
+      },
+      "sylva_ponderosa_pine": {
+        "passed": true,
+        "mesh_instances": 1
+      },
+      "sylva_quaking_aspen": {
+        "passed": true,
+        "mesh_instances": 1
+      },
+      "sylva_rocky_mountain_juniper": {
+        "passed": true,
+        "mesh_instances": 1
+      },
+      "sylva_rocky_mountain_maple": {
+        "passed": true,
+        "mesh_instances": 1
+      }
+    }
+  }
+}

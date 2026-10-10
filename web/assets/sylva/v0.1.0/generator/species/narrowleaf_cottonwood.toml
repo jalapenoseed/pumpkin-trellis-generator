@@ -1,0 +1,117 @@
+id = "narrowleaf_cottonwood"
+common = "Narrowleaf Cottonwood"
+latin = "Populus angustifolia"
+group = "deciduous"
+habitat = "Banks of the San Juan River and mountain streams; riparian galleries framing the water paths through town."
+elevation_m = [1500, 2700]
+fall_note = "Clear bright yellow canopies along the river."
+silhouette_cues = [
+  "Medium tree to ~18 m with a narrow, somewhat upright crown",
+  "Willow-like lanceolate leaves on short petioles",
+  "Smooth pale gray-green bark when young; thick, deep furrows with broad ridges when old",
+  "Upswept limbs, slightly weeping twig ends",
+]
+sources = [
+  { title = "Virginia Tech Dendrology: Narrowleaf cottonwood factsheet", url = "https://dendro.cnre.vt.edu/dendrology/syllabus/factsheet.cfm?ID=898" },
+  { title = "USU Tree Browser: Cottonwood, Narrowleaf", url = "https://extension.usu.edu/treebrowser/catalog/cottonwood-narrowleaf.php" },
+  { title = "Pagosa Daily Post: So many colorful trees, so little time", url = "https://pagosadailypost.com/2021/09/30/so-many-colorful-trees-so-little-time/" },
+  { title = "Wikimedia Commons: Populus angustifolia", url = "https://commons.wikimedia.org/wiki/Category:Populus_angustifolia" },
+]
+
+[form]
+height_m = [11.0, 18.0]
+dbh_m = [0.3, 0.6]
+crown_base = 0.3
+crown_width = 0.42
+envelope = "vase"
+lean_deg = 5.0
+wobble = 0.12
+taper = [[0, 1.0], [0.6, 0.5], [1, 0.1]]
+flare = 0.3
+trunk_reach = 0.6
+leaders = [2, 3]
+leader_angle_deg = [15, 30]
+
+[[levels]]
+count = 26
+down_angle = [[0, 55], [1, 30]]
+angle_var = 10
+length = 0.95
+tropism = [0.2, 0.3]
+wobble = 0.4
+radius_ratio = 0.5
+segments = 8
+
+[[levels]]
+count = 3.5
+start = 0.15
+down_angle = [50, 40]
+length = [[0, 0.55], [1, 0.25]]
+tropism = [0.0, -0.3]
+wobble = 0.45
+radius_ratio = 0.55
+segments = 5
+
+[[levels]]
+count = 6.0
+start = 0.2
+down_angle = 45
+length = [[0, 0.5], [1, 0.3]]
+tropism = [-0.1, -0.4]
+wobble = 0.5
+radius_ratio = 0.6
+segments = 3
+
+[leaves]
+kind = "broadleaf"
+outline = "lanceolate"
+length_cm = [5.0, 12.0]
+width_ratio = 0.28
+petiole_ratio = 0.1
+teeth = 70
+tooth_depth = 0.005
+card_m = [0.22, 0.34]
+cards_per_m = 9.0
+on_levels = [2, 3]
+start = 0.25
+spread_deg = 40
+up_bias = 0.35
+per_card = [7, 11]
+card_budget = 7000
+
+[bark]
+type = "furrowed"
+twig = "#8a6a3e"
+colors = ["#8d8a80", "#6d6a62", "#2f2c28"]
+accent = "#a9ad98"
+young_colors = ["#a9ad98", "#b8b9a4"]
+tile_m = 1.0
+roughness = [0.8, 0.95]
+normal_strength = 6.0
+
+[material]
+leaf_roughness = 0.42
+leaf_specular = 0.5
+translucency = 0.55
+normal_bend = 0.6
+flutter = 0.45
+sway = 0.35
+stiffness = 0.45
+
+[seasons.summer]
+colors = ["#3d5f2a", "#4c7032", "#5d7f3a"]
+weights = [3, 4, 2]
+[seasons.turning]
+colors = ["#6e8a35", "#a8a83a", "#d6b83a"]
+weights = [2, 3, 2]
+[seasons.peak]
+colors = ["#e3c23a", "#d6a92a", "#c9b23f", "#f0d050"]
+weights = [5, 3, 2, 2]
+presence = 0.95
+[seasons.late]
+colors = ["#c89a30", "#a07a32", "#7e6234"]
+weights = [3, 3, 2]
+presence = 0.4
+[seasons.bare]
+colors = ["#7e6234"]
+presence = 0.0

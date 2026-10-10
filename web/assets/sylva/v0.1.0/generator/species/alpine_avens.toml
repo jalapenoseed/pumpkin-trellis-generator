@@ -1,0 +1,67 @@
+id = "alpine_avens"
+common = "Alpine Avens (Ross' Avens)"
+latin = "Geum rossii"
+group = "groundcover"
+habitat = "Above tree line and near it; forms huge colonies that carpet the tundra."
+elevation_m = [3300, 4200]
+fall_note = "Leaves turn a warm, shiny maroon to rust; the source of the tundra's red sweep."
+silhouette_cues = [
+  "Low rosettes of finely pinnately-lobed leaves hugging the ground",
+  "Short stalks (3-18 cm) with five-petaled yellow flowers in summer",
+  "Reads as a continuous red-maroon carpet at landscape scale in fall",
+]
+sources = [
+  { title = "Al Schneider, Rocky Mountains Plant Descriptions: Geum rossii", url = "https://wildflowersearch.org/schneider/Geum%20rossii.html" },
+  { title = "Colorado Wildbuds: Geum rossii", url = "https://coloradowildbuds.com/geum-rossii.html" },
+  { title = "Wikimedia Commons: Geum rossii", url = "https://commons.wikimedia.org/wiki/Category:Geum_rossii" },
+]
+
+[form]
+archetype = "clump"
+height_m = [0.04, 0.15]
+
+[clump]
+blades = [0, 3]
+height_m = [0.05, 0.14]
+width_cm = [0.15, 0.25]
+base_radius_m = 0.03
+splay_deg = [0, 15]
+droop = 0.2
+seed_heads = 3
+
+[leaves]
+kind = "rosette"
+outline = "pinnatifid"
+length_cm = [2.5, 8.0]
+width_ratio = 0.35
+petiole_ratio = 0.25
+lobes = 9
+lobe_depth = 0.78
+card_m = [0.05, 0.1]
+on_levels = []
+per_card = [1, 1]
+
+[material]
+leaf_roughness = 0.4
+leaf_specular = 0.5
+translucency = 0.4
+normal_bend = 0.2
+flutter = 0.2
+sway = 0.1
+stiffness = 0.6
+
+[seasons.summer]
+colors = ["#3f6a2a", "#4f7a32", "#5e8a3a"]
+weights = [3, 4, 2]
+[seasons.turning]
+colors = ["#5e7a32", "#8a5a2a", "#7a3a2a"]
+weights = [3, 2, 2]
+[seasons.peak]
+colors = ["#6e2230", "#8a2a2a", "#a83a26", "#5e1e28", "#b8582a"]
+weights = [3, 3, 2, 2, 1]
+[seasons.late]
+colors = ["#5e2a28", "#6e3a2a", "#7a5032"]
+weights = [3, 2, 2]
+[seasons.bare]
+colors = ["#5a3a2a", "#6a4a32"]
+presence = 0.85

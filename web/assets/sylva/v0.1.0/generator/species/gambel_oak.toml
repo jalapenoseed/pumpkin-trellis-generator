@@ -1,0 +1,110 @@
+id = "gambel_oak"
+common = "Gambel Oak (Scrub Oak)"
+latin = "Quercus gambelii"
+group = "deciduous"
+habitat = "Lower-to-mid elevation hillsides and rocky pastures; dense clonal thickets with open gaps, spreading by root sprouts."
+elevation_m = [1800, 2700]
+fall_note = "Patchwork of golden-yellow, russet-orange and copper-red; dead brown leaves often hang on into winter."
+silhouette_cues = [
+  "Usually a shrubby, clump-forming thicket 2-5 m; occasionally a small tree",
+  "Crooked, zig-zag limbs; dense rounded mounds",
+  "Thick, glossy, deeply round-lobed leaves (7-9 lobes)",
+  "Gray-brown, scaly-platy bark",
+]
+sources = [
+  { title = "USU Tree Browser: Oak, Gambel / Scrub / Rocky Mtn. White", url = "https://extension.usu.edu/treebrowser/catalog/oak-gambel-scrub-rockymt-white" },
+  { title = "USU Range Plants: Gambel Oak", url = "https://extension.usu.edu/rangeplants/shrubs-and-trees/gambel-oak.php" },
+  { title = "KDVR: Which trees turn which colors in Colorado", url = "https://kdvr.com/denver-guide/fall/colors/which-trees-turn-which-colors-in-colorado/" },
+  { title = "Pagosa.com: Fall colors in Pagosa Springs", url = "https://pagosa.com/fall-colors-pagosa-springs-colorado/" },
+  { title = "Wikimedia Commons: Quercus gambelii", url = "https://commons.wikimedia.org/wiki/Category:Quercus_gambelii" },
+]
+
+[form]
+archetype = "shrub"
+height_m = [3.0, 5.5]
+dbh_m = [0.12, 0.25]
+crown_base = 0.18
+crown_width = 1.25
+envelope = "rounded"
+stems = [4, 9]
+stem_spread_m = 0.6
+stem_angle_deg = [12, 38]
+wobble = 0.55
+taper = [[0, 1.0], [1, 0.12]]
+flare = 0.15
+trunk_reach = 0.75
+leaders = [1, 2]
+leader_angle_deg = [20, 40]
+segments = 14
+
+[[levels]]
+count = 14
+down_angle = [[0, 60], [1, 40]]
+angle_var = 14
+length = 0.9
+tropism = [0.1, 0.25]
+wobble = 0.7
+radius_ratio = 0.55
+segments = 7
+
+[[levels]]
+count = 5.0
+start = 0.1
+down_angle = [55, 45]
+length = [[0, 0.6], [1, 0.35]]
+tropism = [0.0, 0.25]
+wobble = 0.8
+radius_ratio = 0.6
+segments = 4
+
+[leaves]
+kind = "broadleaf"
+outline = "oak"
+length_cm = [7.0, 15.0]
+width_ratio = 0.62
+petiole_ratio = 0.1
+lobes = 4
+lobe_depth = 0.5
+card_m = [0.24, 0.38]
+cards_per_m = 11.0
+on_levels = [1, 2]
+start = 0.3
+spread_deg = 50
+up_bias = 0.5
+per_card = [5, 8]
+
+[bark]
+type = "scaly_plates"
+twig = "#6a5a4a"
+colors = ["#7a756c", "#625d55", "#2e2b27"]
+accent = "#8c7a64"
+tile_m = 0.7
+roughness = [0.82, 0.96]
+normal_strength = 5.0
+
+[material]
+leaf_roughness = 0.38
+leaf_specular = 0.5
+translucency = 0.35
+normal_bend = 0.55
+flutter = 0.15
+sway = 0.15
+stiffness = 0.8
+
+[seasons.summer]
+colors = ["#355522", "#3f5f2a", "#567238", "#4a6a30"]
+weights = [3, 4, 2, 2]
+[seasons.turning]
+colors = ["#567238", "#8a8a32", "#b8922e", "#a85f26"]
+weights = [3, 2, 2, 1]
+[seasons.peak]
+colors = ["#d9a32b", "#c56a24", "#a8441f", "#8a2f1d", "#b77a2f", "#e0b83a"]
+weights = [3, 4, 3, 1.5, 2, 1.5]
+presence = 0.95
+[seasons.late]
+colors = ["#8a5a2e", "#7a4a2a", "#5e3b22", "#a06a36"]
+weights = [3, 3, 2, 1]
+presence = 0.75
+[seasons.bare]
+colors = ["#6e4a2c", "#5e3b22"]
+presence = 0.12

@@ -1,0 +1,98 @@
+id = "pinyon_pine"
+common = "Two-needle Pinyon"
+latin = "Pinus edulis"
+group = "evergreen"
+habitat = "Drier, low-elevation scrub such as Chimney Rock National Monument; pinyon-juniper woodland."
+elevation_m = [1200, 2900]
+fall_note = "Evergreen; grey-green. Cones open in early autumn to drop pine nuts."
+silhouette_cues = [
+  "Small, bushy tree 8-17 m (often far less on poor sites)",
+  "Broad cone when young; spreading, flat-topped or rounded when old",
+  "Short, crooked trunk dividing into several large crooked limbs",
+  "Short stiff grey-green needles in pairs, often upcurved, clustered toward the shoot ends",
+]
+sources = [
+  { title = "Colorado Wildbuds: Pinus edulis", url = "https://coloradowildbuds.com/pinus-edulis.html" },
+  { title = "Chimney Rock: Puebloan resources - trees & shrubs", url = "https://www.chimneyrockco.org/puebloan-resources/trees-shrubs/" },
+  { title = "Wild Utah: Pinyon pine", url = "https://wildutah.us/html/plants_scenery/h_pinyonpine.html" },
+  { title = "Wikimedia Commons: Pinus edulis", url = "https://commons.wikimedia.org/wiki/Category:Pinus_edulis" },
+]
+
+[form]
+height_m = [5.0, 11.0]
+dbh_m = [0.25, 0.55]
+crown_base = 0.1
+crown_width = 0.85
+envelope = "rounded"
+lean_deg = 6.0
+wobble = 0.3
+taper = [[0, 1.0], [0.5, 0.6], [1, 0.08]]
+flare = 0.3
+trunk_reach = 0.42
+leaders = [2, 4]
+leader_angle_deg = [22, 42]
+segments = 16
+
+[[levels]]
+count = 26
+down_angle = [[0, 75], [1, 45]]
+angle_var = 14
+length = 0.95
+tropism = [0.05, 0.4]
+wobble = 0.7
+radius_ratio = 0.5
+segments = 7
+
+[[levels]]
+count = 5.0
+start = 0.15
+down_angle = [55, 45]
+length = [[0, 0.5], [1, 0.25]]
+tropism = [0.1, 0.4]
+wobble = 0.7
+radius_ratio = 0.6
+segments = 4
+
+[leaves]
+kind = "needle_spray"
+outline = "pinyon_tuft"
+needle_cm = [2.0, 4.0]
+needles_per_fascicle = 2
+card_m = [0.26, 0.38]
+cards_per_m = 18.0
+on_levels = [1, 2]
+start = 0.4
+tip_bias = 1.5
+spread_deg = 35
+up_bias = 0.6
+per_card = [1, 1]
+card_budget = 6500
+
+[bark]
+type = "shallow_furrow"
+twig = "#6a5a4a"
+colors = ["#6e665e", "#5e5048", "#2a2420"]
+accent = "#8a6a52"
+tile_m = 0.7
+roughness = [0.82, 0.95]
+normal_strength = 4.5
+
+[material]
+leaf_roughness = 0.62
+leaf_specular = 0.35
+translucency = 0.15
+normal_bend = 0.5
+wax = 0.3
+wax_color = "#c8d4c4"
+flutter = 0.05
+sway = 0.12
+stiffness = 0.85
+
+[seasons.summer]
+colors = ["#556b48", "#6a7d5a", "#5e7350"]
+weights = [3, 3, 2]
+[seasons.peak]
+colors = ["#556b48", "#6a7d5a", "#7a7e4a"]
+weights = [3, 3, 1]
+[seasons.bare]
+colors = ["#4e6244", "#5c6e4e"]
