@@ -2,7 +2,7 @@
 
 Reusable procedural autumn assets and a touch-friendly 3D workshop, extracted from Skydancer without replacing its integration.
 
-**Free to use, modify and share — including in commercial games.** Both the project code and included assets are available under the [MIT License](LICENSE). Keep the license notice with redistributed copies; see [asset permissions](ASSET_LICENSE.md).
+**Free to use, modify and share — including in commercial games.** The project code and original pumpkin assets are available under the [MIT License](LICENSE). Keep the license notice with redistributed copies; see [asset permissions](ASSET_LICENSE.md).
 
 [Download ZIP](https://github.com/jalapenoseed/pumpkin-trellis-generator/archive/refs/heads/main.zip) · [Browse the 57 ready-to-import models](web/assets/autumn/v0.2.2) · [License](LICENSE)
 
@@ -10,7 +10,7 @@ Reusable procedural autumn assets and a touch-friendly 3D workshop, extracted fr
 
 ![Placed trellises, yard light and string lights at dusk](docs/v0.4.0/garden-dusk.png)
 
-The current workshop is **v0.4.0**. The bundled model library is **v0.2.2**; use the workshop's **Export GLB** button for the newer geometry and materials. The workshop runs locally with Node.js; the screenshots above are actual renders. The reference board and rind color texture are AI-generated, with [prompts and provenance](web/assets/references/PROVENANCE.md).
+The current workshop is **v0.5.0**. The bundled model library is **v0.2.2**; use the workshop's **Export GLB** button for the newer geometry and materials. The workshop runs locally with Node.js; the screenshots above are actual renders. The reference board and rind color texture are AI-generated, with [prompts and provenance](web/assets/references/PROVENANCE.md).
 
 ## Run locally
 
@@ -25,7 +25,7 @@ npm test
 npm start
 ```
 
-Open http://localhost:8136/autumn.html. On a phone using the same Wi-Fi, use your computer's LAN IP with port 8136. The server listens on all interfaces; local firewall rules still apply. Stop with Ctrl+C. Set PORT to choose another port.
+Open http://localhost:8136/autumn.html for pumpkins or http://localhost:8136/fall.html for Sylva fall scenery. On a phone using the same Wi-Fi, use your computer's LAN IP with port 8136. The server listens on all interfaces; local firewall rules still apply. Stop with Ctrl+C. Set PORT to choose another port.
 
 ## Included
 
@@ -87,3 +87,15 @@ The renderer now uses mottled PBR skin and foliage, bark fissures, tapered ridge
 Validation: node web/tools/test-autumn.cjs and node web/tools/verify-variance.cjs. The browser check uses an isolated Chrome debugger and verifies actual geometry changes, all support types at extreme slider settings, zero flower density, deterministic seeds and finite vertices.
 
 This section describes the historical v0.3.0 update; the current runtime is v0.4.0. Bundled asset exports and their historical validation reports remain v0.2.2. Export GLB in the workshop for the current geometry; the legacy batch export scripts still target a v0.3.0 folder. Changes in this standalone repository are not automatically deployed into Skydancer.
+
+## v0.5.0 — Existing Sylva foliage and pumpkin repair
+
+The fall scene now composes **our existing Sylva 0.1.0 foliage pack**, rather than generating replacement trees. It includes the original 13 species: aspens, cottonwoods, Gambel oak, Rocky Mountain maple, willow, conifers, mountain bunchgrass and alpine avens. Species, density, tree scale, seed, canopy retention, litter, grass, pumpkins, trellis count and four lighting presets are adjustable in `web/fall.html`. Peak fall preserves the baked source palette. Other browser season settings are approximate tint/leaf-retention controls, not the native Godot LUT shader.
+
+Sylva's vertex colors encode hash/height/AO/flex. The browser adapter decodes those fields and corrects AO texture coordinates, preserving authored colors, atlases and bark normal maps. Groundcover is instanced. Trees use the supplied LOD0 on High and LOD1 on Balanced/Mobile. Groundcover uses LOD1 at every tier to bound large instance batches. Tree counts and grass/litter counts are bounded by tier. Rebuilding disposes per-scene materials and geometries; loaded Sylva templates are shared by the viewer. Async rebuilds retain the previous scene during loading and discard stale results.
+
+Pumpkins gain smoother organic geometry, rib and collar color variation, multiscale normal/roughness/height detail and a restrained wax layer. The inspection viewer also uses the existing generated rind reference. Fixed the high-poly warty pumpkin's spread-array call-stack overflow. Seven silhouettes, component controls, placement tools and crop rules remain available.
+
+The new scene exports visible geometry/materials to GLB; sky, lighting presets and procedural wind remain viewer effects. Large woodland exports expand instances and can be substantial. Prefer the Mobile tier for smaller exports. This update is not yet integrated into Skydancer and does not claim scanned or hyperrealistic assets. The Sylva runtime subset retains its existing user-owned license; see its README and ASSET_LICENSE.md.
+
+Validation: seed/terrain/species/tier regression checks; browser geometry finiteness, high-poly merge, actual trellis count, leaf-retention controls, valid pumpkin GLB serialization, no browser errors, and a 390×844 controls/layout check. Tests use software Chromium rendering; physical iPhone, console and GPU performance remain unverified.

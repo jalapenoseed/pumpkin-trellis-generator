@@ -4,3 +4,10 @@ const terrain={heightAt:(x,z)=>x*.1,suitable:(x,z)=>x<0};const d=A.layout({densi
 for(const tier of Object.keys(A.TIERS)){const p=A.layout({width:120,length:120,density:2,tier});assert(p.plants.length<=A.TIERS[tier].maxPlants);assert(p.capped);assert(p.plants.every(p=>Object.values(p).every(v=>typeof v!=='number'||Number.isFinite(v))));}
 const h={day:1,pack:{wood:0},rod:'rack',wilds:{hunt:{gun:'rack'}},activities:{tool:'hands',water:6}};R.ensure(h);assert(R.valid(h.autumn));R.act(h,'harvest',0);assert.equal(h.autumn.carried,1);R.act(h,'harvest',1);assert(h.autumn.plots[1].planted);R.act(h,'store');assert.equal(h.autumn.stored,1);h.activities.tool='trowel';R.act(h,'plant',0);assert(h.autumn.plots[0].planted);R.tick(h,10);assert.equal(h.autumn.plots[0].growth,0);h.activities.tool='wateringCan';R.act(h,'water',0);assert.equal(h.activities.water,5);R.tick(h,180);assert.equal(h.autumn.plots[0].growth,180);R.act(h,'water',0);R.tick(h,60);assert.equal(h.autumn.plots[0].growth,240);h.activities.tool='hands';R.act(h,'harvest',0);assert.equal(h.autumn.carried,1);const saved=JSON.parse(JSON.stringify(h));assert(R.valid(saved.autumn));assert.equal(saved.autumn.harvested,2);h.autumn.version=99;assert.equal(R.ensure(h),null);assert.equal(h.autumn.version,99);
 console.log('AUTUMN_PASS: deterministic seeds; controls; terrain, slope and exclusion rules; all tier budgets; crop lifecycle; capacity; save roundtrip; future-version preservation');
+require('../src/fall-scenery.js');const F=globalThis.FallScenery;
+assert.deepEqual(F.layoutTrees({seed:1935,tier:'high'}),F.layoutTrees({seed:1935,tier:'high'}));
+assert.notDeepEqual(F.layoutTrees({seed:1935}),F.layoutTrees({seed:1936}));
+for(const tier of Object.keys(F.TIERS))assert(F.layoutTrees({tier,width:120,length:120,treeDensity:.08}).length<=F.TIERS[tier].maxTrees);
+assert.equal(F.layoutTrees({}, {suitable:()=>false}).length,0);
+assert(F.layoutTrees({species:'quaking_aspen'}).every(t=>t.species==='quaking_aspen'));
+console.log('SYLVA_PASS: seeded placement, species, terrain exclusions and all tree budgets');

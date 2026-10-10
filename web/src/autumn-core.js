@@ -1,7 +1,7 @@
 /* Autumn 0.4.0. Original procedural geometry; metres, Y-up. No game globals. */
 (function(scope){
 'use strict';
-const VERSION='0.4.0',TAU=Math.PI*2;
+const VERSION='0.5.0',TAU=Math.PI*2;
 const TIERS={high:{rings:48,segments:128,leafRings:9,leafSegments:80,maxPlants:400,leaves:16,shadow:true,near:22,far:60,cull:180},medium:{rings:24,segments:64,leafRings:6,leafSegments:48,maxPlants:300,leaves:12,shadow:true,near:16,far:50,cull:120},mobile:{rings:14,segments:36,leafRings:4,leafSegments:32,maxPlants:200,leaves:8,shadow:false,near:10,far:32,cull:80}};
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 function rng(seed){let a=seed>>>0;return()=>{a+=0x6D2B79F5;let t=Math.imul(a^a>>>15,1|a);t^=t+Math.imul(t^t>>>7,61|t);return((t^t>>>14)>>>0)/4294967296;};}
@@ -14,19 +14,23 @@ function createKit(T,tier='mobile',input={}){
  const settings=options(input);
  const q=TIERS[tier]||TIERS.mobile,geometries=new Map(),materials={},textures=[],clock={value:0};
  function textureSet(kind){
- const n=kind==='skin'?512:256,r=rng(kind==='leaf'?811:kind==='wood'?993:321),make=()=>{const c=document.createElement('canvas');c.width=c.height=n;return c;},canvas=make(),ctx=canvas.getContext('2d'),im=ctx.createImageData(n,n),h=new Float32Array(n*n),roughness=new Float32Array(n*n);
+ const n=kind==='skin'?(tier==='high'?1024:512):256,r=rng(kind==='leaf'?811:kind==='wood'?993:321),make=()=>{const c=document.createElement('canvas');c.width=c.height=n;return c;},canvas=make(),ctx=canvas.getContext('2d'),im=ctx.createImageData(n,n),h=new Float32Array(n*n),roughness=new Float32Array(n*n);
  const hash=(x,y)=>{let v=Math.imul(x,374761393)+Math.imul(y,668265263);v=Math.imul(v^(v>>>13),1274126177);return ((v^(v>>>16))>>>0)/4294967295;};
  const noise=(x,y)=>{let ix=Math.floor(x),iy=Math.floor(y),u=x-ix,v=y-iy;u=u*u*(3-2*u);v=v*v*(3-2*v);return (hash(ix,iy)*(1-u)+hash(ix+1,iy)*u)*(1-v)+(hash(ix,iy+1)*(1-u)+hash(ix+1,iy+1)*u)*v;};
  for(let y=0;y<n;y++)for(let x=0;x<n;x++){
  const i=y*n+x,fine=r(),broad=noise(x/43,y/43),mid=noise(x/12,y/12),micro=noise(x/2,y/2),grain=Math.sin(x*.7+noise(x/22,y/35)*9),pore=Math.max(0,fine-.91)*5;let c;
  if(kind==='skin'){
- const u=x/n*TAU,v=y/n*TAU,cloud=(Math.sin(u*7+Math.sin(v*3))*.5+Math.sin(v*11+Math.cos(u*4))*.3+Math.sin(u*21-v*9)*.2)*.5+.5;
- const fleck=Math.pow(Math.max(0,Math.sin(u*73+Math.sin(v*31)*2)*Math.sin(v*89+Math.sin(u*27))),14);
- const streak=Math.pow(Math.max(0,Math.sin(u*43+Math.sin(v*4)*.7)),28)*Math.pow(Math.max(0,Math.sin(v*9+u*3)),8);
- const pores=Math.sin(u*157+Math.cos(v*53))*Math.sin(v*173+Math.sin(u*39));
- const shade=225+cloud*25-fleck*59-streak*28;
- h[i]=.48+pores*.023-fleck*.025+streak*.075;
- c=[shade,shade-4-streak*12,shade-13-streak*18];roughness[i]=192+cloud*25+fleck*27+streak*20;
+ const u=x/n*TAU,v=y/n*TAU;
+ // Periodic multiscale skin: wax, pores, cork scars and longitudinal mottling.
+ const cloud=.5+.22*Math.sin(u*5+Math.sin(v*3))+.17*Math.sin(v*7+Math.cos(u*4))+.1*Math.sin(u*13-v*11);
+ const streak=Math.pow(Math.max(0,Math.sin(u*31+Math.sin(v*3)*.4)),14)*(.4+.6*Math.pow(Math.max(0,Math.sin(v*7+u*2)),6));
+ const speck=Math.pow(Math.max(0,Math.sin(u*117+Math.sin(v*57))*Math.sin(v*139+Math.cos(u*43))),16);
+ const pore=Math.pow(Math.max(0,Math.sin(u*223+Math.sin(v*131)*2)*Math.sin(v*239+Math.cos(u*113))),12);
+ const wax=Math.sin(u*61-v*37)*Math.sin(v*71+u*53);
+ const shade=207+cloud*38-speck*48-streak*32-pore*14;
+ h[i]=.5+wax*.006-pore*.016+speck*.022+streak*.037;
+ c=[shade,shade-streak*8-speck*5,shade-streak*19-speck*14];roughness[i]=149+cloud*46+speck*57+streak*35;
+
  }
  else if(kind==='wood'){const fissure=Math.pow(Math.max(0,grain),8);h[i]=.36+fissure*.25+mid*.12+fine*.035;c=[147+broad*62+grain*24,136+broad*58+grain*23,111+broad*52+grain*23];roughness[i]=211+broad*35;}
  else {const pale=Math.max(0,mid-.48),vein=Math.pow(Math.max(0,Math.cos((x-128)*.045+Math.abs(y-128)*.043)),24);h[i]=.47+vein*.07+(micro-.5)*.038;c=[137+broad*40+pale*70+vein*15,168+broad*32+pale*34+vein*10,100+broad*34+pale*52];roughness[i]=186+broad*33+fine*9;}
@@ -38,8 +42,8 @@ function createKit(T,tier='mobile',input={}){
  return [canvas,normal,rough,heightCanvas].map((c,i)=>{const t=new T.CanvasTexture(c);t.wrapS=t.wrapT=T.RepeatWrapping;if(i===0)t.encoding=T.sRGBEncoding;textures.push(t);return t;});
  }
  const skin=textureSet('skin'),leaf=textureSet('leaf'),wood=textureSet('wood');
- function mat(name,color,maps,roughness=.8,metalness=0){const m=new T.MeshStandardMaterial({name,color:new T.Color(color).convertSRGBToLinear(),roughness,metalness,map:maps?.[0],normalMap:maps?.[1],roughnessMap:maps?.[2]});m.normalScale?.set(.32,.32);materials[name]=m;return m;}
- mat('fruit',0xffffff,skin,.78);mat('stem',0xa38e68,wood,.98);materials.fruit.metalness=0.02;materials.fruit.normalScale.set(0.85,0.85);if(materials.fruit.clearcoat!==undefined){materials.fruit.clearcoat=0.12;materials.fruit.clearcoatRoughness=0.4;}mat('leaf',0xffffff,leaf,.88);mat('vine',0x597134,wood,.92);mat('flower',0xffbe27,skin,.8);mat('metal',0x465151,null,.48,.78);mat('timber',0x978267,wood,.95);mat('vein',0x94ab52,null,.97);
+ function mat(name,color,maps,roughness=.8,metalness=0){const m=new (name==='fruit'?T.MeshPhysicalMaterial:T.MeshStandardMaterial)({name,color:new T.Color(color).convertSRGBToLinear(),roughness,metalness,map:maps?.[0],normalMap:maps?.[1],roughnessMap:maps?.[2]});m.normalScale?.set(.32,.32);materials[name]=m;return m;}
+ mat('fruit',0xffffff,skin,.74);materials.fruit.vertexColors=true;materials.fruit.bumpMap=skin[3];materials.fruit.bumpScale=.0025;mat('stem',0xa38e68,wood,.98);materials.fruit.metalness=0.02;materials.fruit.normalScale.set(0.85,0.85);if(materials.fruit.clearcoat!==undefined){materials.fruit.clearcoat=0.12;materials.fruit.clearcoatRoughness=0.4;}mat('leaf',0xffffff,leaf,.88);mat('vine',0x597134,wood,.92);mat('flower',0xffbe27,skin,.8);mat('metal',0x465151,null,.48,.78);mat('timber',0x978267,wood,.95);mat('vein',0x94ab52,null,.97);
  materials.fruit.normalScale.set(.65,.65);materials.stem.normalScale.set(.7,.7);
  for(const key of ['map','normalMap','roughnessMap']){const t=materials.stem[key].clone();t.center.set(.5,.5);t.rotation=Math.PI/2;t.needsUpdate=true;textures.push(t);materials.stem[key]=t;}
  function wind(m,depth=false){m.onBeforeCompile=s=>{s.uniforms.autumnTime=clock;s.vertexShader='uniform float autumnTime;\n'+s.vertexShader;s.vertexShader=s.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\n vec3 ap=position;\n #ifdef USE_INSTANCING\n ap=(instanceMatrix*vec4(position,1.0)).xyz;\n #endif\n float aw=length(position.xz); transformed.y+=sin(autumnTime*1.8+ap.x*1.7+ap.z)*0.025*aw;');if(!depth)s.fragmentShader=s.fragmentShader.replace('#include <color_fragment>','#include <color_fragment>\n if(!gl_FrontFacing)diffuseColor.rgb*=vec3(1.16,1.12,.85);');};m.customProgramCacheKey=()=> 'autumn-wind-v2'+depth;}
@@ -66,8 +70,9 @@ function createKit(T,tier='mobile',input={}){
       let rr = 0.30 * widthMul * Math.pow(sy, 0.76)
         * (1 + ribDepth * ribShape)
         * (1 + 0.08 * organic * Math.sin(a*3.2 + t*1.8))
-        * (1 + 0.04 * cy);
-      const micro = 0.008 * organic * Math.sin(a*47 + t*31) * Math.sin(t*53 - a*19);
+        * (1 + 0.04 * cy)
+        * (1 + .027*organic*Math.cos(a*2+.7)*sy);
+      const micro = 0.0014 * organic * Math.sin(a*47 + t*31) * Math.sin(t*53 - a*19);
       rr += micro * sy;
       let wart = 0;
       if(variant === 6){
@@ -75,7 +80,7 @@ function createKit(T,tier='mobile',input={}){
       }
       const y = 0.3 * ratio * (1 + cy)
         - 0.07 * ratio * Math.exp(-Math.pow(t / 0.22, 2))
-        + 0.025 * Math.exp(-Math.pow((Math.PI - t) / 0.18, 2));
+        - 0.002 * Math.exp(-Math.pow((Math.PI - t) / 0.22, 2));
       P.push((rr + wart * sy) * Math.cos(a), y + wart * cy, (rr + wart * sy) * Math.sin(a));
       U.push(i / ns, j / nr);
       if(j < nr && i < ns){
@@ -104,12 +109,22 @@ function createKit(T,tier='mobile',input={}){
     }
     g = merge(parts);
   }
+  // Local color variation follows ribs and the stem collar, including merged warts.
+  const C=[],p=g.attributes.position;
+  for(let k=0;k<p.count;k++){
+    const x=p.getX(k),z=p.getZ(k),y=p.getY(k),a=Math.atan2(z,x),t=Math.acos(clamp(y/(.3*ratio)-1,-1,1));
+    const groove=Math.pow(Math.max(0,-Math.cos(rib*a)),5),stemStain=Math.exp(-Math.pow(Math.hypot(x,z)/.09,2))*clamp(y/(.5*ratio),0,1);
+    const m=.96+.035*Math.sin(a*17+t*11)-.12*groove-.26*stemStain;
+    C.push(m,m*(1-.10*stemStain),m*(1-.21*stemStain));
+  }
+  g.setAttribute('color',new T.Float32BufferAttribute(C,3));
+  if(g.index){const normal=g.attributes.normal;for(let j=0;j<=nr;j++){const a=j*(ns+1),b=a+ns,n=new T.Vector3(normal.getX(a)+normal.getX(b),normal.getY(a)+normal.getY(b),normal.getZ(a)+normal.getZ(b)).normalize();normal.setXYZ(a,n.x,n.y,n.z);normal.setXYZ(b,n.x,n.y,n.z);}}
   g.userData = {socket:[0, 0.532*ratio, 0], height:0.6*ratio, variant};
   geometries.set(key, g);
   return g;
 }
 function tube(points,radius=.01,sides=5){const curve=new T.CatmullRomCurve3(points.map(p=>p.isVector3?p:new T.Vector3(...p)));return new T.TubeGeometry(curve,Math.max(3,points.length*2),radius,sides,false);}
- function merge(list){if(!list.length)return new T.BufferGeometry();const P=[],N=[],U=[];for(const g0 of list){const g=g0.index?g0.toNonIndexed():g0,p=g.attributes.position,n=g.attributes.normal,u=g.attributes.uv;P.push(...p.array);N.push(...n.array);if(u)U.push(...u.array);else U.push(...new Array(p.count*2).fill(0));if(g!==g0)g.dispose();g0.dispose();}const g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(P,3));g.setAttribute('normal',new T.Float32BufferAttribute(N,3));g.setAttribute('uv',new T.Float32BufferAttribute(U,2));g.computeBoundingSphere();return g;}
+ function merge(list){if(!list.length)return new T.BufferGeometry();const P=[],N=[],U=[];for(const g0 of list){const g=g0.index?g0.toNonIndexed():g0,p=g.attributes.position,n=g.attributes.normal,u=g.attributes.uv;for(const v of p.array)P.push(v);for(const v of n.array)N.push(v);if(u){for(const v of u.array)U.push(v);}else{for(let i=0;i<p.count*2;i++)U.push(0);}if(g!==g0)g.dispose();g0.dispose();}const g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(P,3));g.setAttribute('normal',new T.Float32BufferAttribute(N,3));g.setAttribute('uv',new T.Float32BufferAttribute(U,2));g.computeBoundingSphere();return g;}
  function leafGeometry(lod=0,variant=0){const key='leaf'+lod+':'+variant;if(geometries.has(key))return geometries.get(key);const rings=Math.max(2,q.leafRings-lod*2),segments=Math.max(20,q.leafSegments-lod*12),P=[],U=[],I=[];
  for(let side=0;side<2;side++)for(let j=0;j<=rings;j++)for(let i=0;i<=segments;i++){const a=TAU*i/segments,r=j/rings,tip=.78+.22*Math.cos(5*a+.3),notch=1-.50*Math.exp(-Math.pow((a-Math.PI*1.5)/.29,2)),edge=1+.045*Math.sin(a*23+variant)-(variant===2?.16*Math.pow(Math.max(0,Math.cos(a*11)),5):0),len=.34*tip*notch*edge;const x=Math.cos(a)*len*r,z=Math.sin(a)*len*r+.07*r,y=.10*r*r+.025*Math.sin(a*4+variant)*r*r*r+(side?-.004:0);P.push(x,y,z);U.push(.5+x/ .8,.5+z/.8);if(j<rings&&i<segments){let k=side*(rings+1)*(segments+1)+j*(segments+1)+i,b=k+segments+1;if(!side)I.push(k,b,k+1,k+1,b,b+1);else I.push(k,k+1,b,k+1,b+1,b);}}
  const stride=(rings+1)*(segments+1);for(let i=0;i<segments;i++){const k=rings*(segments+1)+i;I.push(k,k+1,k+stride,k+1,k+stride+1,k+stride);}const g=buffer(P,U,I),C=[];for(let i=0;i<P.length/3;i++)C.push(...(i>=stride?[1.3,1.18,.92]:[1,1,1]));g.setAttribute('color',new T.Float32BufferAttribute(C,3));geometries.set(key,g);return g;}
@@ -127,7 +142,7 @@ function tube(points,radius=.01,sides=5){const curve=new T.CatmullRomCurve3(poin
  return {T,tier,q,materialMaps:{skin,leaf,wood},materials,clock,depth,fruit,leaf:leafGeometry,veins,stem,flower,tube,merge,trellis,dispose};
 }
 function build(T,input={},terrain={},existingKit){const data=layout(input,terrain),o=data.options,kit=existingKit||createKit(T,o.tier,o),root=new T.Group(),chunks=[],owned=[],sample=terrain.heightAt||(()=>0),suitable=terrain.suitable||(()=>true),q=kit.q;root.name='Autumn procedural patch';
- const palette=[0xe07918,0xd86414,0xe49730,0xb96826,0xe9dfb3,0x647950,0xb37e36],lc=o.health==='dried'?0x817140:o.health==='yellow'||o.season==='late-fall'?0xaaa343:0x467830;
+ const palette=[0xcd641c,0xc96b24,0xd59036,0xb45f2b,0xe2d8b6,0x687450,0xad813e],lc=o.health==='dried'?0x817140:o.health==='yellow'||o.season==='late-fall'?0xaaa343:0x467830;
  const matrix=(x,y,z,scale=1,yaw=0,pitch=0)=>{const m=new T.Matrix4();m.compose(new T.Vector3(x,y,z),new T.Quaternion().setFromEuler(new T.Euler(pitch,yaw,0)),new T.Vector3(scale,scale,scale));return m;};
  function inst(g,mat,items,parent,wind=false){if(!items.length)return;const mesh=new T.InstancedMesh(g,mat,items.length);mesh.name=g.userData.variant!==undefined?'Pumpkin instances':'Shared '+mat.name;items.forEach((a,i)=>{mesh.setMatrixAt(i,a.m);mesh.setColorAt(i,new T.Color(a.color??0xffffff).convertSRGBToLinear());});mesh.instanceMatrix.needsUpdate=true;if(mesh.instanceColor)mesh.instanceColor.needsUpdate=true;mesh.frustumCulled=false;mesh.castShadow=q.shadow||mat.name==='fruit';mesh.receiveShadow=true;if(wind)mesh.customDepthMaterial=kit.depth;parent.add(mesh);return mesh;}
  const byChunk=new Map();for(const p of data.plants){const key=Math.floor(p.x/8)+','+Math.floor(p.z/8);if(!byChunk.has(key))byChunk.set(key,[]);byChunk.get(key).push(p);}

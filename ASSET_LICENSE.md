@@ -1,6 +1,6 @@
 # Code and asset permissions
 
-The repository's [MIT License](LICENSE) applies to the project-authored source code,
+Except for the Sylva folder described below, the repository's [MIT License](LICENSE) applies to the project-authored source code,
 documentation, procedural models, GLB/glTF exports, textures, thumbnails, and
 generated reference images included here. It also covers the project-authored
 content in assets you export from this generator. You may use, modify, redistribute,
@@ -20,3 +20,7 @@ The two images under `web/assets/references/` were AI-generated; see the include
 [provenance and prompts](web/assets/references/PROVENANCE.md). This permission covers
 the author's rights in the included content and does not assert exclusive rights
 in AI-generated output. Assets are provided as-is, as stated in the MIT License.
+
+## Sylva foliage subset
+
+`web/assets/sylva/v0.1.0/` retains the source pack's `LicenseRef-User-Owned` ownership metadata and is excluded from the general MIT asset grant above. The included source manifest and README identify this existing authored Asset Forge pack. The scene adapter is project code under MIT; exported scenes containing Sylva geometry also contain those user-owned assets.

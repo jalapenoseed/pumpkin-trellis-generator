@@ -1,244 +1,36 @@
-/* Fall Scenery Generator 0.1.0 — Full autumn add-ons: colored trees, ground leaf litter, optional pumpkin patches & trellises.
-   Seeded, tiered, Three.js compatible. Composes with AutumnAssets when available. Metres, Y-up. */
-(function(scope){
-'use strict';
-const VERSION='0.1.0', TAU=Math.PI*2;
-const TIERS={
-  high:{treeLevels:4, leafClusters:80, litter:1200, trunkSegs:12, shadow:true},
-  medium:{treeLevels:3, leafClusters:40, litter:600, trunkSegs:8, shadow:true},
-  mobile:{treeLevels:2, leafClusters:18, litter:250, trunkSegs:6, shadow:false}
-};
-const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+/* Scene composition around the existing Sylva 0.1.0 foliage outputs.
+   Sylva geometry/materials remain authoritative; this module handles placement and harvest. */
+(function(scope){'use strict';
+const VERSION='0.3.0',TAU=Math.PI*2,BASE='assets/sylva/v0.1.0/';
+const TIERS={high:{maxTrees:28,litter:2400,grass:2200,lod:0,shadow:true},medium:{maxTrees:18,litter:1400,grass:1300,lod:1,shadow:true},mobile:{maxTrees:10,litter:550,grass:350,lod:1,shadow:false}};
+const SPECIES=['quaking_aspen','gambel_oak','rocky_mountain_maple','mountain_willow','narrowleaf_cottonwood','plains_cottonwood','ponderosa_pine','pinyon_pine','douglas_fir','blue_spruce','rocky_mountain_juniper'];
+const DECIDUOUS=new Set(SPECIES.slice(0,6)),clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 function rng(seed){let a=seed>>>0;return()=>{a+=0x6D2B79F5;let t=Math.imul(a^a>>>15,1|a);t^=t+Math.imul(t^t>>>7,61|t);return((t^t>>>14)>>>0)/4294967296;};}
-
-function options(o={}){
-  const n=(k,d,a,b)=>clamp(Number.isFinite(+o[k])?+o[k]:d,a,b);
-  return {
-    ...o,
-    seed:n('seed',42069,0,4294967295)>>>0,
-    width:n('width',40,8,200),
-    length:n('length',40,8,200),
-    treeDensity:n('treeDensity',0.012,0,0.08),
-    treeScale:n('treeScale',1,0.4,2.2),
-    leafLitter:n('leafLitter',1,0,2.5),
-    colorBias:['mixed','orange','yellow','red','brown'].includes(o.colorBias)?o.colorBias:'mixed',
-    includePumpkins:o.includePumpkins!==false,
-    includeTrellis:o.includeTrellis!==false,
-    pumpkinDensity:n('pumpkinDensity',0.15,0,0.6),
-    trellisCount:n('trellisCount',2,0,8)|0,
-    tier:TIERS[o.tier]?o.tier:'medium',
-    season:['early-fall','late-fall','peak'].includes(o.season)?o.season:'peak'
-  };
+function options(o={}){const n=(k,d,a,b)=>clamp(Number.isFinite(+o[k])?+o[k]:d,a,b),species={aspen:'quaking_aspen',oak:'gambel_oak',maple:'rocky_mountain_maple'}[o.species]||o.species;return {...o,seed:n('seed',1935,0,4294967295)>>>0,width:n('width',28,8,120),length:n('length',24,8,120),treeDensity:n('treeDensity',.02,0,.08),treeScale:n('treeScale',1,.4,2.2),leafLitter:n('leafLitter',1,0,2.5),canopyDensity:n('canopyDensity',1,.15,1),grassDensity:n('grassDensity',1,0,2),species:SPECIES.includes(species)?species:'mixed',colorBias:['mixed','orange','yellow','red','brown'].includes(o.colorBias)?o.colorBias:'mixed',includePumpkins:o.includePumpkins!==false,includeTrellis:o.includeTrellis!==false,pumpkinDensity:n('pumpkinDensity',.04,0,.3),trellisCount:n('trellisCount',2,0,8)|0,tier:TIERS[o.tier]?o.tier:'medium',season:['early-fall','late-fall','peak'].includes(o.season)?o.season:'peak'};}
+function layoutTrees(input,terrain={}){const o=options(input),r=rng(o.seed),trees=[],sample=terrain.heightAt||(()=>0),suitable=terrain.suitable||(()=>true),count=Math.min(TIERS[o.tier].maxTrees,Math.floor(o.width*o.length*o.treeDensity));const mixed=['quaking_aspen','quaking_aspen','gambel_oak','rocky_mountain_maple','ponderosa_pine','narrowleaf_cottonwood','mountain_willow'];for(let i=0;i<count*70&&trees.length<count;i++){const x=(r()-.5)*o.width,z=(r()-.5)*o.length;if(Math.abs(x)<o.width*.19&&Math.abs(z)<o.length*.26)continue;if(!suitable(x,z)||trees.some(t=>Math.hypot(x-t.x,z-t.z)<3.8*o.treeScale))continue;const y=sample(x,z);if(!Number.isFinite(y))continue;trees.push({x,y,z,scale:o.treeScale*(.82+r()*.25),yaw:r()*TAU,seed:Math.floor(r()*1e9),species:o.species==='mixed'?mixed[trees.length%mixed.length]:o.species});}return trees;}
+function createKit(T,tier='medium',base=BASE){if(!T.GLTFLoader)throw Error('Load Three.js GLTFLoader before FallScenery.');const loader=new T.GLTFLoader(),cache=new Map(),clock={value:0};let disposed=false;async function load(species,lod){const key=species+':'+lod;if(!cache.has(key)){const url=base+'models/sylva_'+species+'/'+(lod?'lod1.glb':'asset.glb');const task=loader.loadAsync(url).then(gltf=>{if(disposed){release(gltf.scene);throw Error('Foliage kit was disposed during load.');}// Sylva COLOR_0 is hash/height/AO/flex data, not display RGB.
+ gltf.scene.traverse(m=>{if(!m.isMesh)return;const g=m.geometry,data=g.attributes.color;if(data){g.setAttribute('sylvaData',data);const colors=new Float32Array(data.count*3);for(let i=0;i<data.count;i++)colors.fill(data.getZ(i),i*3,i*3+3);g.setAttribute('color',new T.BufferAttribute(colors,3));}if(g.attributes.uv2)g.setAttribute('sylvaPivot',g.attributes.uv2);else g.setAttribute('sylvaPivot',g.attributes.uv);if(g.attributes.uv)g.setAttribute('uv2',g.attributes.uv);});
+ gltf.scene.updateMatrixWorld(true);return gltf.scene;}).catch(e=>{cache.delete(key);throw Error('Could not load Sylva '+species+': '+e.message);});cache.set(key,task);}return cache.get(key);}
+ function release(root){const geometries=new Set(),materials=new Set(),textures=new Set();root.traverse(m=>{if(!m.isMesh)return;geometries.add(m.geometry);for(const mat of Array.isArray(m.material)?m.material:[m.material]){materials.add(mat);for(const v of Object.values(mat))if(v?.isTexture)textures.add(v);}});geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());textures.forEach(t=>t.dispose());}
+ function dispose(){if(disposed)return;disposed=true;cache.forEach(p=>p.then(release,()=>{}));cache.clear();}
+ return {T,tier,clock,load,dispose};}
+function thinCards(T,geometry,fraction,seed){if(fraction>=.999)return geometry;const g=new T.BufferGeometry();for(const [key,a]of Object.entries(geometry.attributes))g.setAttribute(key,a);const index=geometry.index?.array,r=rng(seed),keep=[],count=index?index.length:geometry.attributes.position.count;for(let i=0;i<count;i+=6)if(r()<fraction)for(let j=i;j<Math.min(i+6,count);j++)keep.push(index?index[j]:j);g.setIndex(keep);g.computeBoundingSphere();return g;}
+async function build(T,input={},terrain={},existingKit){const o=options(input),q=TIERS[o.tier],kit=existingKit||createKit(T,o.tier),root=new T.Group(),ownedGeo=[],ownedMat=[],patches=[],sample=terrain.heightAt||(()=>0),suitable=terrain.suitable||(()=>true),trees=layoutTrees(o,terrain);root.name='Sylva autumn scenery';const needed=new Set(trees.map(t=>t.species));if(o.grassDensity>0){needed.add('mountain_bunchgrass');needed.add('alpine_avens');}let templates;try{templates=new Map(await Promise.all([...needed].map(async s=>[s,await kit.load(s,['mountain_bunchgrass','alpine_avens'].includes(s)?1:q.lod)])));}catch(e){if(!existingKit)kit.dispose();throw e;}
+ let foliageTriangles=0,litter=0,grass=0;
+ // Preserve source textures, normals and AO. Add only browser wind and art-directed seasonal tints.
+ const materialCache=new Map();function material(source,species){const key=source.uuid+':'+species;if(materialCache.has(key))return materialCache.get(key);const m=source.clone(),leaf=/_(foliage|leaf|grass)(_|$)/i.test(source.name);if(leaf){m.roughness=Math.max(.65,m.roughness);if(DECIDUOUS.has(species)){const tint=o.colorBias==='mixed'?(o.season==='early-fall'?0xa8c075:o.season==='late-fall'?0xa79472:0xffffff):({yellow:0xffe6a6,orange:0xf3a974,red:0xcf816d,brown:0xab977b}[o.colorBias]);m.color.multiply(new T.Color(tint).convertSRGBToLinear());}m.onBeforeCompile=s=>{s.uniforms.sylvaTime=kit.clock;s.vertexShader='uniform float sylvaTime;\n attribute vec4 sylvaData;\n attribute vec2 sylvaPivot;\n'+s.vertexShader;s.vertexShader=s.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\n vec3 wp=position;\n #ifdef USE_INSTANCING\n wp=(instanceMatrix*vec4(position,1.)).xyz;\n #endif\n transformed.x+=sin(sylvaTime*1.2+wp.z*.17+sylvaData.x*6.28)*.045*sylvaData.y*sylvaData.w;transformed+=normal*sin(sylvaTime*3.1+sylvaData.x*12.57)*.012*max(0.,sylvaPivot.x)*sylvaData.w;');};m.customProgramCacheKey=()=> 'sylva-browser-wind-v1';}materialCache.set(key,m);ownedMat.push(m);return m;}
+ const geometryCache=new Map();function geometry(source,species){if(!DECIDUOUS.has(species))return source.geometry;const leaf=/_(foliage|leaf)(_|$)/i.test(source.material.name);if(!leaf)return source.geometry;const fraction=o.canopyDensity*(o.season==='late-fall'?.3:1),key=source.geometry.uuid+':'+species;if(!geometryCache.has(key)){const g=thinCards(T,source.geometry,fraction,o.seed+species.length);geometryCache.set(key,g);if(g!==source.geometry)ownedGeo.push(g);}return geometryCache.get(key);}
+ for(const t of trees){const group=new T.Group();group.name='Sylva '+t.species;group.position.set(t.x,t.y,t.z);group.rotation.y=t.yaw;group.scale.setScalar(t.scale);const source=templates.get(t.species);source.traverse(m=>{if(!m.isMesh)return;const geo=geometry(m,t.species),mesh=new T.Mesh(geo,material(m.material,t.species));mesh.applyMatrix4(m.matrixWorld);mesh.castShadow=q.shadow;mesh.receiveShadow=true;group.add(mesh);if(/_(foliage|leaf)(_|$)/i.test(m.material.name))foliageTriangles+=(geo.index?.count||geo.attributes.position.count)/3;});root.add(group);}
+ const random=rng(o.seed+99),compose=(x,y,z,scale,yaw,pitch=0)=>new T.Matrix4().compose(new T.Vector3(x,y,z),new T.Quaternion().setFromEuler(new T.Euler(pitch,yaw,0)),new T.Vector3(scale,scale,scale));
+ // Groundcover uses the existing Sylva bunchgrass and alpine avens meshes, instanced.
+ for(const species of ['mountain_bunchgrass','alpine_avens']){const template=templates.get(species);if(!template)continue;const instances=[],count=Math.floor(q.grass*o.grassDensity*(species==='alpine_avens'?.2:1));for(let i=0;i<count;i++){const x=(random()-.5)*o.width*1.08,z=(random()-.5)*o.length*1.08;if(Math.abs(x+Math.sin(z*.2)*1.4)<.85||!suitable(x,z))continue;const y=sample(x,z);if(!Number.isFinite(y))continue;instances.push(compose(x,y,z,.65+random()*.7,random()*TAU));}if(!instances.length)continue;template.traverse(m=>{if(!m.isMesh)return;const mesh=new T.InstancedMesh(m.geometry,material(m.material,species),instances.length);instances.forEach((a,i)=>mesh.setMatrixAt(i,a.clone().multiply(m.matrixWorld)));mesh.instanceMatrix.needsUpdate=true;mesh.frustumCulled=false;mesh.receiveShadow=true;mesh.name='Sylva '+species+' instances';root.add(mesh);});grass+=instances.length;}
+ // Reuse a card and its atlas from the real Sylva leaf geometry for fallen litter.
+ const leafSource=[];for(const [species,template]of templates)if(DECIDUOUS.has(species))template.traverse(m=>{if(m.isMesh&&/_(foliage|leaf)(_|$)/i.test(m.material.name))leafSource.push({species,mesh:m});});
+ for(let k=0;k<leafSource.length;k++){const src=leafSource[k],geo=src.mesh.geometry,index=geo.index?.array,pos=geo.attributes.position,ids=Array.from({length:Math.min(6,index?.length||pos.count)},(_,i)=>index?index[i]:i),vertices=[...new Set(ids)],p0=new T.Vector3().fromBufferAttribute(pos,vertices[0]),p1=new T.Vector3().fromBufferAttribute(pos,vertices[1]),p2=new T.Vector3().fromBufferAttribute(pos,vertices[2]),normal=p1.clone().sub(p0).cross(p2.clone().sub(p0)).normalize(),rot=new T.Quaternion().setFromUnitVectors(normal,new T.Vector3(0,1,0)),center=new T.Vector3();vertices.forEach(i=>center.add(new T.Vector3().fromBufferAttribute(pos,i)));center.multiplyScalar(1/vertices.length);const g=new T.BufferGeometry(),positions=[],uvs=[];for(const i of vertices){const v=new T.Vector3().fromBufferAttribute(pos,i).sub(center).applyQuaternion(rot);positions.push(...v.toArray());uvs.push(geo.attributes.uv.getX(i),geo.attributes.uv.getY(i));}g.setAttribute('position',new T.Float32BufferAttribute(positions,3));g.setAttribute('uv',new T.Float32BufferAttribute(uvs,2));const colors=[],data=[],pivot=[];for(const i of vertices){colors.push(1,1,1);const a=geo.attributes.sylvaData;data.push(a?a.getX(i):0,0,1,0);pivot.push(0,0);}g.setAttribute('color',new T.Float32BufferAttribute(colors,3));g.setAttribute('sylvaData',new T.Float32BufferAttribute(data,4));g.setAttribute('sylvaPivot',new T.Float32BufferAttribute(pivot,2));g.setIndex(ids.map(i=>vertices.indexOf(i)));g.computeVertexNormals();ownedGeo.push(g);const instances=[],n=Math.floor(q.litter*o.leafLitter/leafSource.length);for(let i=0;i<n;i++){const t=trees[(i+k)%trees.length],a=random()*TAU,d=Math.sqrt(random())*4.5,x=t.x+Math.cos(a)*d,z=t.z+Math.sin(a)*d;if(Math.abs(x)>o.width*.6||Math.abs(z)>o.length*.6||!suitable(x,z))continue;const y=sample(x,z);if(!Number.isFinite(y))continue;instances.push(compose(x,y+.035,z,.7+random()*.55,random()*TAU,(random()-.5)*.2));}if(instances.length){const mesh=new T.InstancedMesh(g,material(src.mesh.material,src.species),instances.length);instances.forEach((a,i)=>mesh.setMatrixAt(i,a));mesh.instanceMatrix.needsUpdate=true;mesh.frustumCulled=false;mesh.receiveShadow=true;root.add(mesh);litter+=instances.length;}}
+ if(scope.AutumnAssets&&(o.includePumpkins||(o.includeTrellis&&o.trellisCount))){const A=scope.AutumnAssets,ak=A.createKit(T,o.tier),params={seed:o.seed+1,width:o.width*.44,length:o.length*.45,density:o.includePumpkins?o.pumpkinDensity:0,scale:1.1,tier:o.tier,season:o.season==='peak'?'early-fall':o.season,trellis:'off',leafDensity:.65,vineLength:1.5};const patch=A.build(T,params,terrain,ak);root.add(patch.root);patches.push(patch);for(let i=0;i<(o.includeTrellis?o.trellisCount:0);i++){const x=(i-(o.trellisCount-1)/2)*3.7,z=-o.length*.1,y=sample(x,z);if(!Number.isFinite(y)||!suitable(x,z))continue;const p=A.build(T,{...params,width:1,length:1,density:0,trellis:i%2?'arch':'wooden',trellisWidth:3.2,trellisHeight:2.6},{heightAt:(a,b)=>sample(a+x,b+z)-y},ak);p.root.position.set(x,y,z);root.add(p.root);patches.push(p);}root.userData.autumnKit=ak;}
+ function update(camera,time=0){kit.clock.value=time;patches.forEach(p=>p.update(camera,time));}
+ let disposed=false;function dispose(){if(disposed)return;disposed=true;root.removeFromParent();patches.forEach(p=>p.dispose());root.userData.autumnKit?.dispose();ownedGeo.forEach(g=>g.dispose());ownedMat.forEach(m=>m.dispose());root.traverse(m=>{if(m.isInstancedMesh)m.dispose?.();});if(!existingKit)kit.dispose();}
+ return {root,kit,trees:trees.length,litter,update,dispose,stats:()=>({trees:trees.length,foliageTriangles,litter,grass,hasAutumn:patches.length>0,source:'Sylva 0.1.0',lod:q.lod,capped:Math.floor(o.width*o.length*o.treeDensity)>q.maxTrees})};
 }
-
-function createKit(T,tier='medium'){
-  const q=TIERS[tier]||TIERS.medium;
-  const geometries=new Map(), materials={}, textures=[];
-  function makeLeafTexture(colorHex){
-    const c=document.createElement('canvas'); c.width=c.height=128;
-    const ctx=c.getContext('2d');
-    const g=ctx.createRadialGradient(64,64,8,64,64,60);
-    const col=new T.Color(colorHex);
-    g.addColorStop(0,col.getStyle());
-    g.addColorStop(0.7,col.clone().offsetHSL(0,0,-0.15).getStyle());
-    g.addColorStop(1,'rgba(0,0,0,0)');
-    ctx.fillStyle=g; ctx.fillRect(0,0,128,128);
-    ctx.strokeStyle='rgba(80,40,10,0.35)'; ctx.lineWidth=1.5;
-    ctx.beginPath(); ctx.moveTo(64,20); ctx.lineTo(64,100); ctx.stroke();
-    const t=new T.CanvasTexture(c); t.encoding=T.sRGBEncoding; textures.push(t); return t;
-  }
-  const leafColors={
-    orange:makeLeafTexture(0xe07a1a),
-    yellow:makeLeafTexture(0xf0c040),
-    red:makeLeafTexture(0xc43a1a),
-    brown:makeLeafTexture(0x8a5a2a),
-    green:makeLeafTexture(0x4a7a32)
-  };
-  function mat(name,color,map,rough=0.85,metal=0){
-    const m=new T.MeshStandardMaterial({name,color:new T.Color(color).convertSRGBToLinear(),map,roughness:rough,metalness:metal,side:T.DoubleSide,transparent:!!map,alphaTest:map?0.15:0});
-    materials[name]=m; return m;
-  }
-  mat('trunk',0x6b4a2a,null,0.92);
-  mat('branch',0x5a3d22,null,0.9);
-  Object.entries(leafColors).forEach(([k,tex])=>mat('leaf-'+k,0xffffff,tex,0.7));
-  function simpleTreeGeometry(levels,scale,seed){
-    const key='tree'+levels+':'+Math.floor(scale*10)+':'+seed;
-    if(geometries.has(key))return geometries.get(key);
-    const r=rng(seed);
-    const pieces=[];
-    function branch(origin,dir,len,rad,level){
-      if(level>levels||len<0.3)return;
-      const pts=[];
-      for(let i=0;i<=6;i++){
-        const t=i/6;
-        const wobble=new T.Vector3((r()-.5)*0.15*t,(r()-.5)*0.08*t,(r()-.5)*0.15*t);
-        pts.push(origin.clone().add(dir.clone().multiplyScalar(len*t)).add(wobble));
-      }
-      const curve=new T.CatmullRomCurve3(pts);
-      const tube=new T.TubeGeometry(curve,6,rad,6,false);
-      pieces.push(tube);
-      if(level<levels){
-        const kids=level===0?3:2;
-        for(let k=0;k<kids;k++){
-          const end=pts[pts.length-1];
-          const yaw=(r()-.5)*1.4, pitch=0.6+r()*0.6;
-          const childDir=dir.clone().applyEuler(new T.Euler(pitch,yaw,0)).normalize();
-          branch(end,childDir,len*(0.55+r()*0.2),rad*0.55,level+1);
-        }
-      }
-    }
-    branch(new T.Vector3(0,0,0),new T.Vector3(0,1,0),2.8*scale,0.18*scale,0);
-    const geo=pieces.length?merge(pieces):new T.BufferGeometry();
-    geo.userData={canopyY:3.2*scale,canopyR:2.4*scale};
-    geometries.set(key,geo);
-    return geo;
-  }
-  function merge(list){
-    if(!list.length)return new T.BufferGeometry();
-    const P=[],N=[],U=[];
-    for(const g0 of list){
-      const g=g0.index?g0.toNonIndexed():g0;
-      const p=g.attributes.position,n=g.attributes.normal,u=g.attributes.uv;
-      P.push(...p.array); N.push(...(n?n.array:new Array(p.count*3).fill(0)));
-      if(u)U.push(...u.array); else U.push(...new Array(p.count*2).fill(0));
-      if(g!==g0)g.dispose(); g0.dispose();
-    }
-    const g=new T.BufferGeometry();
-    g.setAttribute('position',new T.Float32BufferAttribute(P,3));
-    g.setAttribute('normal',new T.Float32BufferAttribute(N,3));
-    g.setAttribute('uv',new T.Float32BufferAttribute(U,2));
-    g.computeBoundingSphere();
-    return g;
-  }
-  function leafPlane(){
-    if(geometries.has('leafPlane'))return geometries.get('leafPlane');
-    const g=new T.PlaneGeometry(0.28,0.22);
-    g.translate(0,0.11,0);
-    geometries.set('leafPlane',g);
-    return g;
-  }
-  function dispose(){
-    for(const g of geometries.values())g.dispose();
-    for(const m of Object.values(materials))m.dispose();
-    textures.forEach(t=>t.dispose());
-  }
-  return {T,tier,q,materials,leafColors,simpleTreeGeometry,leafPlane,merge,dispose};
-}
-
-function layoutTrees(o,terrain={}){
-  const r=rng(o.seed), trees=[], sample=terrain.heightAt||(()=>0), suitable=terrain.suitable||(()=>true);
-  const count=Math.floor(o.width*o.length*o.treeDensity);
-  for(let i=0;i<count*3&&trees.length<count;i++){
-    const x=(r()-.5)*o.width, z=(r()-.5)*o.length;
-    if(!suitable(x,z))continue;
-    const y=sample(x,z);
-    if(!Number.isFinite(y))continue;
-    trees.push({x,y,z,scale:o.treeScale*(0.7+r()*0.6),yaw:r()*TAU,seed:Math.floor(r()*1e9),color:o.colorBias==='mixed'?['orange','yellow','red','brown'][Math.floor(r()*4)]:o.colorBias});
-  }
-  return trees;
-}
-
-function build(T,input={},terrain={},existingKit){
-  const o=options(input);
-  const kit=existingKit||createKit(T,o.tier);
-  const root=new T.Group(); root.name='Fall Scenery';
-  const owned=[];
-  const sample=terrain.heightAt||(()=>0);
-  const trees=layoutTrees(o,terrain);
-  const leafPlane=kit.leafPlane();
-  const palette=o.colorBias==='mixed'?['orange','yellow','red','brown']:[o.colorBias];
-
-  for(const t of trees){
-    const g=new T.Group();
-    g.position.set(t.x,t.y,t.z);
-    g.rotation.y=t.yaw;
-    const trunkGeo=kit.simpleTreeGeometry(kit.q.treeLevels,t.scale,t.seed);
-    const trunk=new T.Mesh(trunkGeo,kit.materials.trunk);
-    trunk.castShadow=kit.q.shadow;
-    trunk.receiveShadow=true;
-    g.add(trunk);
-    owned.push(trunkGeo);
-
-    const clusters=Math.floor(kit.q.leafClusters*(0.6+Math.random()*0.8));
-    const leaves=[];
-    const r=rng(t.seed+17);
-    const canopyY=trunkGeo.userData.canopyY||3*t.scale;
-    const canopyR=trunkGeo.userData.canopyR||2*t.scale;
-    for(let i=0;i<clusters;i++){
-      const a=r()*TAU, dist=Math.sqrt(r())*canopyR*0.85;
-      const h=canopyY*(0.55+r()*0.5);
-      const px=Math.cos(a)*dist, pz=Math.sin(a)*dist;
-      const m=new T.Matrix4().compose(
-        new T.Vector3(px,h,pz),
-        new T.Quaternion().setFromEuler(new T.Euler((r()-.5)*0.6,r()*TAU,(r()-.5)*0.4)),
-        new T.Vector3(0.7+r()*0.8,0.7+r()*0.8,0.7+r()*0.8)
-      );
-      const col=palette[Math.floor(r()*palette.length)];
-      leaves.push({m,color:col});
-    }
-    const byColor={};
-    leaves.forEach(l=>{(byColor[l.color]||(byColor[l.color]=[])).push(l);});
-    for(const [col,items] of Object.entries(byColor)){
-      const mesh=new T.InstancedMesh(leafPlane,kit.materials['leaf-'+col],items.length);
-      items.forEach((a,i)=>mesh.setMatrixAt(i,a.m));
-      mesh.instanceMatrix.needsUpdate=true;
-      mesh.castShadow=false;
-      mesh.frustumCulled=false;
-      g.add(mesh);
-    }
-    root.add(g);
-  }
-
-  const litterCount=Math.floor(kit.q.litter*o.leafLitter);
-  if(litterCount>0){
-    const litter=[];
-    const r=rng(o.seed+99);
-    for(let i=0;i<litterCount;i++){
-      const x=(r()-.5)*o.width*0.95, z=(r()-.5)*o.length*0.95;
-      const y=sample(x,z)+0.015;
-      const m=new T.Matrix4().compose(
-        new T.Vector3(x,y,z),
-        new T.Quaternion().setFromEuler(new T.Euler(-Math.PI/2+(r()-.5)*0.3,r()*TAU,0)),
-        new T.Vector3(0.6+r()*0.7,0.6+r()*0.7,1)
-      );
-      const col=palette[Math.floor(r()*palette.length)];
-      litter.push({m,color:col});
-    }
-    const byColor={};
-    litter.forEach(l=>{(byColor[l.color]||(byColor[l.color]=[])).push(l);});
-    for(const [col,items] of Object.entries(byColor)){
-      const mesh=new T.InstancedMesh(leafPlane,kit.materials['leaf-'+col],items.length);
-      items.forEach((a,i)=>mesh.setMatrixAt(i,a.m));
-      mesh.instanceMatrix.needsUpdate=true;
-      mesh.receiveShadow=true;
-      mesh.frustumCulled=false;
-      root.add(mesh);
-    }
-  }
-
-  let autumnRoot=null;
-  if((o.includePumpkins||o.includeTrellis)&&scope.AutumnAssets){
-    const autumnOpts={
-      seed:o.seed+1, width:o.width*0.7, length:o.length*0.7,
-      density:o.includePumpkins?o.pumpkinDensity:0,
-      scale:0.9, tier:o.tier==='high'?'high':o.tier,
-      season:o.season==='peak'?'early-fall':o.season,
-      trellis:o.includeTrellis&&o.trellisCount>0?'wooden':'off',
-      trellisWidth:3.2, trellisHeight:2.6
-    };
-    const built=scope.AutumnAssets.build(T,autumnOpts,terrain);
-    autumnRoot=built.root;
-    root.add(autumnRoot);
-  }
-
-  function dispose(){
-    root.removeFromParent();
-    owned.forEach(g=>g.dispose());
-    root.traverse(m=>{if(m.isInstancedMesh)m.dispose?.();});
-    if(!existingKit)kit.dispose();
-  }
-  return {root,kit,trees:trees.length,litter:litterCount,dispose,stats:()=>({trees:trees.length,litter:litterCount,hasAutumn:!!autumnRoot})};
-}
-
-scope.FallScenery={VERSION,TIERS,rng,options,createKit,layoutTrees,build};
+scope.FallScenery={VERSION,TIERS,SPECIES,rng,options,layoutTrees,createKit,build};
 })(typeof window!=='undefined'?window:globalThis);
